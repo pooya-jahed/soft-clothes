@@ -1,435 +1,853 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
-    <script type="module" src="js/color-modes.js"></script>
-    <title>Bootstrap Color Modes</title>
-  </head>
-  <body>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                             HEADER SECTION                              -->
-    <!-- ----------------------------------------------------------------------- -->
-    <div class="px-4 pt-5 my-5 text-center border-bottom">
-      <h1 class="display-4 fw-bold text-body-emphasis">Centered screenshot</h1>
-      <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">
-          Quickly design and customize responsive mobile-first sites with
-          Bootstrap, the world’s most popular front-end open source toolkit,
-          featuring Sass variables and mixins, responsive grid system, extensive
-          prebuilt components, and powerful JavaScript plugins.
-        </p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
-            Primary button
-          </button>
-          <button type="button" class="btn btn-outline-secondary btn-lg px-4">
-            Secondary
-          </button>
-        </div>
-      </div>
-      <div class="overflow-hidden" style="max-height: 30vh">
-        <div class="container-fluid px-5">
-          <img
-            src="https://getbootstrap.com/docs/5.3/examples/heroes/bootstrap-docs.png"
-            class="img-fluid border rounded-3 shadow-lg mb-4"
-            alt="Example image"
-            width="700"
-            height="500"
-            loading="lazy"
-          />
-        </div>
-      </div>
-    </div>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                           HEADER SECTION END                            -->
-    <!-- ----------------------------------------------------------------------- -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="bootstrap" viewBox="0 0 512 408" fill="currentcolor">
-        <path
-          d="M106.342 0c-29.214 0-50.827 25.58-49.86 53.32.927 26.647-.278 61.165-8.966 89.31C38.802 170.862 24.07 188.707 0 191v26c24.069 2.293 38.802 20.138 47.516 48.37 8.688 28.145 9.893 62.663 8.965 89.311C55.515 382.42 77.128 408 106.342 408h299.353c29.214 0 50.827-25.58 49.861-53.319-.928-26.648.277-61.166 8.964-89.311 8.715-28.232 23.411-46.077 47.48-48.37v-26c-24.069-2.293-38.765-20.138-47.48-48.37-8.687-28.145-9.892-62.663-8.964-89.31C456.522 25.58 434.909 0 405.695 0H106.342zm236.559 251.102c0 38.197-28.501 61.355-75.798 61.355h-87.202a2 2 0 01-2-2v-213a2 2 0 012-2h86.74c39.439 0 65.322 21.354 65.322 54.138 0 23.008-17.409 43.61-39.594 47.219v1.203c30.196 3.309 50.532 24.212 50.532 53.085zm-84.58-128.125h-45.91v64.814h38.669c29.888 0 46.373-12.03 46.373-33.535 0-20.151-14.174-31.279-39.132-31.279zm-45.91 90.53v71.431h47.605c31.12 0 47.605-12.482 47.605-35.941 0-23.46-16.947-35.49-49.608-35.49h-45.602z"
-        />
-      </symbol>
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path
-          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
-        />
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path
-          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
-        />
-        <path
-          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
-        />
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path
-          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-        />
-      </symbol>
-    </svg>
 
-    <div class="container py-4 px-3 mx-auto">
-      <header class="d-md-flex align-items-md-center pb-3 mb-5 border-bottom">
-        <h1 class="h4 me-auto">
-          <a
-            href="/"
-            class="d-flex align-items-center text-body text-decoration-none"
-          >
-            <svg class="d-inline-block me-2" width="40" height="32">
-              <use href="#bootstrap"></use>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <script type="module" src="js/color-modes.js"></script>
+  <title>soft</title>
+</head>
+
+<body>
+  <a href="#top" id="scrollTop">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                           HEADER SECTION START                          -->
+  <!-- ----------------------------------------------------------------------- -->
+  <header>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                             navbar section                              -->
+    <!-- ----------------------------------------------------------------------- -->
+    <section class="ftco-section" data-bs-theme="light">
+      <div class="w100-bg-black">
+        <div class="container">
+          <div class="row justify-content-between align-items-center p-2">
+            <span class="btn-group col-1 dark-light" role="group" aria-label="Basic radio toggle button group"
+              aria-labelledby="bd-theme">
+              <input type="radio" class="btn-check" name="btnradio" data-bs-theme-value="light" id="btnradio1"
+                autocomplete="off" checked="" />
+              <label class="btn text-white btn-outline-white " for="btnradio1">
+                <svg class="bi m-2  opacity-100 theme-icon">
+                  <use href="#sun-fill"></use>
+                </svg>
+                <svg class="bi ms-auto d-none">
+                  <use href="#check2"></use>
+                </svg>
+              </label>
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" data-bs-theme-value="dark"
+                autocomplete="off" />
+              <label class="btn text-white btn-outline-white" for="btnradio2">
+                <svg class="bi me-2 opacity-100 theme-icon">
+                  <use href="#moon-stars-fill"></use>
+                </svg>
+                <svg class="bi ms-auto d-none">
+                  <use href="#check2"></use>
+                </svg>
+              </label>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+              <symbol id="circle-half" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+              </symbol>
+              <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                <path
+                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
+                <path
+                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+              </symbol>
+              <symbol id="sun-fill" viewBox="0 0 16 16">
+                <path
+                  d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+              </symbol>
             </svg>
-            <span>Color Modes</span>
-          </a>
-        </h1>
-        <div class="d-flex align-items-center gap-3">
-          <div class="d-flex align-items-center dropdown color-modes">
-            <button
-              class="btn btn-link px-0 text-decoration-none dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              data-bs-display="static"
-            >
-              <svg class="bi my-1 me-2 theme-icon-active">
-                <use href="#circle-half"></use>
-              </svg>
-              <span class="ms-2" id="bd-theme-text">Toggle theme</span>
-            </button>
-            <ul
-              class="dropdown-menu dropdown-menu-end"
-              aria-labelledby="bd-theme"
-              style="--bs-dropdown-min-width: 8rem"
-            >
-              <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center"
-                  data-bs-theme-value="light"
-                >
-                  <svg class="bi me-2 opacity-50 theme-icon">
-                    <use href="#sun-fill"></use>
-                  </svg>
-                  Light
-                  <svg class="bi ms-auto d-none">
-                    <use href="#check2"></use>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center"
-                  data-bs-theme-value="dark"
-                >
-                  <svg class="bi me-2 opacity-50 theme-icon">
-                    <use href="#moon-stars-fill"></use>
-                  </svg>
-                  Dark
-                  <svg class="bi ms-auto d-none">
-                    <use href="#check2"></use>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  class="dropdown-item d-flex align-items-center active"
-                  data-bs-theme-value="auto"
-                >
-                  <svg class="bi me-2 opacity-50 theme-icon">
-                    <use href="#circle-half"></use>
-                  </svg>
-                  Auto
-                  <svg class="bi ms-auto d-none">
-                    <use href="#check2"></use>
-                  </svg>
-                </button>
-              </li>
-            </ul>
-          </div>
-          <a
-            href="https://github.com/twbs/examples/tree/main/color-modes/"
-            target="_blank"
-            rel="noopener"
-            class="text-decoration-none"
-            >View on GitHub</a
-          >
-        </div>
-      </header>
-
-      <h1>Get started with Bootstrap color modes</h1>
-      <div class="col-lg-8 px-0">
-        <p class="fs-4">
-          You've successfully loaded up the Bootstrap Color Modes example! It's
-          loaded up with a pre-release version of
-          <a href="https://getbootstrap.com/">Bootstrap 5.3.0</a>, Sass,
-          <a href="https://github.com/guybedford/es-module-shims"
-            >ES Modules Shims</a
-          >
-          for our JavaScript plugins, and our documentation's color mode picker.
-        </p>
-        <p>
-          If this button appears blue and the link appears purple, everything is
-          working. Check out the <strong>Toggle theme</strong> button at the top
-          of the page to switch between color modes. We suggest you review the
-          <a href="https://twbs-bootstrap.netlify.app/docs/5.3/migration/"
-            >upcoming migration guide</a
-          >, the
-          <a href="https://twbs-bootstrap.netlify.app/docs/5.3/customize/color/"
-            >new color system</a
-          >, and the
-          <a
-            href="https://twbs-bootstrap.netlify.app/docs/5.3/customize/color-modes/"
-            >new color modes documentation</a
-          >.
-        </p>
-      </div>
-
-      <button
-        type="button"
-        class="btn btn-primary me-3"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasExample"
-      >
-        Toggle offcanvas
-      </button>
-      <a
-        id="popoverButton"
-        class="text-success"
-        href="#"
-        role="button"
-        data-bs-toggle="popover"
-        title="Custom popover"
-        data-bs-content="This popover is created thanks to an ESM shim."
-        >Example popover</a
-      >
-
-      <div
-        class="offcanvas offcanvas-end"
-        tabindex="-1"
-        id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel"
-      >
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-          <button
-            type="button"
-            class="btn-close text-reset"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you
-            have chosen. Like, text, images, lists, etc.
-          </div>
-          <div class="dropdown mt-3">
-            <button
-              class="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              data-bs-toggle="dropdown"
-            >
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
+            <div class="col-3 mx-4 d-none d-md-inline text-start text-md-end">
+              <p class="mb-0 phone">
+                <span class="bi bi-phone-flip text-warning fs-4"></span> <a class=" text-warning display-6 "
+                  href="#">+00
+                  1234
+                  567</a>
+              </p>
+            </div>
+            <!-- social media section  -->
+            <div class="col d-flex justify-content-end">
+              <div class="social-media">
+                <p class="mb-0 d-flex">
+                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i class="bi bi-facebook">
+                    </i>
+                  </a>
+                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i class="bi bi-twitter">
+                    </i></a>
+                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i
+                      class="bi bi-instagram"></i></a>
+                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i
+                      class="bi bi-dribbble"></i></a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <hr class="col-1 my-5 mx-0" />
+      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top"
+        id="ftco-navbar">
+        <div class="container-fluid px-0 px-md-4">
+          <a class="display-6 navbar-brand mx-0 mx-md-1 " href="index.html">soft clothes
+            <span>commerce</span></a>
 
-      <h2>Guides</h2>
-      <p>
-        Read more detailed instructions and documentation on using or
-        contributing to Bootstrap.
-      </p>
-      <ul class="icon-list">
-        <li>
-          <a
-            href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
-            >Bootstrap quick start guide</a
-          >
-        </li>
-        <li>
-          <a href="https://getbootstrap.com/docs/5.3/getting-started/webpack/"
-            >Bootstrap Webpack guide</a
-          >
-        </li>
-        <li>
-          <a href="https://getbootstrap.com/docs/5.3/getting-started/parcel/"
-            >Bootstrap Parcel guide</a
-          >
-        </li>
-        <li>
-          <a href="https://getbootstrap.com/docs/5.3/getting-started/vite/"
-            >Bootstrap Vite guide</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://getbootstrap.com/docs/5.3/getting-started/contribute/"
-            >Contributing to Bootstrap</a
-          >
-        </li>
-      </ul>
+          <form action="#" class="searchform order-sm-start order-lg-last d-none d-lg-block">
+            <div class="form-group d-flex">
+              <input type="text" class="form-control pl-3" placeholder="Search" />
+              <button type="submit" placeholder="" class="form-control search">
+                <span class="bi bi-search"></span>
+              </button>
+            </div>
+          </form>
 
-      <hr class="mt-5 mb-4" />
+          <button class="navbar-toggler collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav"
+            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="bi bi-list navbar-toggler-icon text-warning-50 fw-bold fs-1"></span>
+          </button>
+          <ul class="navbar-nav d-flex d-lg-none flex-row p-0">
+            <li class="nav-item">
+              <a class="bi bi-bag-check navbar-main-icon position-relative"><span
+                  class="position-absolute badge rounded-pill bg-danger ">
+                  +5</a>
+              <span class="visually-hidden">favorite list</span></span>
+            </li>
+            <li class="nav-item">
+              <a class="bi bi-heart navbar-main-icon position-relative"><span
+                  class="position-absolute badge rounded-pill bg-danger">
+                  +5
+                  <span class="visually-hidden">favorite list</span></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="bi bi-person navbar-main-icon position-relative"><span
+                  class="position-absolute badge rounded-pill bg-danger">
+                  +5
+                  <span class="visually-hidden">favorite list</span></span></a>
+            </li>
+          </ul>
+          <div class="navbar-collapse collapsed" id="ftco-nav">
+            <ul class="navbar-nav m-auto d-flex  align-items-start">
+              <li class="nav-item active w-100">
+                <a href="#" class="nav-link">Home</a>
+              </li>
 
-      <p class="text-muted">
-        Created and open sourced by the Bootstrap team. Licensed MIT.
-      </p>
+              <li class="nav-item w-100">
+                <a href="#" class="nav-link">Catalog</a>
+              </li>
+              <li class="nav-item w-100">
+                <a href="#" class="nav-link">Blog</a>
+              </li>
+              <li class="nav-item w-100">
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="navbar-nav px-0 d-none d-lg-flex px-md-5">
+
+          <li id="shop-list" class="btn btn-link nav-item px-2" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+
+            <a class="bi bi-heart navbar-main-icon position-relative p-0"><span
+                class="position-absolute badge rounded-pill bg-danger">
+                +5
+                <span class="visually-hidden">favorite list</span></a>
+            </div>
+            <div class="dropdown-menu dropdown-navbar-shop dropdown-menu-end px-4 py-3 position-absolute"
+              aria-labelledby="shop-list" data-bs-popper="static">
+
+              <!-- cart item-->
+              <div class="navbar-cart-product ">
+                <div class="d-flex align-items-center"><a href="detail.html"><img
+                      class="img-fluid navbar-cart-product-image" style="max-width:60px ;"
+                      src="/assets/img/product-img-woman-jeans-1.jpg" alt="..."></a>
+                  <div class="w-100 ">
+                    <div class="ps-3 "> <a class="navbar-cart-product-link" href="detail.html">Skull
+                        Tee</a><span class="btn-close float-end " style="width: 2px;"></span><small
+                        class="d-block text-muted">Quantity: 1
+                      </small><strong class="d-block ">$75.00
+                      </strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- cart item-->
+              <hr class="navbar-cart-product-wrapper ">
+              <!-- total price-->
+              <hr class="navbar-cart-product-wrapper ">
+              <div class="navbar-cart-total w-100"><span class="text-uppercase text-white">Total</span><strong
+                  class="text-uppercase float-end">$75.00</strong></div>
+              <hr class="navbar-cart-product-wrapper p-0 ">
+              <!-- buttons-->
+              <div class="d-flex justify-content-between"><a class="btn btn-link text-dark me-3" href="cart.html">View
+                  Cart <i class="fa-arrow-right fa"></i></a><a class="btn btn-outline-dark"
+                  href="checkout1.html">Checkout</a></div>
+            </div>
+            <!-- ---------------- -->
+          </li>
+          <li class="nav-item px-2">
+            <a class="bi bi-bag-check navbar-main-icon position-relative p-0"><span
+                class="position-absolute badge rounded-pill bg-danger">
+                +5
+                <span class="visually-hidden">favorite list</span></a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="bi bi-person navbar-main-icon position-relative p-0"><span
+                class="position-absolute badge rounded-pill bg-danger">
+                +5
+                <span class="visually-hidden">favorite list</span></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                           navbar section end                            -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                            carousel section                             -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div class="container-fluid">
+      <div class="row">
+        <div id="myCarousel" class="carousel carousel-fade slide mb-6 p-0" data-bs-ride="carousel" data-bs-theme="dark">
+          <div class="carousel-indicators ">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="bg-danger py-1"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"
+              class=" bg-danger active py-1 " aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"
+              class="bg-danger py-1"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active carousel-item-start">
+              <div class="z-n1" style="
+                    background-image: url(assets/img/header-1.jpg);
+                    background-size: cover;
+                    background-position: left center;
+                    height: 87vh;
+                  "></div>
+              <div class="container">
+                <div class="carousel-caption text-end my-auto">
+                  <div class="col-lg-6 ms-auto">
+                    <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light display-6">
+                      Our all-time favourites
+                    </p>
+                    <h2 class="text-danger display-3" style="line-height: 1">
+                      Blouses &amp; Tops
+                    </h2>
+                    <p class="text-white mb-5">
+                      The bedding was hardly able to cover it and seemed ready
+                      to slide off any moment. His many legs, pit
+                    </p>
+                    <a class="btn btn-dark" href="#">Discover more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item carousel-item-next carousel-item-start">
+              <div class="z-n1" style="
+                    background-image: url(assets/img/header-4.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    height: 87vh;
+                  ">
+
+              </div>
+              <div class="container">
+                <div class="carousel-caption text-end my-auto">
+                  <div class="col-lg-6 ms-auto">
+                    <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light display-6">
+                      Our all-time favourites
+                    </p>
+                    <h2 class="text-primary display-3" style="line-height: 1">
+                      Blouses &amp; Tops
+                    </h2>
+                    <p class="text-white mb-5">
+                      The bedding was hardly able to cover it and seemed ready
+                      to slide off any moment. His many legs, pit
+                    </p>
+                    <a class="btn btn-dark" href="#">Discover more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="z-n1" style="
+                    background-image: url(assets/img/header-3.jpg);
+                    background-size: cover;
+                    background-position: left center;
+                    background-repeat: no-repeat;
+                    height: 87vh;
+                  ">
+
+              </div>
+              <div class="container">
+                <div class="carousel-caption text-end my-auto">
+                  <div class="col-lg-6 ms-auto">
+                    <p class="subtitle letter-spacing-3 mb-3 text-dark font-weight-light display-6">
+                      Our all-time favourites
+                    </p>
+                    <h2 class="text-warning display-3" style="line-height: 1">
+                      Blouses &amp; Tops
+                    </h2>
+                    <p class="text-white mb-5">
+                      The bedding was hardly able to cover it and seemed ready
+                      to slide off any moment. His many legs, pit
+                    </p>
+                    <a class="btn btn-dark" href="#">Discover more</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class=" bi-chevron-double-left text-white-50 display-3 " aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="bi-chevron-double-right text-white-50 display-3" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
     </div>
     <!-- ----------------------------------------------------------------------- -->
-    <!--                          FOOTER SECTION START                           -->
+    <!--                          carousel section end                           -->
     <!-- ----------------------------------------------------------------------- -->
+  </header>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                           HEADER SECTION END                            -->
+  <!-- ----------------------------------------------------------------------- -->
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                      CATEGORY GALLERY SECTION START                     -->
+  <!-- ----------------------------------------------------------------------- -->
+  <section id="gallery">
     <div class="container">
-      <footer class="py-5">
-        <div class="row">
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Features</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-              </li>
-            </ul>
-          </div>
+      <!-- <ol class="breadcrumb">
+          <li class="breadcrumb-item active">
+            <a class="text-decoration-none" href="index.html">Home</a>
+          </li>
+          <li class="breadcrumb-item">About Us</li>
+        </ol> -->
+      <div class="row justify-content-center m-3">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-6 text-center mt-5 mb-5">
+          <!-- Preheading -->
+          <h4 class="mb-4 text-gray-400">New Collection</h4>
 
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Features</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-              </li>
-            </ul>
-          </div>
+          <!-- Heading -->
+          <h2 class="display-3 fw-bold text-body-emphasis">
+            Best Picks 2023
+          </h2>
 
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary"
-                  >Features</a
-                >
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-              </li>
-            </ul>
-          </div>
+          <!-- Subheading -->
+          <p class="mb-10 text-gray-500 h6">
+            Appear, dry there darkness they're seas, dry waters thing fly
+            midst. Beast, above fly brought Very green.
+          </p>
+        </div>
+      </div>
+      <div class="row gallary-dark-mode ">
+        <div class="col-12 col-md-5 col-lg-4 d-flex flex-column dark-mode">
+          <!-- Card -->
+          <div class="card  text-white overlay-hover-light  " style="
+                min-height: 380px;
+                background-image: url(assets/img/products/product-1.jpg);
+              ">
+            <!-- Background -->
+            <div style="
+                  min-height: 380px;
+                  background-size: cover;
+                  background-position: center;
+                  background-image: url(/assets/img/-galleryproduct-1.jpg);
+                " class="card-bg"></div>
 
-          <div class="col-md-5 offset-md-1 mb-3">
-            <form>
-              <h5>Subscribe to our newsletter</h5>
-              <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden"
-                  >Email address</label
-                >
-                <input
-                  id="newsletter1"
-                  type="text"
-                  class="form-control"
-                  placeholder="Email address"
-                />
-                <button class="btn btn-primary" type="button">Subscribe</button>
-              </div>
-            </form>
+            <!-- Body -->
+            <div
+              class="card-body d-flex justify-content-center align-items-center flex-column h-100 w-100 position-absolute">
+              <!-- Heading -->
+              <h4 class="mb-0 h2 ">Bags Collection</h4>
+
+              <!-- Link -->
+              <a class="btn btn-link text-white fw-semibold  stretched-link position-relative py-3 fs-4 "
+                href="shop.html">
+                Shop Now <i class="bi bi-arrow-right ms-2 position-relative fs-5 translate-middle-y"></i>
+              </a>
+            </div>
           </div>
         </div>
+        <div class="col-12 col-md-7 col-lg-8 d-flex flex-column dark-mode ">
+          <!-- Card -->
+          <div class="card mb-7 text-body overlay-hover-light position-relative " style="">
+            <!-- Background -->
+            <div style="
+                  min-height: 380px;
+                  background-size: cover;
+                  background-position: center;
+                  background-image: url(assets/img/gallery-product-2.jpg);
+                " class="card-bg"></div>
 
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
-        >
-          <p>© 2023 Company, Inc. All rights reserved.</p>
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#twitter"></use>
-                </svg>
+            <!-- Body -->
+            <div class="card-body text-dark px-md-10 text-center text-md-start position-absolute  ">
+
+
+              <!-- Heading -->
+              <h4 class="mb-0 mt-5 fs-3 h3 fw-bold">Printed men’s Shirts</h4>
+
+              <!-- Link -->
+              <a class="btn btn-link text-dark fw-semibold  stretched-link position-relative px-0 py-3 fs-5 "
+                href="shop.html">
+                Shop Now <i class="bi bi-arrow-right mx-2 position-relative fs-5 translate-middle-y"></i>
               </a>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-7 col-lg-8 d-flex flex-column dark-mode">
+          <!-- Card -->
+          <div class="card mb-7 mb-md-0 text-body overlay-hover-light " style="min-height: 380px">
+            <!-- Background -->
+            <div style="
+                  min-height: 380px;
+                  background-size: cover;
+                  background-position: center;
+                  background-image: url(assets/img/gallery-product-3.jpg);
+                " class="card-bg"></div>
+
+            <!-- Body -->
+            <div class="card-body my-auto px-md-10 text-center text-md-start position-absolute">
+              <!-- Heading -->
+              <h4 class="mb-0 mt-5 fs-3 h3 fw-bold text-dark">Basic women’s Dresses</h4>
+
+              <!-- Link -->
+              <a class="btn btn-link text-dark fw-semibold  stretched-link position-relative py-3 fs-4 "
+                href="shop.html">
+                Shop Now <i class="bi bi-arrow-right ms-2 position-relative fs-5 translate-middle-y"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 col-lg-4 d-flex flex-column dark-mode">
+          <!-- Card -->
+          <div class="card text-white overlay-hover-light " style="min-height: 380px">
+            <!-- Background -->
+            <div style="
+                  min-height: 380px;
+                  background-size: cover;
+                  background-position: center;
+                  background-image: url(assets/img/gallery-product-4.jpg);
+                " class="card-bg"></div>
+
+            <!-- Body -->
+            <div
+              class="card-body d-flex justify-content-center align-items-center flex-column h-100 w-100 position-absolute">
+              <!-- Heading -->
+              <h4 class="mb-0 h2">Sweatshirts</h4>
+
+              <!-- Link -->
+              <a class="btn btn-link text-white fw-semibold  stretched-link position-relative py-3 fs-4 "
+                href="shop.html">
+                Shop Now <i class="bi bi-arrow-right ms-2 position-relative fs-5 translate-middle-y"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                      CATEGORY GALLARY SECTION END                       -->
+  <!-- ----------------------------------------------------------------------- -->
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                         MAN WOMAN SECTION START                         -->
+  <!-- ----------------------------------------------------------------------- -->
+  <section>
+    <div class="container py-6">
+      <div class="px-5 pt-5 my-5 text-center ">
+        <h1 class="display-4 fw-bold text-body-emphasis text-uppercase">
+          soft clothes
+          <h2 class="display-6 fw-bold text-body-emphasis text-uppercase">Ecommerce</h2>
+        </h1>
+        <div class="col-lg-10 mx-auto">
+          <p class="lead m-4 mb-5">
+            One morning, when Gregor Samsa woke from troubled dreams, he found
+            himself transformed in his bed into a horrible vermin. He lay on his
+            armour-like back, and if he lifted his head a little he could see his
+            brown belly, slightly domed and divided by arches into stiff sections
+          </p>
+        </div>
+      </div>
+      <div class=" position-relative">
+        <div class="row">
+          <div class="col-sm-6 mb-5 mb-sm-0 ">
+            <div class="card card-scale shadow-0 border-0 text-white  overlay-hover-light text-center ">
+              <img class="card-img " src="/assets/img/category-women.jpg" alt="Card image" />
+              <div class="card-img-overlay d-flex align-items-center">
+                <div class="w-100 py-3">
+                  <h2 class="display-3 fw-bold mb-0">Women</h2>
+                  <a class="stretched-link fw-semibold fs-4" href="index.html"><span class="sr-only">Visit
+                    </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 mb-5 mb-sm-0 ">
+            <div
+              class="card card-scale shadow-0 border-0 text-white text-hover-gray-900 overlay-hover-light text-center ">
+              <img class="card-img " src="/assets/img/category-men.jpg" alt="Card image" />
+              <div class="card-img-overlay d-flex align-items-center">
+                <div class="w-100 py-3">
+                  <h2 class="display-3 fw-bold mb-0">Men</h2>
+                  <a class="stretched-link fw-semibold fs-4 " href="index.html"><span class="sr-only">Visit </span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  </section>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                          MAN WOMAN SECTION END                          -->
+  <!-- ----------------------------------------------------------------------- -->
+
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                          CARD PRODUCT SECTION START                     -->
+  <!-- ----------------------------------------------------------------------- -->
+
+
+  <section id="card-product" class="py-5 mx-auto">
+    <div class="container justify-content-center">
+      <div class="row">
+        <div class="col-xl-12 mb-2">
+
+          <div class="row">
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+                  src="/assets/img/img-product-1.jpg" alt=""></a>
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+                  <h3 class="py-2">Black<br>canvas<br>bag </h3>
+                  <p class="text-muted">$39.90</p>
+                </a>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+              </div>
+            </div>
+          </div>
+  </section>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                        CARD PRODUCT SECTION END                         -->
+  <!-- ----------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                            OFF SECTION START                            -->
+  <!-- ----------------------------------------------------------------------- -->
+  <section class="bg-danger">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-xl-6 py-5">
+          <p class="subtitle mb-3 text-danger">Deal of the week</p>
+          <h3 class="fs-1 text-white">Oversized denim jacket</h3>
+          <p class="text-white">
+            <del class="fs-2">$129.00</del><span class="fs-5"> $79.00</span>
+          </p>
+          <p class="mb-4">
+            <span class="fs-4 badge bg-dark p-3">$50 off</span>
+          </p>
+          <div class="bg-dark px-5 py-4 shadow mb-4 text-white remain-off" id="countdown">
+            <div class="row justify-content-between">
+              <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                <h6 id="days" class="h4 mb-2 days">14</h6>
+                <span id="day-n" class="text-white">days</span>
+              </div>
+              <div class="col-6 col-sm-3 text-center mb-4 mb-sm-0">
+                <h6 id="hours" class="h4 mb-2 hours">23</h6>
+                <span id="hour-n" class="text-white">hours</span>
+              </div>
+              <div class="col-6 col-sm-3 text-center">
+                <h6 id="minutes" class="h4 mb-2 minutes">11</h6>
+                <span id="minute-n" class="text-white">minutes</span>
+              </div>
+              <div class="col-6 col-sm-3 text-center">
+                <h6 id="seconds" class="h4 mb-2 seconds">17</h6>
+                <span id="second-n" class="text-white">seconds</span>
+              </div>
+            </div>
+          </div>
+          <p>
+            <a class="btn btn-outline-dark w-100 p-3" href="#">Shop now</a>
+          </p>
+        </div>
+        <div class="col-lg-6" style="
+              background: right bottom url(/assets/img/off-section-bg.jpg)
+                no-repeat;
+              background-size: contain;
+            "></div>
+      </div>
+    </div>
+  </section>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                             OFF SECTION END                             -->
+  <!-- ----------------------------------------------------------------------- -->
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                          FOOTER SECTION START                           -->
+  <!-- ----------------------------------------------------------------------- -->
+  <div class="container-fluid position-relative footer-bg ">
+    <footer class="pt-5 container text-dark">
+      <span class="footer-shape"></span>
+      <div class="row position-relative " style="z-index: 3;">
+        <div class="col-6 col-md-2 mb-3 ">
+          <h5>Section1</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-dark">Home</a>
             </li>
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#instagram"></use>
-                </svg>
-              </a>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-dark">Features</a>
             </li>
-            <li class="ms-3">
-              <a class="link-body-emphasis" href="#"
-                ><i
-                  class="bi bi-facebook"
-                  style="width: 24px; height: 24px"
-                ></i>
-              </a>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-dark">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-dark">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-body-dark">About</a>
             </li>
           </ul>
         </div>
-      </footer>
-    </div>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                           FOOTER SECTION END                            -->
-    <!-- ----------------------------------------------------------------------- -->
-    <script
-      async
-      src="https://ga.jspm.io/npm:es-module-shims@1.5.5/dist/es-module-shims.js"
-    ></script>
-    <script type="importmap">
+
+        <div class="col-6 col-md-2 mb-3  text-dark">
+          <h5>Section2</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-2 mb-3 text-dark">
+          <h5>Section3</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">Home</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">Features</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">Pricing</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">FAQs</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-dark">About</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 offset-md-1 mb-3 text-dark">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+        <p>© 2023 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3">
+            <a class="link-body-emphasis" href="#"><i class="bi bi-twitter" style="width: 24px; height: 24px"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="link-body-emphasis" href="#"><i class="bi bi-instagram" style="width: 24px; height: 24px"></i>
+            </a>
+          </li>
+          <li class="ms-3">
+            <a class="link-body-emphasis" href="#"><i class="bi bi-facebook" style="width: 24px; height: 24px"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                           FOOTER SECTION END                            -->
+  <!-- ----------------------------------------------------------------------- -->
+
+  <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.5/dist/es-module-shims.js"></script>
+  <script type="importmap">
       {
         "imports": {
           "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.js",
@@ -437,6 +855,7 @@
         }
       }
     </script>
-    <script type="module" src="js/main.js"></script>
-  </body>
+  <script type="module" src="js/main.js"></script>
+</body>
+
 </html>

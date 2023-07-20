@@ -33,7 +33,7 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 $body-color: #333;
 $body-bg: #fff;
 $border-radius: 0.4rem;
-$success: #7952b3;
+$card-product-text-dark: white !important;
 
 // Required
 @import "../node_modules/bootstrap/scss/functions";
@@ -46,55 +46,506 @@ $success: #7952b3;
 @import "../node_modules/bootstrap/scss/reboot";
 
 @import "../node_modules/bootstrap/scss/type";
-// @import "bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";
 @import "../node_modules/bootstrap/scss/grid";
-// @import "bootstrap/scss/tables";
-// @import "bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
 @import "../node_modules/bootstrap/scss/buttons";
 @import "../node_modules/bootstrap/scss/transitions";
 @import "../node_modules/bootstrap/scss/dropdown";
-// @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
-// @import "bootstrap/scss/card";
-// @import "bootstrap/scss/breadcrumb";
-// @import "bootstrap/scss/accordion";
-// @import "bootstrap/scss/pagination";
-// @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/alert";
-// @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/list-group";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar"; // Requires nav
+@import "../node_modules/bootstrap/scss/card";
+@import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/accordion";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+@import "../node_modules/bootstrap/scss/alert";
+@import "../node_modules/bootstrap/scss/progress";
+@import "../node_modules/bootstrap/scss/list-group";
 @import "../node_modules/bootstrap/scss/close";
-// @import "bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/toasts";
 @import "../node_modules/bootstrap/scss/modal"; // Requires transitions
-// @import "bootstrap/scss/tooltip";
+@import "../node_modules/bootstrap/scss/tooltip";
 @import "../node_modules/bootstrap/scss/popover";
-// @import "bootstrap/scss/carousel";
-// @import "bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/carousel";
+@import "../node_modules/bootstrap/scss/spinners";
 @import "../node_modules/bootstrap/scss/offcanvas"; // Requires transitions
-// @import "bootstrap/scss/placeholders";
+@import "../node_modules/bootstrap/scss/placeholders";
 
 // Helpers
-// @import "bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/helpers";
 
 // Utilities
 @import "../node_modules/bootstrap/scss/utilities/api";
 
-//
-// Custom styles
-//
+// global
+$font-primary: "Poppins", Arial, sans-serif !important;
+$navbar-hover: rgb(255, 107, 107) !important;
+$footer-bgshape: $navbar-hover !important;
+$booststrap-icon-size: 1rem;
+$booststrap-icon-size-md: 0.8rem;
+$booststrap-icon-size-xs: 0.6rem;
+$navbar-link-text-color-light: lighten($black, 30%);
 
-@import "icon-list";
+// darkmode
+$navbar-bg-color-dark: #292929 !important;
+$footer-bg-color-dark: #292929 !important;
+$navbar-logo-color-dark: #ebebeb !important;
+$navbar-text-color-dark: #aeaeae !important;
+$navbar-link-text-color-dark: lighten($white, 30%) !important;
+$booststrap-icon-color-dark: lighten($white, 30%) !important;
 
-body {
-  padding: 1.5rem;
+.navbar-main-icon {
+  font-size: 2rem !important;
+  padding: 5px 10px;
+  @include media-breakpoint-down(md) {
+    font-size: 1.5rem !important;
+  }
 }
 
+/* Setting the stroke to green using rgb values (0, 128, 0) */
+
+//
+// Custom styles
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #1e2226;
+  border: solid 1px #343a40;
+  text-align: center;
+  background: #a5a5a588;
+  font-size: 0.8rem;
+  z-index: 999;
+  cursor: pointer;
+  transition: border-color, color, background-color, bottom 0.5s ease-out;
+}
+#scrollTop:hover,
+#scrollTop:focus {
+  background-color: #2f1d035d;
+  bottom: 2.2rem;
+}
+//
+.mt-8 {
+  margin-top: 8rem;
+}
+.mt-9 {
+  margin-top: 9rem;
+}
+.py-7 {
+  padding-top: 128px;
+  padding-bottom: 128px;
+}
+.mx-9 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+.px-md-10 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+// @import "icon-list";
+body {
+  font-family: $font-primary;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: normal;
+}
+/* -------------------------------------------------------------------------- */
+/*                                   NAVBAR                                   */
+/* -------------------------------------------------------------------------- */
+
+nav a {
+  transition: 0.6s all ease;
+  color: $black;
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                  DARK MODE                                 */
+/* -------------------------------------------------------------------------- */
+@include color-mode(dark) {
+  .ftco-section {
+    .nav-link {
+      color: $navbar-link-text-color-dark;
+    }
+    .navbar-brand {
+      color: $navbar-logo-color-dark;
+    }
+    #ftco-navbar {
+      background-color: $navbar-bg-color-dark;
+    }
+    .navbar-main-icon {
+      color: $booststrap-icon-color-dark;
+    }
+  }
+  #gallery {
+    .gallary-dark-mode {
+      padding: 1rem;
+      background-color: #ebebeb;
+    }
+    .dark-mode {
+      padding: 0;
+    }
+    #card-product {
+      h3 {
+        color: white !important;
+      }
+    }
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                                DARK MODE END                               */
+/* -------------------------------------------------------------------------- */
+.ftco-section {
+  padding: 0;
+}
+
+.ftco-no-pt {
+  padding-top: 0;
+}
+.ftco-no-pb {
+  padding-bottom: 0;
+}
+//HEADING SECTION
+.heading-section {
+  font-size: 28px;
+}
+
+//COVER BG
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.w100-bg-black {
+  background: #202020;
+  .phone {
+    a {
+      color: $white;
+      font-size: 12px;
+    }
+  }
+}
+.social-media {
+  display: inline-block;
+  p {
+    a {
+      width: 40px;
+      height: 40px;
+      background: lighten($black, 30%);
+      margin-right: 1px;
+      i {
+        color: $light;
+      }
+      &:hover {
+        background: $navbar-hover;
+        border-color: $navbar-hover;
+        i {
+          color: $light;
+        }
+      }
+    }
+  }
+}
+
+.ftco-navbar-light {
+  background: #8a121214 !important;
+  z-index: 3;
+  padding: 0;
+  -webkit-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 5px 20px -17px rgba(0, 0, 0, 0.34);
+  @include media-breakpoint-down(md) {
+    background: $white;
+    position: relative;
+    top: 0;
+    padding: 10px 15px;
+  }
+  .navbar-brand {
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1;
+    span {
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+    }
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 0.9rem;
+    }
+  }
+
+  .navbar-nav {
+    @include media-breakpoint-down(md) {
+      padding-bottom: 0.4rem;
+    }
+    > .nav-item {
+      .badge {
+        font-size: 9px;
+        top: 1%;
+        left: 65%;
+      }
+      > .nav-link {
+        font-size: 11px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: 500;
+        color: $navbar-link-text-color-light;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          bottom: 0;
+          left: 0;
+          background-color: $navbar-hover;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.2s ease-in-out 0s;
+          transition: all 0.2s ease-in-out 0s;
+          z-index: -1;
+        }
+        &:hover {
+          color: $white;
+          &:before {
+            visibility: visible;
+            background-color: $navbar-hover;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
+        }
+        opacity: 1 !important;
+        @include media-breakpoint-down(md) {
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 0.9rem;
+          padding-bottom: 0.9rem;
+          &:hover {
+            color: $white;
+          }
+        }
+        @include media-breakpoint-down(sm) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+      }
+      .dropdown-navbar-shop {
+        top: 82%;
+        right: 12%;
+        background-color: rgba(209, 209, 209, 0.591);
+      }
+      .dropdown-menu {
+        border: none;
+
+        box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+        border-radius: 4px;
+        .dropdown-item {
+          font-size: 12px;
+          color: $black;
+          &:hover,
+          &:focus {
+            background: $navbar-hover;
+            color: $white;
+          }
+        }
+        @include media-breakpoint-down(md) {
+          display: block !important;
+          background: $white;
+          box-shadow: none;
+        }
+      }
+
+      &.cta {
+        > a {
+          color: $white;
+          background: $primary;
+          border-radius: 0px;
+          @include media-breakpoint-down(sm) {
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+          @include media-breakpoint-down(md) {
+            color: $white;
+            background: $primary;
+            border-radius: 4px;
+          }
+        }
+      }
+      &.active {
+        > a {
+          color: $white !important;
+          &:before {
+            visibility: visible;
+            background-color: $navbar-hover;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
+          @include media-breakpoint-down(md) {
+            color: $black;
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    color: rgb(255, 107, 107) !important;
+    cursor: pointer;
+    padding: 4px;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
+
+.searchform {
+  height: 46px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  @include border-radius(5px);
+  .form-control {
+    width: calc(100% - 46px);
+    border: none;
+    background: #fff !important;
+    color: rgba(0, 0, 0, 0.7) !important;
+    font-size: 14px;
+  }
+  .search {
+    width: 46px;
+    height: 46px;
+    span {
+      font-size: 18px;
+    }
+  }
+}
+
+.form-control {
+  height: 46px !important;
+  background: $white !important;
+  color: $black !important;
+  font-size: 14px;
+  border-radius: 0px;
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  &:focus,
+  &:active {
+    border-color: $black;
+  }
+}
+.navbar-main-icon {
+  width: 46px;
+  height: 46px;
+}
+/* -------------------------------------------------------------------------- */
+/*                                 NAVBAR END                                 */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                         MAN AND WOMAN SECTION START                        */
+/* -------------------------------------------------------------------------- */
+
+.light-overlay,
+.overlay-hover-light {
+  position: relative;
+}
+
+.light-overlay::after,
+.overlay-hover-light::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  background: #fff;
+}
+
+.light-overlay.card::after,
+.overlay-hover-light.card::after {
+  border-radius: 5px;
+}
+
+.overlay-hover-light::after {
+  transition: opacity 0.15s linear;
+  opacity: 0;
+}
+
+.light-overlay::after,
+.overlay-hover-light:hover::after {
+  opacity: 0.4;
+}
+
+.light-overlay-0::after,
+.overlay-hover-light-0:hover::after {
+  display: none;
+}
+
+.dark-overlay {
+  position: relative;
+}
+
+.dark-overlay::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: " ";
+  opacity: 0.4;
+  background: #000;
+}
+
+.dark-overlay.card::after {
+  border-radius: 5px;
+}
+
+.dark-overlay-0::after {
+  display: none;
+}
+/* -------------------------------------------------------------------------- */
+/*                          MAN AND WOMAN SECTION END                         */
+/* -------------------------------------------------------------------------- */
 .bi {
   width: 1em;
   height: 1em;
   fill: currentcolor;
+  font-size: $booststrap-icon-size;
+  @include media-breakpoint-down(md) {
+    font-size: $booststrap-icon-size-md;
+  }
+  @include media-breakpoint-down(xs) {
+    font-size: $booststrap-icon-size-xs;
+  }
 }
 
 .color-modes {
@@ -118,3 +569,111 @@ body {
     }
   }
 }
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                      FOOTER SECTION START                                      */
+/* ---------------------------------------------------------------------------------------------- */
+.footer-bg {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: whitesmoke;
+}
+.footer-shape {
+  &::before {
+    background-color: $footer-bgshape;
+    content: "";
+    height: 81vh;
+    width: 88vh;
+    overflow-y: hidden;
+    position: absolute;
+    top: -192px;
+    left: -185px;
+    border-radius: 100%;
+    opacity: 0.3;
+    z-index: 1;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+  &::after {
+    background-color: $footer-bgshape;
+    content: "";
+    width: 514px;
+    height: 380px;
+    position: absolute;
+    top: -213px;
+    right: -100px;
+    border-radius: 100%;
+    -webkit-transform: skew(3deg, 30deg);
+    -ms-transform: skew(3deg, 30deg);
+    transform: skew(37deg, -27deg);
+    opacity: 0.5;
+    z-index: 2;
+    @include media-breakpoint-down(lg) {
+      right: -140px;
+      top: -83px;
+      width: 414px;
+      height: 300px;
+    }
+  }
+}
+footer {
+  li {
+    a {
+      width: fit-content;
+      color: black !important;
+      font-size: 11px;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-weight: 500;
+      color: lighten($black, 30%);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: $navbar-hover;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s;
+        z-index: -1;
+      }
+      &:hover {
+        color: $black;
+
+        &:before {
+          visibility: visible;
+          background-color: $navbar-hover;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+        }
+      }
+      opacity: 1 !important;
+      @include media-breakpoint-down(md) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 0.9rem;
+        padding-bottom: 0.9rem;
+        &:hover {
+          color: $white;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                       FOOTER SECTION END                                       */
+/* ---------------------------------------------------------------------------------------------- */
