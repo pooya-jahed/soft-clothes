@@ -355,7 +355,10 @@ nav a {
       }
       .dropdown-navbar-shop {
         top: 82%;
-        right: 12%;
+        right: 142px;
+        background-color: rgba(209, 209, 209, 0.591);
+      }
+      .dropdown-navbar-shop-md {
         background-color: rgba(209, 209, 209, 0.591);
       }
       .dropdown-menu {
@@ -373,8 +376,6 @@ nav a {
           }
         }
         @include media-breakpoint-down(md) {
-          display: block !important;
-          background: $white;
           box-shadow: none;
         }
       }
@@ -397,7 +398,7 @@ nav a {
       }
       &.active {
         > a {
-          color: $white !important;
+          color: $black !important;
           &:before {
             visibility: visible;
             background-color: $navbar-hover;
