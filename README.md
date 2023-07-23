@@ -20,7 +20,7 @@ Run
   npm start
 ```
 
-You need to instal dependecies first
+You need to install dependecies first
 
 Install dependencies
 
