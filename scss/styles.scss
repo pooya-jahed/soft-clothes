@@ -1,29 +1,4 @@
-// Override Bootstrap's Sass default variables
-//
-// Nearly all variables in Bootstrap are written with the `!default` flag.
-// This allows you to override the default values of those variables before
-// you import Bootstrap's source Sass files.
-//
-// Overriding the default variable values is the best way to customize your
-// CSS without writing _new_ styles. For example, you can either change
-// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
-// `body { color: red; }`.
 
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
-// Import all of Bootstrap's CSS
-
-// @import "bootstrap/scss/bootstrap";
-
-// Option 2
-//
-// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
-
-// Toggle global options
 $enable-gradients: true;
 $enable-shadows: true;
 
@@ -33,7 +8,6 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
 $body-color: #333;
 $body-bg: #fff;
 $border-radius: 0.4rem;
-$card-product-text-dark: white !important;
 
 // Required
 @import "../node_modules/bootstrap/scss/functions";
@@ -44,7 +18,6 @@ $card-product-text-dark: white !important;
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/root";
 @import "../node_modules/bootstrap/scss/reboot";
-
 @import "../node_modules/bootstrap/scss/type";
 @import "../node_modules/bootstrap/scss/images";
 @import "../node_modules/bootstrap/scss/containers";
@@ -89,14 +62,18 @@ $booststrap-icon-size: 1rem;
 $booststrap-icon-size-md: 0.8rem;
 $booststrap-icon-size-xs: 0.6rem;
 $navbar-link-text-color-light: lighten($black, 30%);
+$dropdown-navbar-shop-light:white;
 
 // darkmode
+$navbar-cart-product-link-dark: #ebebeb !important;
+$card-product-text-dark: white !important;
 $navbar-bg-color-dark: #292929 !important;
 $footer-bg-color-dark: #292929 !important;
 $navbar-logo-color-dark: #ebebeb !important;
 $navbar-text-color-dark: #aeaeae !important;
 $navbar-link-text-color-dark: lighten($white, 30%) !important;
 $booststrap-icon-color-dark: lighten($white, 30%) !important;
+$dropdown-navbar-shop-dark:#292929 !important;
 
 .navbar-main-icon {
   font-size: 2rem !important;
@@ -106,9 +83,6 @@ $booststrap-icon-color-dark: lighten($white, 30%) !important;
   }
 }
 
-/* Setting the stroke to green using rgb values (0, 128, 0) */
-
-//
 // Custom styles
 #scrollTop {
   display: none;
@@ -161,7 +135,6 @@ body {
 /* -------------------------------------------------------------------------- */
 /*                                   NAVBAR                                   */
 /* -------------------------------------------------------------------------- */
-
 nav a {
   transition: 0.6s all ease;
   color: $black;
@@ -175,8 +148,34 @@ nav a {
 /* -------------------------------------------------------------------------- */
 /*                                  DARK MODE                                 */
 /* -------------------------------------------------------------------------- */
+
 @include color-mode(dark) {
+  nav a{
+    color: white;
+  }
+  nav .text-muted{
+color: #d1d1d1!important;
+  }
+  nav .text-dark{
+    color:rgb(220, 220, 220)!important;
+
+  }
+  .text-dark-mode{
+    color:rgb(215, 215, 215)!important;
+
+  }
+  .active-nav-link-dark .active{
+    color: #ffffff!important;
+
+  }
+
+  btn{
+    color:rgb(220, 220, 220)!important;
+
+  }
+  
   .ftco-section {
+    
     .nav-link {
       color: $navbar-link-text-color-dark;
     }
@@ -189,7 +188,16 @@ nav a {
     .navbar-main-icon {
       color: $booststrap-icon-color-dark;
     }
+    .dropdown-menu {
+      background-color:$dropdown-navbar-shop-dark;
+      color: white;
+    }
+    .navbar-cart-product-link-dark{
+      color:$navbar-cart-product-link-dark;
+    }
+    
   }
+
   #gallery {
     .gallary-dark-mode {
       padding: 1rem;
@@ -208,6 +216,7 @@ nav a {
 /* -------------------------------------------------------------------------- */
 /*                                DARK MODE END                               */
 /* -------------------------------------------------------------------------- */
+
 .ftco-section {
   padding: 0;
 }
@@ -272,7 +281,7 @@ nav a {
     background: $white;
     position: relative;
     top: 0;
-    padding: 10px 15px;
+    padding: 10px 15px 0 5px;
   }
   .navbar-brand {
     color: black;
@@ -353,10 +362,12 @@ nav a {
           border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
       }
-      .dropdown-navbar-shop {
-        top: 82%;
-        right: 142px;
-        background-color: rgba(209, 209, 209, 0.591);
+     
+      
+      .dropdown-navbar-shop{
+        top: 87%;
+        right: 165px;
+        background-color: white;
       }
       .dropdown-navbar-shop-md {
         background-color: rgba(209, 209, 209, 0.591);
@@ -398,7 +409,9 @@ nav a {
       }
       &.active {
         > a {
-          color: $black !important;
+          color: $black ;
+          background-color: rgb(255, 107, 107) !important;;
+
           &:before {
             visibility: visible;
             background-color: $navbar-hover;
