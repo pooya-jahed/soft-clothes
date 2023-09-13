@@ -1,4 +1,3 @@
-
 $enable-gradients: true;
 $enable-shadows: true;
 
@@ -53,6 +52,7 @@ $border-radius: 0.4rem;
 
 // Utilities
 @import "../node_modules/bootstrap/scss/utilities/api";
+@import "../scss/catalog";
 
 // global
 $font-primary: "Poppins", Arial, sans-serif !important;
@@ -62,18 +62,20 @@ $booststrap-icon-size: 1rem;
 $booststrap-icon-size-md: 0.8rem;
 $booststrap-icon-size-xs: 0.6rem;
 $navbar-link-text-color-light: lighten($black, 30%);
-$dropdown-navbar-shop-light:white;
+$dropdown-navbar-shop-light: white;
+$footer-bg-background: whitesmoke;
 
 // darkmode
 $navbar-cart-product-link-dark: #ebebeb !important;
 $card-product-text-dark: white !important;
 $navbar-bg-color-dark: #292929 !important;
+$footer-bg-background-dark: #292929;
 $footer-bg-color-dark: #292929 !important;
 $navbar-logo-color-dark: #ebebeb !important;
 $navbar-text-color-dark: #aeaeae !important;
 $navbar-link-text-color-dark: lighten($white, 30%) !important;
 $booststrap-icon-color-dark: lighten($white, 30%) !important;
-$dropdown-navbar-shop-dark:#292929 !important;
+$dropdown-navbar-shop-dark: #292929 !important;
 
 .navbar-main-icon {
   font-size: 2rem !important;
@@ -150,32 +152,27 @@ nav a {
 /* -------------------------------------------------------------------------- */
 
 @include color-mode(dark) {
-  nav a{
+  nav a {
     color: white;
   }
-  nav .text-muted{
-color: #d1d1d1!important;
+  nav .text-muted {
+    color: #d1d1d1 !important;
   }
-  nav .text-dark{
-    color:rgb(220, 220, 220)!important;
-
+  nav .text-dark {
+    color: rgb(220, 220, 220) !important;
   }
-  .text-dark-mode{
-    color:rgb(215, 215, 215)!important;
-
+  .text-dark-mode {
+    color: rgb(215, 215, 215) !important;
   }
-  .active-nav-link-dark .active{
-    color: #ffffff!important;
-
+  .active-nav-link-dark .active {
+    color: #ffffff !important;
   }
 
-  btn{
-    color:rgb(220, 220, 220)!important;
-
+  btn {
+    color: rgb(220, 220, 220) !important;
   }
-  
+
   .ftco-section {
-    
     .nav-link {
       color: $navbar-link-text-color-dark;
     }
@@ -189,13 +186,12 @@ color: #d1d1d1!important;
       color: $booststrap-icon-color-dark;
     }
     .dropdown-menu {
-      background-color:$dropdown-navbar-shop-dark;
+      background-color: $dropdown-navbar-shop-dark;
       color: white;
     }
-    .navbar-cart-product-link-dark{
-      color:$navbar-cart-product-link-dark;
+    .navbar-cart-product-link-dark {
+      color: $navbar-cart-product-link-dark;
     }
-    
   }
 
   #gallery {
@@ -212,7 +208,22 @@ color: #d1d1d1!important;
       }
     }
   }
+  .footer-bg {
+    background-color: $footer-bg-background-dark;
+  }
+  h5 {
+    color: white;
+  }
+  a,
+  p {
+    color: whitesmoke !important;
+  }
+  .footer-shape::after,
+  .footer-shape::before {
+    background-color: rgb(148, 148, 148) !important;
+  }
 }
+
 /* -------------------------------------------------------------------------- */
 /*                                DARK MODE END                               */
 /* -------------------------------------------------------------------------- */
@@ -362,9 +373,8 @@ color: #d1d1d1!important;
           border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         }
       }
-     
-      
-      .dropdown-navbar-shop{
+
+      .dropdown-navbar-shop {
         top: 87%;
         right: 165px;
         background-color: white;
@@ -409,8 +419,8 @@ color: #d1d1d1!important;
       }
       &.active {
         > a {
-          color: $black ;
-          background-color: rgb(255, 107, 107) !important;;
+          color: $black;
+          background-color: rgb(255, 107, 107) !important;
 
           &:before {
             visibility: visible;
@@ -590,7 +600,7 @@ color: #d1d1d1!important;
 .footer-bg {
   overflow-y: hidden;
   overflow-x: hidden;
-  background-color: whitesmoke;
+  background-color: $footer-bg-background;
 }
 .footer-shape {
   &::before {

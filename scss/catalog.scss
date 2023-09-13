@@ -1,0 +1,84 @@
+#carouselExampleDark img {
+  object-fit: cover;
+  object-position: top;
+  height: 420px;
+}
+.carousel-indicators-catalog [data-bs-target] {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+// catalog card style
+.product-cart-header {
+  height: 400px;
+}
+.action-section {
+  visibility: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 67%;
+}
+.action-section i {
+  width: 3.2rem;
+  height: 3.2rem;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-cart-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-image: url("/assets/img/catalog/Twill-Dress\ -Pants-1.webp");
+}
+.product-cart-image:hover {
+  background-image: url("/assets/img/catalog/Twill-Dress\ -Pants-2.jpg");
+  animation: fadeinfadeout 300ms ease-in;
+}
+.product-cart-image--add--shop:hover,
+.product-cart-image--add--favorite:hover {
+  background-color: rgb(255, 107, 107) !important;
+  z-index: 25;
+}
+
+.product-cart-image:hover {
+  .action-section {
+    visibility: visible;
+    animation: slidein 480ms ease-in;
+  }
+}
+@keyframes slidein {
+  0% {
+    opacity: 0.2;
+    margin-top: 20px;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.8;
+    margin-top: 0;
+  }
+}
+@keyframes fadeinfadeout {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* -------------------------------------------------------------------------- */
+/*                             ACCAORDION SECTION                             */
+/* -------------------------------------------------------------------------- */
+@include color-mode(dark) {
+  .accordion button {
+    color: white !important;
+  }
+}
