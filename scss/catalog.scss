@@ -3,6 +3,18 @@
   object-position: top;
   height: 420px;
 }
+.price-section .form-control {
+  background: #2b3035 !important;
+  color: #e4dfdf !important;
+  font-size: 14px;
+  border-radius: 0px;
+  box-shadow: none !important;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  &:focus {
+    border: 1px solid white;
+  }
+}
+
 .carousel-indicators-catalog [data-bs-target] {
   width: 20px;
   height: 20px;
@@ -35,10 +47,10 @@
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
-  background-image: url("/assets/img/catalog/Twill-Dress\ -Pants-1.webp");
+  background-image: url("../assets/img/product-img/product-(1)/Smocked-bodice-Dress-1.jpg");
 }
 .product-cart-image:hover {
-  background-image: url("/assets/img/catalog/Twill-Dress\ -Pants-2.jpg");
+  background-image: url("../assets/img/product-img/product-(1)/Smocked-bodice-Dress-2.jpg");
   animation: fadeinfadeout 300ms ease-in;
 }
 .product-cart-image--add--shop:hover,
@@ -81,4 +93,16 @@
   .accordion button {
     color: white !important;
   }
+}
+
+.simplebar-content-wrapper .form-check-size {
+  margin-right: 0 !important;
+  padding: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.product-cart-badge {
+  width: 130px;
+  top: 22px;
+  left: 105px;
 }
