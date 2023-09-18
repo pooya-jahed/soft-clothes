@@ -1,18 +1,119 @@
 [
   {
     "id": 1,
-    "title": "English Lecture",
-    "brand": "",
-    "colors": [""],
-    "type": "",
-    "price": "",
-    "sizes": [],
-    "gender": [],
-    "description": "language lessons with the most popular teachers",
-    "imageUrl": "/images/img1.jpg",
+    "title": "Smocked bodice Dress",
+    "imageUrl": {
+      "catalog": ["Smocked"],
+      "detail": ["Smocked-3"]
+    },
+
+    "brand": "javad-mod",
+    "model": "kokab",
+    "price": "$64.99",
+    "type": ["Dress"],
+    "gender": ["womens"],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": ["white", "red"],
+    "description": "Ankle-length dress in woven, crêped fabric with smocking at top. Round neckline, keyhole opening at back with a concealed button, and long balloon sleeves with narrow elastic at cuffs.",
     "rate": "4.5",
-    "tags": ["langauges"],
-    "status": "Completed",
-    "sortby": ""
+    "tags": ["patterned", "White", "paisley-patterned", "Keyhole", "Smocking"],
+    "status": "Available",
+    "season": ["summer"],
+    "data": "10/10/2022"
+  },
+  {
+    "id": 2,
+    "title": "Loose-Jeans",
+    "imageUrl": {
+      "catalog": ["black", "blue", "brown"],
+      "detail": ["black-3", "blue-5", "brown-4"]
+    },
+    "brand": "DENIM",
+    "model": ["Taylor", "John", "Frank"],
+    "price": "$54.99",
+    "type": ["Dress"],
+    "gender": ["Mens"],
+    "sizes": [
+      28.3, 28.32, 29.32, 30.3, 30.32, 31.3, 31.32, 32.3, 32.32, 32.34, 33.32,
+      34.3, 34.32, 36.32, 38.32, 40.32, 42.32, 44.32
+    ],
+    "colors": ["blue", "brown", "black"],
+    "description": "5-pocket jeans in non-stretch cotton denim. Rounded legs and loose fit from seat to hem for extra room around legs. Regular waist, zip fly, and dropped gusset. Perfect for the full denim look.",
+    "rate": "4.0",
+    "tags": ["jeans", "black", "blue", "brown", "Jeans", "pants"],
+    "status": "Available",
+    "season": ["All"],
+    "data": "10/8/2022"
+  },
+  {
+    "id": 3,
+    "title": "Wide High Jeans",
+    "imageUrl": {
+      "catalog": ["black", "blue"],
+      "detail": ["black-2", "blue-2"]
+    },
+    "brand": "DENIM",
+    "model": ["Kokab", "Angella"],
+    "price": "$32.99",
+    "type": ["jeans"],
+    "gender": ["womens"],
+    "sizes": [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
+    "colors": ["blue", "black"],
+    "description": "5-pocket jeans in washed cotton denim. High waist, zip fly with button, and straight, wide legs.",
+    "rate": "5",
+    "tags": [
+      "jeans",
+      "black",
+      "blue",
+      "brown",
+      "Jeans",
+      "pants",
+      "pocket jeans"
+    ],
+    "status": "coming soon",
+    "season": ["All"],
+    "data": "2023"
+  },
+  {
+    "id": 4,
+    "title": "rib knit top ",
+    "imageUrl": {
+      "catalog": ["black", "blue"],
+      "detail": ["black-2", "blue-2"]
+    },
+    "brand": "DENIM",
+    "model": ["Kokab"],
+    "price": "$32.99",
+    "type": ["top"],
+    "gender": ["womens"],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": ["white", "red"],
+    "description": "Fitted, rib-knit top with a mock turtleneck and overlooked edges. Long sleeves with flared cuffs.",
+    "rate": "3.9",
+    "tags": ["top", "Long sleeve", "red", "Cream"],
+    "status": "sold",
+    "season": ["Winter", "Spring", "Autumn"],
+    "data": "2023"
+  },
+  {
+    "id": 5,
+    "title": "Fit Denim Jacket",
+    "imageUrl": {
+      "catalog": ["gray"],
+      "detail": ["gray-2"]
+    },
+    "brand": "DENIM",
+    "model": ["Deni"],
+    "price": "$76.99",
+    "type": ["jacket"],
+    "gender": ["Mens"],
+    "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
+    "colors": ["gray"],
+    "description": "Relaxed-fit jacket in non-stretch denim. Collar, metal buttons at front, chest pockets with flap and button, and welt side pockets. Long sleeves with button at cuffs. Adjustable tab at sides with buttons.",
+    "rate": "2.8",
+    "tags": ["fit jacket", "Trucker Jacket", "gray", "non-stretch "],
+    "status": "sold",
+    "season": ["All"],
+    "data": "2023"
   }
 ]
