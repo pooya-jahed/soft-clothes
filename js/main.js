@@ -1,16 +1,18 @@
-//
-// Place any custom JS here
-//
-
 import * as bootstrap from "bootstrap";
-
+import filterSearch from "./navbar-filter.js";
+/* -------------------------------------------------------------------------- */
+/*                          BOOTSTRAP TOAST FUNCTION                          */
+/* -------------------------------------------------------------------------- */
 document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popover) => {
   new bootstrap.Popover(popover);
 });
-let mybutton = document.querySelector("#scrollTop");
+/* -------------------------------------------------------------------------- */
+/*                        BOOTSTRAP TOAST FUNCTION END                        */
+/* -------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 /*                               SCROLL FUNCTION                              */
 /* -------------------------------------------------------------------------- */
+let myButton = document.querySelector("#scrollTop");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
@@ -18,9 +20,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    myButton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    myButton.style.display = "none";
   }
 }
 /* -------------------------------------------------------------------------- */
@@ -52,14 +54,11 @@ let curSeconds = curDate.getSeconds();
 // -----------------------------------
 
 let SystemCurTime = {};
-// Iffe function get system data time
+// IFFe function get system data time
 (function getSystemCurTime() {
   let evCurTime = eval(
     curYear + curMonth + curDays + curHours + curMinutes + curSeconds
   );
-  // curMonth > 9 ? curMonth : (curMonth = "0" + curMonth);
-  // curDays > 9 ? curDays : (curDays = "0" + curDays);
-  // curSeconds > 9 ? curSeconds : (curSeconds = "0" + curSeconds);
   SystemCurTime = {
     curYear,
     curMonth,
@@ -76,7 +75,7 @@ let SystemCurTime = {};
 // /* -------------------------------------------------------------------------- */
 function getTime() {
   let now = new Date();
-  let y2k = new Date("july 30 2023 2:00:00");
+  let y2k = new Date("SEPTEMBER 30 2023 2:00:00");
   let days = (y2k - now) / 1000 / 60 / 60 / 24;
   let daysRound = Math.floor(days);
   let hours = (y2k - now) / 1000 / 60 / 60 - 24 * daysRound;

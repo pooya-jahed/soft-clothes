@@ -19,7 +19,7 @@
     "rate": "4.5",
     "tags": ["patterned", "White", "paisley-patterned", "Keyhole", "Smocking"],
     "status": "Available",
-    "season": ["summer"],
+    "season": ["summer", "Spring"],
     "data": "10/10/2022"
   },
   {
@@ -223,7 +223,7 @@
     "rate": "5",
     "tags": ["black", "Mia", "black-Jacket", "Quilted", "women", "Jacket"],
     "status": "coming soon",
-    "season": ["summer"],
+    "season": ["summer", "Spring"],
     "data": "15/9/2023"
   },
   {
@@ -274,7 +274,7 @@
     "rate": "5",
     "tags": ["Tommy", "T-shirt", "human", "men"],
     "status": "Available",
-    "season": ["summer"],
+    "season": ["summer", "Spring"],
     "data": "30/7/2023"
   },
   {
@@ -340,7 +340,7 @@
     "rate": "4",
     "tags": ["T-shirt", "black", "Liam", "printed", "men"],
     "status": "sold",
-    "season": ["summer", "Winter"],
+    "season": ["summer", "Spring", "Winter"],
     "data": "18/09/2023"
   },
   {
@@ -384,7 +384,7 @@
     "rate": "1.9",
     "tags": ["Puffer ", "women", "men"],
     "status": "Available",
-    "season": ["summer", "Autumn"],
+    "season": ["summer", "Spring", "Autumn"],
     "data": "18/09/2020"
   },
   {

@@ -103,7 +103,7 @@
 
           <form action="#" class="searchform order-sm-start order-lg-last d-none d-lg-block">
             <div class="form-group d-flex">
-              <input type="text" class="form-control pl-3" placeholder="Search" />
+              <input type="text" class="form-control pl-3 product-filter" placeholder="Search" />
               <button type="submit" placeholder="" class="form-control search">
                 <span class="bi bi-search"></span>
               </button>
@@ -385,34 +385,7 @@
                         </a>
 
                         <!-- Collapse -->
-                        <div class="collapse show" id="dressesCollapse" data-bs-parent="#productsNav">
-                          <div class="py-4 ps-5">
-                            <div class="form-check mb-3">
-                              <input class="form-check-input" id="dressesOne" type="checkbox">
-                              <label class="form-check-label" for="dressesOne">
-                                A-line Dresses
-                              </label>
-                            </div>
-                            <div class="form-check mb-3">
-                              <input class="form-check-input" id="dressesTwo" type="checkbox" checked="">
-                              <label class="form-check-label" for="dressesTwo">
-                                Shift Dresses
-                              </label>
-                            </div>
-                            <div class="form-check mb-3">
-                              <input class="form-check-input" id="dressesThree" type="checkbox">
-                              <label class="form-check-label" for="dressesThree">
-                                Wrap Dresses
-                              </label>
-                            </div>
-                            <div class="form-check">
-                              <input class="form-check-input" id="dressesFour" type="checkbox">
-                              <label class="form-check-label" for="dressesFour">
-                                Maxi Dresses
-                              </label>
-                            </div>
-                          </div>
-                        </div>
+
 
                       </li>
                       <li class="list-styled-item">
@@ -513,7 +486,7 @@
                   <div class="accordion-body">
 
                     <!-- Collapse -->
-                    <div class="collapse show" id="seasonCollapse" data-simplebar-collapse="#seasonGroup" style="">
+                    <div class="collapse show" id="seasonCollapse" data-simplebar-collapse="#seasonGroup">
                       <div class="form-group form-group-overflow mb-6" id="seasonGroup" data-simplebar="init">
                         <div class="simplebar-wrapper" style="margin: 0px;">
                           <div class="simplebar-height-auto-observer-wrapper">
@@ -525,7 +498,13 @@
                                 aria-label="scrollable content" style="height: auto; overflow: hidden;">
                                 <div class="simplebar-content" style="padding: 0px;">
                                   <div class="form-check mb-3">
-                                    <input class="form-check-input" id="seasonOne" type="checkbox" checked="">
+                                    <input class="form-check-input" id="All" type="checkbox" checked="">
+                                    <label class="form-check-label" for="All">
+                                      All
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-3">
+                                    <input class="form-check-input" id="seasonOne" type="checkbox">
                                     <label class="form-check-label" for="seasonOne">
                                       Summer
                                     </label>
@@ -536,10 +515,16 @@
                                       Winter
                                     </label>
                                   </div>
-                                  <div class="form-check">
+                                  <div class="form-check mb-3">
                                     <input class="form-check-input" id="seasonThree" type="checkbox">
                                     <label class="form-check-label" for="seasonThree">
-                                      Spring &amp; Autumn
+                                      Spring
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" id="seasonFour" type="checkbox">
+                                    <label class="form-check-label" for="seasonFour">
+                                      Autumn
                                     </label>
                                   </div>
                                 </div>
@@ -572,7 +557,7 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <div class="collapse show" id="sizeCollapse" data-simplebar-collapse="#sizeGroup" style="">
+                    <div class="collapse show" id="sizeCollapse" data-simplebar-collapse="#sizeGroup">
                       <div class="form-group form-group-overlow mb-6" id="sizeGroup" data-simplebar="init">
                         <div class="simplebar-wrapper" style="margin: 0px;">
                           <div class="simplebar-height-auto-observer-wrapper">
@@ -667,7 +652,7 @@
                 </h2>
                 <div id="collapseFour" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <div class="collapse show" id="colorCollapse" data-simplebar-collapse="#colorGroup" style="">
+                    <div class="collapse show" id="colorCollapse" data-simplebar-collapse="#colorGroup">
                       <div class="form-group form-group-overflow mb-6" id="colorGroup" data-simplebar="init">
                         <div class="simplebar-wrapper" style="margin: 0px;">
                           <div class="simplebar-height-auto-observer-wrapper">
@@ -835,14 +820,6 @@
                             </div>
                           </div>
                         </div>
-                        <div class="simplebar-placeholder" style="width: auto; height: 312px;"></div>
-                      </div>
-                      <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                        <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
-                      </div>
-                      <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
-                        <div class="simplebar-scrollbar"
-                          style="height: 200px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
                       </div>
                     </div>
                   </div>
@@ -850,6 +827,7 @@
               </div>
 
               <!-- accordion item six -->
+
               <div class="accordion-item price-section ">
                 <h2 class="accordion-header">
                   <button class="accordion-button bg-body border-light shadow-none" type="button"
@@ -870,7 +848,6 @@
                       <input type="text" class="form-control highest-price" placeholder="$100.00
                       " aria-label="Server">
                       <span class="input-group-text p-2 rounded-0 "></span>
-
                     </div>
                   </div>
                 </div>
@@ -1158,7 +1135,8 @@
           }
         }
       </script>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/navbar-filter.js"></script>
 
 </body>
 
