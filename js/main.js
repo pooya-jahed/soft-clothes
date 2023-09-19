@@ -1,5 +1,6 @@
 import * as bootstrap from "bootstrap";
 import filterSearch from "./navbar-filter.js";
+
 /* -------------------------------------------------------------------------- */
 /*                          BOOTSTRAP TOAST FUNCTION                          */
 /* -------------------------------------------------------------------------- */
