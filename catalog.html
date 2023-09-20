@@ -280,7 +280,6 @@
     <!--                                           CONTENT                                           -->
     <!-- ------------------------------------------------------------------------------------------- -->
     <section class="content">
-
       <div class="container ">
         <div class="row my-5  ">
           <!-- ----------------------------------------------------------------------- -->
@@ -724,14 +723,13 @@
                               </div>
                             </div>
                           </div>
-                          <div class="simplebar-placeholder" style="width: auto; height: 276px;"></div>
+
                         </div>
                         <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                          <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+
                         </div>
                         <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
-                          <div class="simplebar-scrollbar"
-                            style="height: 226px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+
                         </div>
                       </div>
                     </div>
@@ -855,7 +853,7 @@
             </div>
           </div>
           <!-- ----------------------------------------------------------------------- -->
-          <!--                          ACCORDION SECTION END                           -->
+          <!--                          ACCORDION SECTION END                          -->
           <!-- ----------------------------------------------------------------------- -->
           <!-- ----------------------------------------------------------------------- -->
           <!--                             SLIDER SECTION                              -->
@@ -906,8 +904,11 @@
             <!-- ----------------------------------------------------------------------- -->
             <!--                           SLIDER SECTION END                            -->
             <!-- ----------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                      TOP INFO TITLE SECTION START                       -->
+            <!-- ----------------------------------------------------------------------- -->
             <div class="row p-2 d-flex justify-content-between align-baseline ">
-              <h1 class="col-8">Jackets and tops</h1>
+              <h1 class="col-8">All Products</h1>
               <select class="form-select col-4 h-25 w-25 mt-2 rounded-0 ">
                 <option selected="">NEWEST FIRST</option>
                 <option selected="">RATING</option>
@@ -921,9 +922,11 @@
                   <li class="breadcrumb-item active" aria-current="page"><a href="#"></a> page 1</li>
                 </ol>
               </nav>
-              <div class="btn px-1  col-1  my-2">2<div class="btn btn-close "></div>
+              <div class="btn px-1  col-1  my-2 ">22<div class="btn btn-close ">
+                </div>
               </div>
-              <div class="btn px-1 col-1  my-2">2<div class="btn btn-close"></div>
+              <div class="btn px-1 col-1  my-2">2<div class="btn btn-close" aria-label="Close">
+                </div>
               </div>
               <div class="btn px-1  col-1  my-2">2<div class="btn btn-close"></div>
               </div>
@@ -938,6 +941,9 @@
               <div class="btn px-1  col-2  my-2">2<div class="btn btn-close"></div>
               </div>
             </div>
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                      TOP INFO TITLE SECTION END                         -->
+            <!-- ----------------------------------------------------------------------- -->
 
             <!-- ----------------------------------------------------------------------- -->
             <!--                   CATALOG CARD PRODUCT SECTION START                    -->
@@ -947,69 +953,127 @@
                 <div class="row">
                   <div class="col-xl-12 mb-2">
                     <div class="row">
-
-                      <div class="col-md-4 mb-4 mb-md-6 pt-lg-3 product-cart  ">
+                      <!-- product-cart section -->
+                      <div class="product-cart col-12 col-lg-6 col-xl-4 mb-4 mb-md-6 pt-lg-3">
                         <div class="product-cart-header ">
-                          <div class="product-cart-image rounded-2 rounded-3 position-relative">
-                            <div class="action-section position-absolute  h-25 w-100" type=" button" id="liveToastBtn">
-                              <i
-                                class=" btn rounded-5 product-cart-image--add--shop bi bi-cart text-black-50 bg-white "></i>
-                              <i class=" btn rounded-5 product-cart-image--add--favorite bi bi-heart text-black-50
+                          <div class="product-cart-size product-cart-image rounded-2 rounded-3 position-relative">
+                            <div class="action-section position-absolute  h-25 w-100" type=" button">
+                              <i id="liveToastBtn"
+                                class=" btn rounded-5 product-cart-image--add--shop bi bi-cart text-black-50 bg-white ">
+                              </i>
+                              <i id="liveToastFavoriteBtn" class=" btn rounded-5 product-cart-image--add--favorite bi bi-heart text-black-50
                               bg-white "></i>
                             </div>
                           </div>
-                          <div>
-                          </div>
-
-                          <div>
-                          </div>
                         </div>
-                        <div class=" z-index-2 mt-2 ">
-                          <a class=" text-decoration-none product-cart-footer" href="detail-2.html">
-                            <p class="product-cart-footer--type text-muted  mb-0 mt-3">Dress</p>
-                            <h4 class="product-cart-footer--title ">Smocked bodies Dress</h4>
-                            <s class="product-cart-footer--price text-muted d-inline-block h5 ">$49.90</s>
-                            <p class="product-cart-footer--offPrice text-danger-emphasis d-inline-block px-3 h5">
-                              $39.90
-                            </p>
-                          </a>
-
+                        <div class="product-cart-footer z-index-2 mt-2 text-lg-start text-center ">
+                          <a class="text-decoration-none" href="detail-2.html"></a>
+                          <p class="product-cart-footer--type text-muted  mb-0 mt-3">Dress</p>
+                          <h4 class="product-cart-footer--title ">Smocked bodies Dress</h4>
+                          <s class="product-cart-footer--price text-muted d-inline-block h5 ">$49.90</s>
+                          <p class="product-cart-footer--offPrice  d-inline-block px-3 h5">
+                            $39.90
+                          </p>
                         </div>
                       </div>
-
-                      <nav aria-label="Page navigation example ">
-                        <ul class="pagination justify-content-center bottom-0">
-                          <li class="page-item ">
-                            <a class="page-link">Previous</a>
-                          </li>
-                          <li class="page-item active "><a class="page-link bg-light-subtle border-light" href="#">1</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                          </li>
-                        </ul>
-                      </nav>
+                      <!-- product-cart section -->
+                      <div class="product-cart col-12 col-lg-6 col-xl-4 mb-4 mb-md-6 pt-lg-3">
+                        <div class="product-cart-header ">
+                          <div class="product-cart-size product-cart-image-1 rounded-2 rounded-3 position-relative">
+                            <div class="action-section position-absolute  h-25 w-100" type=" button">
+                              <i id="liveToastBtn"
+                                class=" btn rounded-5 product-cart-image--add--shop bi bi-cart text-black-50 bg-white ">
+                              </i>
+                              <i id="liveToastFavoriteBtn" class=" btn rounded-5 product-cart-image--add--favorite bi bi-heart text-black-50
+                              bg-white "></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-cart-footer z-index-2 mt-2 text-lg-start text-center ">
+                          <a class="text-decoration-none" href="detail-2.html"></a>
+                          <p class="product-cart-footer--type text-muted  mb-0 mt-3">Dress</p>
+                          <h4 class="product-cart-footer--title ">Smocked bodies Dress</h4>
+                          <s class="product-cart-footer--price text-muted d-inline-block h5 ">$49.90</s>
+                          <p class="product-cart-footer--offPrice  d-inline-block px-3 h5">
+                            $39.90
+                          </p>
+                        </div>
+                      </div>
+                      <div class="product-cart col-12 col-lg-6 col-xl-4 mb-4 mb-md-6 pt-lg-3">
+                        <div class="product-cart-header ">
+                          <div class="product-cart-size product-cart-image-2 rounded-2 rounded-3 position-relative">
+                            <div class="action-section position-absolute  h-25 w-100" type=" button">
+                              <i id="liveToastBtn"
+                                class=" btn rounded-5 product-cart-image--add--shop bi bi-cart text-black-50 bg-white ">
+                              </i>
+                              <i id="liveToastFavoriteBtn" class=" btn rounded-5 product-cart-image--add--favorite bi bi-heart text-black-50
+                              bg-white "></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-cart-footer z-index-2 mt-2 text-lg-start text-center ">
+                          <a class="text-decoration-none" href="detail-2.html"></a>
+                          <p class="product-cart-footer--type text-muted  mb-0 mt-3">Dress</p>
+                          <h4 class="product-cart-footer--title ">Smocked bodies Dress</h4>
+                          <s class="product-cart-footer--price text-muted d-inline-block h5 ">$49.90</s>
+                          <p class="product-cart-footer--offPrice  d-inline-block px-3 h5">
+                            $39.90
+                          </p>
+                        </div>
+                      </div>
+                      <div class="product-cart col-12 col-lg-6 col-xl-4 mb-4 mb-md-6 pt-lg-3">
+                        <div class="product-cart-header ">
+                          <div class="product-cart-size product-cart-image-3 rounded-2 rounded-3 position-relative">
+                            <div class="action-section position-absolute  h-25 w-100" type=" button">
+                              <i id="liveToastBtn"
+                                class=" btn rounded-5 product-cart-image--add--shop bi bi-cart text-black-50 bg-white ">
+                              </i>
+                              <i id="liveToastFavoriteBtn" class=" btn rounded-5 product-cart-image--add--favorite bi bi-heart text-black-50
+                              bg-white "></i>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-cart-footer z-index-2 mt-2 text-lg-start text-center ">
+                          <a class="text-decoration-none" href="detail-2.html"></a>
+                          <p class="product-cart-footer--type text-muted  mb-0 mt-3">Dress</p>
+                          <h4 class="product-cart-footer--title ">Smocked bodies Dress</h4>
+                          <s class="product-cart-footer--price text-muted d-inline-block h5 ">$49.90</s>
+                          <p class="product-cart-footer--offPrice text-danger-emphasis d-inline-block px-3 h5">
+                            $39.90
+                          </p>
+                        </div>
+                      </div>
                     </div>
-            </section>
-            <!-- ----------------------------------------------------------------------- -->
-            <!--                      CATALOG CARD PRODUCT SECTION END                   -->
-            <!-- ----------------------------------------------------------------------- -->
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                      CATALOG CARD PRODUCT SECTION END                   -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div aria-label="Page navigation example ">
+      <ul class="pagination justify-content-center bottom-0">
+        <li class="page-item ">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item active "><a class="page-link bg-light-subtle border-light" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </div>
 
-      </div>
-      </div>
-      </div>
     </section>
 
     <!-- ------------------------------------------------------------------------------------------- -->
     <!--                                         CONTENT END                                         -->
     <!-- ------------------------------------------------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                            carousel section                             -->
-    <!-- ----------------------------------------------------------------------- -->
+
 
     <!-- ----------------------------------------------------------------------- -->
     <!--                          FOOTER SECTION START                           -->
@@ -1033,10 +1097,8 @@
               <li class="nav-item mb-2">
                 <a href="#" class="nav-link p-0 text-body-dark">Shipping & Returns</a>
               </li>
-
             </ul>
           </div>
-
           <div class="col-6 col-md-2 mb-3  text-dark">
             <h5>SHOP</h5>
             <ul class="nav flex-column">
@@ -1051,7 +1113,6 @@
               </li>
             </ul>
           </div>
-
           <div class="col-6 col-md-2 mb-3 text-dark">
             <h5>CONTACT</h5>
             <ul class="nav flex-column">
@@ -1065,7 +1126,6 @@
                 <a href="#" class="nav-link p-0 text-dark">help@softclothes.com</a>
             </ul>
           </div>
-
           <div class="col-md-5 offset-md-1 mb-3 text-dark">
             <form>
               <h5>Subscribe to our newsletter</h5>
@@ -1078,7 +1138,6 @@
             </form>
           </div>
         </div>
-
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
           <p>© 2023 Company, Inc. All rights reserved.</p>
           <ul class="list-unstyled d-flex">
@@ -1097,35 +1156,44 @@
           </ul>
         </div>
       </footer>
-      <!-- toast start -->
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                           FOOTER SECTION END                            -->
+      <!-- ----------------------------------------------------------------------- -->
+      <!-- TOAST START -->
+      <!-- add to cart toast -->
       <div class="toast position-fixed text-bg-success bottom-0 start-0 ms-3 mb-3 sticky-bottom " role="alert"
         aria-live="assertive" aria-atomic="true" id="liveToast">
-        <div class="d-flex">
-          <div class="toast-body fs-6">
+        <div class="d-flex px-2">
+          <div class="toast-body fs-6 z-n1">
             successfully add <i class="bi bi-cart-check fs-4 mx-1"></i>
           </div>
           <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close">
           </button>
         </div>
       </div>
-      <!-- toast end -->
+      <!-- add to cart toast end -->
+
+      <!-- add to favorite toast start -->
+      <div class="toast position-fixed text-bg-danger bottom-0 start-0 ms-3 mb-3 sticky-bottom " role="alert"
+        aria-live="assertive" aria-atomic="true" id="liveToastFavorite">
+        <div class="d-flex px-2 ">
+          <div class="toast-body fs-6">
+            added to your favorite
+            <i class="bi bi-clipboard-heart-fill fs-4 mx-1"></i>
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close">
+          </button>
+        </div>
+      </div>
     </div>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                           FOOTER SECTION END                            -->
-    <!-- ----------------------------------------------------------------------- -->
+    <!-- add to cart toast end -->
+
+    <!-- TOAST END -->
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="enable-stuff.js"></script>
-    <script>
-      const toastTrigger = document.getElementById('liveToastBtn')
-      const toastLiveExample = document.getElementById('liveToast')
-      if (toastTrigger) {
-        toastTrigger.addEventListener('click', () => {
-          const toast = new bootstrap.Toast(toastLiveExample)
-          toast.show()
-        })
-      }
-    </script>
+
 
     <script type="importmap">
         {
@@ -1135,6 +1203,7 @@
           }
         }
       </script>
+    <script type="module" src="./js/toast-bootstrap.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="./js/navbar-filter.js"></script>
 

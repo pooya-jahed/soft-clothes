@@ -1,7 +1,7 @@
 import data from "../products.json" assert { type: "json" };
 console.log(data);
 export default function filterSearch() {
-  let product = data.map((item) => item.title);
+  let product = data.map((item) => item.type);
   console.log(product);
   const searchInput = document.getElementById("search-input");
 

@@ -1,19 +1,13 @@
 import * as bootstrap from "bootstrap";
 import filterSearch from "./navbar-filter.js";
 
-/* -------------------------------------------------------------------------- */
-/*                          BOOTSTRAP TOAST FUNCTION                          */
-/* -------------------------------------------------------------------------- */
 document.querySelectorAll('[data-bs-toggle="popover"]').forEach((popover) => {
   new bootstrap.Popover(popover);
 });
-/* -------------------------------------------------------------------------- */
-/*                        BOOTSTRAP TOAST FUNCTION END                        */
-/* -------------------------------------------------------------------------- */
+let mybutton = document.querySelector("#scrollTop");
 /* -------------------------------------------------------------------------- */
 /*                               SCROLL FUNCTION                              */
 /* -------------------------------------------------------------------------- */
-let myButton = document.querySelector("#scrollTop");
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
@@ -21,9 +15,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    myButton.style.display = "block";
+    mybutton.style.display = "block";
   } else {
-    myButton.style.display = "none";
+    mybutton.style.display = "none";
   }
 }
 /* -------------------------------------------------------------------------- */
@@ -97,7 +91,6 @@ function getTime() {
   getIdMinutes.textContent = minutesRound;
   getIdHours.textContent = hoursRound;
   getIdSeconds.textContent = secondsRound;
-  // document.timeForm.input1.value =
 
   console.log(
     "Time remaining: " +
