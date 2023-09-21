@@ -4,10 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="css/styles.css" />
   <script type="module" src="js/color-modes.js"></script>
-  <title>soft</title>
+  <script defer type="module" src="./js/offTime.js"></script>
+
+  <title>SOFTCLOTH</title>
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
 </head>
 
 <body>
@@ -420,7 +423,7 @@
           <!-- Card -->
           <div class="card text-white overlay-hover-light" style="
                 min-height: 380px;
-                background-image: url(assets/img/products/product-1.jpg);
+               ;
               ">
             <!-- Background -->
             <div style="
@@ -794,7 +797,7 @@
             </div>
           </div>
           <p>
-            <a class="btn btn-outline-dark w-100 p-3" onclick="event.preventDefault()" href="#">Shop now</a>
+            <a class="btn btn-outline-dark w-100 p-3" href="#">Shop now</a>
           </p>
         </div>
         <div class="col-lg-6" style="
@@ -899,18 +902,11 @@
   <!--                           FOOTER SECTION END                            -->
   <!-- ----------------------------------------------------------------------- -->
 
-  <script async src="https://ga.jspm.io/npm:es-module-shims@1.5.5/dist/es-module-shims.js"></script>
-  <script type="importmap">
-      {
-        "imports": {
-          "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.js",
-          "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.esm.min.js"
-        }
-      }
-    </script>
   <script type="module" src="js/main.js"></script>
-  <script type="module" src="./js/navbar-filter.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="./js/searchHandler.js"></script>
+  <script type="module" src="./js/toast-bootstrap.js"></script>
 </body>
 
 </html>

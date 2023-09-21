@@ -31,22 +31,9 @@
       background-size: contain;
       background-repeat: no-repeat;
       width: auto;
-      background-image: url("../assets/img/product-img/product-(1)/bodice-Dress-Smocked-1.jpg");
       @include media-breakpoint-down(lg) {
         height: 380px;
       }
-    }
-    .product-cart-image {
-      background-image: url("../assets/img/product-img/product-(1)/bodice-Dress-Smocked-1.jpg");
-    }
-    .product-cart-image-1 {
-      background-image: url("../assets/img/product-img/product-(2)/Loose-Jeans-blue-1.jpg");
-    }
-    .product-cart-image-2 {
-      background-image: url("../assets/img/product-img/product-(3)/Wide-High-Jeans-black-1.jpg");
-    }
-    .product-cart-image-3 {
-      background-image: url("../assets/img/product-img/product-(4)/rib-knit-top-red-1.jpg");
     }
   }
 }
@@ -67,7 +54,6 @@
 }
 
 .product-cart-image:hover {
-  background-image: url("../assets/img/product-img/product-(1)/bodice-Dress-Smocked-2.jpg");
   animation: fadeinfadeout 400ms ease-in;
 }
 .product-cart-image--add--shop:hover,
