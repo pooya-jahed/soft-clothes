@@ -1,5 +1,4 @@
 // _____________________________________________
-
 import data from "../products.json" assert { type: "json" };
 // console.log(data);
 let product = data.map((item) => item);
