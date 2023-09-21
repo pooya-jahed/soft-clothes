@@ -23,11 +23,14 @@ let curSeconds = curDate.getSeconds();
 // -----------------------------------
 
 let SystemCurTime = {};
-// IFFe function get system data time
+// Iffe function get system data time
 (function getSystemCurTime() {
   let evCurTime = eval(
     curYear + curMonth + curDays + curHours + curMinutes + curSeconds
   );
+  // curMonth > 9 ? curMonth : (curMonth = "0" + curMonth);
+  // curDays > 9 ? curDays : (curDays = "0" + curDays);
+  // curSeconds > 9 ? curSeconds : (curSeconds = "0" + curSeconds);
   SystemCurTime = {
     curYear,
     curMonth,
@@ -44,7 +47,7 @@ let SystemCurTime = {};
 // /* -------------------------------------------------------------------------- */
 function getTime() {
   let now = new Date();
-  let y2k = new Date("SEPTEMBER 30 2023 2:00:00");
+  let y2k = new Date("september 30 2023 2:00:00");
   let days = (y2k - now) / 1000 / 60 / 60 / 24;
   let daysRound = Math.floor(days);
   let hours = (y2k - now) / 1000 / 60 / 60 - 24 * daysRound;
@@ -65,6 +68,7 @@ function getTime() {
   getIdMinutes.textContent = minutesRound;
   getIdHours.textContent = hoursRound;
   getIdSeconds.textContent = secondsRound;
+  // document.timeForm.input1.value =
 
   console.log(
     "Time remaining: " +
@@ -79,5 +83,5 @@ function getTime() {
   );
 }
 
-setInterval(getTime(), 1000);
+setInterval(getTime, 1000);
 // __________________________________________
