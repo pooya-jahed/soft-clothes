@@ -29,6 +29,8 @@ export default function searchHandler() {
     }
   });
 }
-searchInput.addEventListener("click", searchHandler());
+setTimeout(function () {
+  searchInput.addEventListener("click", searchHandler());
+}, 2000);
 
 // -----------------------------------------
