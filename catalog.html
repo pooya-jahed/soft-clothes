@@ -290,7 +290,7 @@
               <!-- accordion item one -->
               <div class="accordion-item ">
                 <h2 class="accordion-header ">
-                  <button class="accordion-button bg-body border-light shadow-none" type="button"
+                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                     aria-controls="collapseOne">
                     Category
@@ -298,41 +298,46 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <ul class="list-styled mb-0" id="productsNav">
-                      <li class="list-styled-item">
-                        <a class="list-styled-link" href="#">
+                    <ul class="list-styled mb-0 px-0  " id="productsNav">
+                      <li class="list-unstyled d-flex px-0  ">
+                        <input class="h3 list-inline-item" id="check-all" type="checkbox" checked=""
+                          style="width: 25px;height: 25px;">
+                        <label id="all-product"
+                          class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
+                          for="check-all">
                           All Products
-                        </a>
+                        </label>
                       </li>
-                      <li class="list-styled-item">
+                      <li class="list-styled-item ms-3">
 
                         <!-- Toggle -->
-                        <a class="list-styled-link" data-bs-toggle="collapse" href="#blousesCollapse">
+                        <a class="list-styled-link text-decoration-none fw-bold " data-bs-toggle="collapse"
+                          href="#blousesCollapse" style="width: 25px;height: 25px;">
                           Blouses and Shirts
                         </a>
 
                         <!-- Collapse -->
                         <div class="collapse" id="blousesCollapse" data-bs-parent="#productsNav">
                           <div class="py-4 ps-5">
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="blousesOne" type="checkbox">
                               <label class="form-check-label" for="blousesOne">
                                 Women Tops, Tees &amp; Blouses
                               </label>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="blousesTwo" type="checkbox">
                               <label class="form-check-label" for="blousesTwo">
                                 Petite
                               </label>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="blousesThree" type="checkbox">
                               <label class="form-check-label" for="blousesThree">
                                 Petite-Size Blouses &amp; Button-Down Shirts
                               </label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check px-0">
                               <input class="form-check-input" id="blousesFour" type="checkbox">
                               <label class="form-check-label" for="blousesFour">
                                 Women Plus Tops &amp; Tees
@@ -342,29 +347,30 @@
                         </div>
 
                       </li>
-                      <li class="list-styled-item">
+                      <li class="list-styled-item ms-3 ">
 
                         <!-- Toggle -->
-                        <a class="list-styled-link" data-bs-toggle="collapse" href="#coatsCollapse">
+                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
+                          href="#coatsCollapse">
                           Coats and Jackets
                         </a>
 
                         <!-- Collapse -->
                         <div class="collapse" id="coatsCollapse" data-bs-parent="#productsNav">
                           <div class="py-4 ps-5">
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="coatsOne" type="checkbox">
                               <label class="form-check-label" for="coatsOne">
                                 Coats, Jackets &amp; Vests
                               </label>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="coatsTwo" type="checkbox">
                               <label class="form-check-label" for="coatsTwo">
                                 Down Jackets &amp; Parkas
                               </label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check px-0">
                               <input class="form-check-input" id="coatsThree" type="checkbox">
                               <label class="form-check-label" for="coatsThree">
                                 Wool &amp; Pea Coats Plus-Size
@@ -374,11 +380,11 @@
                         </div>
 
                       </li>
-                      <li class="list-styled-item">
+                      <li class="list-styled-item ms-3 ">
 
                         <!-- Toggle -->
-                        <a class="list-styled-link" data-bs-toggle="collapse" href="#dressesCollapse"
-                          aria-expanded="true">
+                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
+                          href="#dressesCollapse" aria-expanded="true">
                           Dresses
                         </a>
 
@@ -386,35 +392,36 @@
 
 
                       </li>
-                      <li class="list-styled-item">
+                      <li class="list-styled-item ms-3">
 
                         <!-- Toggle -->
-                        <a class="list-styled-link" data-bs-toggle="collapse" href="#hoodiesCollapse">
+                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
+                          href="#hoodiesCollapse">
                           Hoodies and Sweats
                         </a>
 
                         <!-- Collapse -->
                         <div class="collapse" id="hoodiesCollapse" data-bs-parent="#productsNav">
                           <div class="py-4 ps-5">
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="hoodiesOne" type="checkbox">
                               <label class="form-check-label" for="hoodiesOne">
                                 Activewear
                               </label>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="hoodiesTwo" type="checkbox">
                               <label class="form-check-label" for="hoodiesTwo">
                                 Fashion Hoodies &amp; Sweatshirts
                               </label>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="hoodiesThree" type="checkbox">
                               <label class="form-check-label" for="hoodiesThree">
                                 Big &amp; Tall Sweatshirts
                               </label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check px-0">
                               <input class="form-check-input" id="hoodiesFour" type="checkbox">
                               <label class="form-check-label" for="hoodiesFour">
                                 Big &amp; Tall Fashion Hoodies
@@ -425,35 +432,36 @@
 
                       </li>
 
-                      <li class="list-styled-item">
+                      <li class="list-styled-item ms-3 ">
 
                         <!-- Toggle -->
-                        <a class="list-styled-link" data-bs-toggle="collapse" href="#jeansCollapse">
+                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
+                          href="#jeansCollapse">
                           Jeans
                         </a>
 
                         <!-- Collapse -->
                         <div class="collapse" id="jeansCollapse" data-bs-parent="#productsNav">
                           <div class="py-4 ps-5">
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="jeansOne" type="checkbox">
                               <label class="form-check-label" for="jeansOne">
                                 Men Jeans
                               </label>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="jeansTwo" type="checkbox">
                               <label class="form-check-label" for="jeansTwo">
                                 Men Big &amp; Tall Jeans
                               </label>
                             </div>
-                            <div class="form-check mb-3">
+                            <div class="form-check mb-3 px-0">
                               <input class="form-check-input" id="jeansThree" type="checkbox">
                               <label class="form-check-label" for="jeansThree">
                                 Surf, Skate &amp; Street Clothing
                               </label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check px-0">
                               <input class="form-check-input" id="jeansFour" type="checkbox">
                               <label class="form-check-label" for="jeansFour">
                                 Men Big &amp; Tall Pants
@@ -473,7 +481,7 @@
               <!-- accordion item two -->
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none" type="button"
+                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                     aria-controls="collapseTwo">
                     Season
@@ -495,34 +503,50 @@
                               <div class="simplebar-content-wrapper" tabindex="0" role="region"
                                 aria-label="scrollable content" style="height: auto; overflow: hidden;">
                                 <div class="simplebar-content" style="padding: 0px;">
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="All" type="checkbox" checked="">
-                                    <label class="form-check-label" for="All">
+
+                                  <div class="form-check mb-3 d-flex p-0">
+                                    <input class="h3 list-inline-item" id="check-all" type="checkbox" checked=""
+                                      style="width: 25px;height: 25px;">
+                                    <label
+                                      class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
+                                      for="check-all">
                                       All
                                     </label>
                                   </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="seasonOne" type="checkbox">
-                                    <label class="form-check-label" for="seasonOne">
-                                      Summer
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="seasonTwo" type="checkbox">
-                                    <label class="form-check-label" for="seasonTwo">
+                                  <div class="form-check mb-3 d-flex p-0">
+                                    <input class="h3 list-inline-item" id="check-all" type="checkbox"
+                                      style="width: 25px;height: 25px;">
+                                    <label
+                                      class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
+                                      for="check-all">
                                       Winter
                                     </label>
                                   </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="seasonThree" type="checkbox">
-                                    <label class="form-check-label" for="seasonThree">
-                                      Spring
+                                  <div class="form-check mb-3 d-flex p-0">
+                                    <input class="h3 list-inline-item" id="check-all" type="checkbox"
+                                      style="width: 25px;height: 25px;">
+                                    <label
+                                      class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
+                                      for="check-all">
+                                      Autumn
                                     </label>
                                   </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" id="seasonFour" type="checkbox">
-                                    <label class="form-check-label" for="seasonFour">
-                                      Autumn
+                                  <div class="form-check mb-3 d-flex p-0">
+                                    <input class="h3 list-inline-item" id="check-all" type="checkbox"
+                                      style="width: 25px;height: 25px;">
+                                    <label
+                                      class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
+                                      for="check-all">
+                                      Summer
+                                    </label>
+                                  </div>
+                                  <div class="form-check mb-3 d-flex p-0">
+                                    <input class="h3 list-inline-item" id="check-all" type="checkbox"
+                                      style="width: 25px;height: 25px;">
+                                    <label
+                                      class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
+                                      for="check-all">
+                                      Spring
                                     </label>
                                   </div>
                                 </div>
@@ -547,7 +571,7 @@
               <!-- accordion item three -->
               <div class="accordion-item ">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none " type="button"
+                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                     aria-controls="collapseThree">
                     Size
@@ -642,7 +666,7 @@
               <!-- accordion item four -->
               <div class="accordion-item ">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none" type="button"
+                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
                     aria-controls="collapseFour">
                     Color
@@ -739,7 +763,7 @@
               <!-- accordion item five -->
               <div class="accordion-item ">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none" type="button"
+                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
                     aria-controls="collapseFive">
                     Brand
@@ -758,58 +782,14 @@
                               aria-label="scrollable content" style="height: auto; overflow: hidden scroll;">
                               <div class="simplebar-content" style="padding: 0px;">
                                 <div class="list">
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandOne" type="checkbox">
-                                    <label class="form-check-label name" for="brandOne">
-                                      Dsquared2
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandTwo" type="checkbox" disabled="">
-                                    <label class="form-check-label name" for="brandTwo">
-                                      Alexander McQueen
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandThree" type="checkbox">
-                                    <label class="form-check-label name" for="brandThree">
-                                      Balenciaga
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandFour" type="checkbox" checked="">
-                                    <label class="form-check-label name" for="brandFour">
-                                      Adidas
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandFive" type="checkbox">
-                                    <label class="form-check-label name" for="brandFive">
-                                      Balmain
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandSix" type="checkbox">
-                                    <label class="form-check-label name" for="brandSix">
-                                      Burberry
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandSeven" type="checkbox">
-                                    <label class="form-check-label name" for="brandSeven">
-                                      Chloé
-                                    </label>
-                                  </div>
-                                  <div class="form-check mb-3">
-                                    <input class="form-check-input" id="brandEight" type="checkbox">
-                                    <label class="form-check-label name" for="brandEight">
-                                      Kenzo
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input class="form-check-input" id="brandNine" type="checkbox">
-                                    <label class="form-check-label name" for="brandNine">
-                                      Givenchy
+
+                                  <div class="form-check mb-3 d-flex p-0">
+                                    <input class="h3 list-inline-item" id="brand-all" type="checkbox"
+                                      style="width: 25px;height: 25px;">
+                                    <label
+                                      class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
+                                      for="brand-all">
+                                      All
                                     </label>
                                   </div>
                                 </div>
@@ -827,7 +807,7 @@
 
               <div class="accordion-item price-section ">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none" type="button"
+                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
                     data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
                     aria-controls="collapseSix">
                     Price
@@ -1106,9 +1086,10 @@
 
 
     <script type="module" src="./js/toast-bootstrap.js"></script>
+    <script type="module" src="/js/categoryFilter.js"></script>
+    <script type="module" src="./js/navbar-filter.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="./js/searchHandler.js"></script>
-    <script type="module" src="./js/navbar-filter.js"></script>
 
 </body>
 
