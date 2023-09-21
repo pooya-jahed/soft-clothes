@@ -4,15 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <script src="/js/toas-bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
   <script type="module" src="js/color-modes.js"></script>
   <title>catalog</title>
-
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <title>Bootstrap Example</title>
-
 </head>
 
 <body>
@@ -103,9 +101,9 @@
 
           <form action="#" class="searchform order-sm-start order-lg-last d-none d-lg-block">
             <div class="form-group d-flex">
-              <input type="text" class="form-control pl-3 product-filter" placeholder="Search" />
-              <button type="submit" placeholder="" class="form-control search">
-                <span class="bi bi-search"></span>
+              <input type="text" id="search-input" class="form-control pl-3 " placeholder="Search" />
+              <button type="submit" placeholder="" class="form-control search ">
+                <span class="bi bi-search "></span>
               </button>
             </div>
           </form>
@@ -280,7 +278,6 @@
     <!--                                           CONTENT                                           -->
     <!-- ------------------------------------------------------------------------------------------- -->
     <section class="content">
-
       <div class="container ">
         <div class="row my-5  ">
           <!-- ----------------------------------------------------------------------- -->
@@ -724,14 +721,13 @@
                               </div>
                             </div>
                           </div>
-                          <div class="simplebar-placeholder" style="width: auto; height: 276px;"></div>
+
                         </div>
                         <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                          <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+
                         </div>
                         <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
-                          <div class="simplebar-scrollbar"
-                            style="height: 226px; transform: translate3d(0px, 0px, 0px); display: block;"></div>
+
                         </div>
                       </div>
                     </div>
@@ -855,7 +851,7 @@
             </div>
           </div>
           <!-- ----------------------------------------------------------------------- -->
-          <!--                          ACCORDION SECTION END                           -->
+          <!--                          ACCORDION SECTION END                          -->
           <!-- ----------------------------------------------------------------------- -->
           <!-- ----------------------------------------------------------------------- -->
           <!--                             SLIDER SECTION                              -->
@@ -871,22 +867,22 @@
                   data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
               <div class="carousel-inner">
-                <div class="carousel-item active " data-bs-interval="8000">
+                <div style="max-height: 370px;" class="carousel-item active " data-bs-interval="8000">
                   <img src="/assets/img/catalog/carousel/cover-1.jpg" class="d-block w-100 " alt="...">
                   <div class="carousel-caption d-none d-md-block text-white text-start p-3">
                     <h4 class="">First slide label</h4>
                     <p>Some representative placeholder content for the first slide.</p>
                   </div>
                 </div>
-                <div class="carousel-item " data-bs-interval="2000">
-                  <img src="/assets/img/catalog/carousel/cover-2.jpg " class="d-block opacity-75 w-100 text-end p-3  "
+                <div style="max-height: 370px;" class="carousel-item " data-bs-interval="2000">
+                  <img src="/assets/img/catalog/carousel/cover-2.jpg " class="d-block opacity-75 w-100 text-end p-3"
                     alt="...">
                   <div class="carousel-caption d-none d-md-block text-center text-light">
                     <h4 class="">Second slide label</h4>
                     <p>Some representative placeholder content for the second slide.</p>
                   </div>
                 </div>
-                <div class="carousel-item">
+                <div style="max-height: 370px;" class="carousel-item">
                   <img src="/assets/img/catalog/carousel/cover-3.jpg " class="d-block  w-100  " alt="...">
                   <div class="carousel-caption d-none d-md-block text-white text-end">
                     <h4 class="">Third slide label</h4>
@@ -906,8 +902,11 @@
             <!-- ----------------------------------------------------------------------- -->
             <!--                           SLIDER SECTION END                            -->
             <!-- ----------------------------------------------------------------------- -->
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                      TOP INFO TITLE SECTION START                       -->
+            <!-- ----------------------------------------------------------------------- -->
             <div class="row p-2 d-flex justify-content-between align-baseline ">
-              <h1 class="col-8">Jackets and tops</h1>
+              <h1 class="col-8 product-category">All Products</h1>
               <select class="form-select col-4 h-25 w-25 mt-2 rounded-0 ">
                 <option selected="">NEWEST FIRST</option>
                 <option selected="">RATING</option>
@@ -921,9 +920,11 @@
                   <li class="breadcrumb-item active" aria-current="page"><a href="#"></a> page 1</li>
                 </ol>
               </nav>
-              <div class="btn px-1  col-1  my-2">2<div class="btn btn-close "></div>
+              <div class="btn px-1  col-1  my-2 ">22<div class="btn btn-close ">
+                </div>
               </div>
-              <div class="btn px-1 col-1  my-2">2<div class="btn btn-close"></div>
+              <div class="btn px-1 col-1  my-2">2<div class="btn btn-close" aria-label="Close">
+                </div>
               </div>
               <div class="btn px-1  col-1  my-2">2<div class="btn btn-close"></div>
               </div>
@@ -938,6 +939,9 @@
               <div class="btn px-1  col-2  my-2">2<div class="btn btn-close"></div>
               </div>
             </div>
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                      TOP INFO TITLE SECTION END                         -->
+            <!-- ----------------------------------------------------------------------- -->
 
             <!-- ----------------------------------------------------------------------- -->
             <!--                   CATALOG CARD PRODUCT SECTION START                    -->
@@ -946,70 +950,42 @@
               <div class="container justify-content-center">
                 <div class="row">
                   <div class="col-xl-12 mb-2">
-                    <div class="row">
+                    <div id="product-container" class="row">
 
-                      <div class="col-md-4 mb-4 mb-md-6 pt-lg-3 product-cart  ">
-                        <div class="product-cart-header ">
-                          <div class="product-cart-image rounded-2 rounded-3 position-relative">
-                            <div class="action-section position-absolute  h-25 w-100" type=" button" id="liveToastBtn">
-                              <i
-                                class=" btn rounded-5 product-cart-image--add--shop bi bi-cart text-black-50 bg-white "></i>
-                              <i class=" btn rounded-5 product-cart-image--add--favorite bi bi-heart text-black-50
-                              bg-white "></i>
-                            </div>
-                          </div>
-                          <div>
-                          </div>
+                      <!-- product-cart section -->
 
-                          <div>
-                          </div>
-                        </div>
-                        <div class=" z-index-2 mt-2 ">
-                          <a class=" text-decoration-none product-cart-footer" href="detail-2.html">
-                            <p class="product-cart-footer--type text-muted  mb-0 mt-3">Dress</p>
-                            <h4 class="product-cart-footer--title ">Smocked bodies Dress</h4>
-                            <s class="product-cart-footer--price text-muted d-inline-block h5 ">$49.90</s>
-                            <p class="product-cart-footer--offPrice text-danger-emphasis d-inline-block px-3 h5">
-                              $39.90
-                            </p>
-                          </a>
 
-                        </div>
-                      </div>
-
-                      <nav aria-label="Page navigation example ">
-                        <ul class="pagination justify-content-center bottom-0">
-                          <li class="page-item ">
-                            <a class="page-link">Previous</a>
-                          </li>
-                          <li class="page-item active "><a class="page-link bg-light-subtle border-light" href="#">1</a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                          </li>
-                        </ul>
-                      </nav>
                     </div>
-            </section>
-            <!-- ----------------------------------------------------------------------- -->
-            <!--                      CATALOG CARD PRODUCT SECTION END                   -->
-            <!-- ----------------------------------------------------------------------- -->
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
+    </section>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                      CATALOG CARD PRODUCT SECTION END                   -->
+    <!-- ----------------------------------------------------------------------- -->
+    <div aria-label="Page navigation example ">
+      <ul class="pagination justify-content-center bottom-0">
+        <li class="page-item ">
+          <a class="page-link">Previous</a>
+        </li>
+        <li class="page-item active "><a class="page-link bg-light-subtle border-light" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </div>
 
-      </div>
-      </div>
-      </div>
     </section>
 
     <!-- ------------------------------------------------------------------------------------------- -->
     <!--                                         CONTENT END                                         -->
     <!-- ------------------------------------------------------------------------------------------- -->
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                            carousel section                             -->
-    <!-- ----------------------------------------------------------------------- -->
+
 
     <!-- ----------------------------------------------------------------------- -->
     <!--                          FOOTER SECTION START                           -->
@@ -1033,10 +1009,8 @@
               <li class="nav-item mb-2">
                 <a href="#" class="nav-link p-0 text-body-dark">Shipping & Returns</a>
               </li>
-
             </ul>
           </div>
-
           <div class="col-6 col-md-2 mb-3  text-dark">
             <h5>SHOP</h5>
             <ul class="nav flex-column">
@@ -1051,7 +1025,6 @@
               </li>
             </ul>
           </div>
-
           <div class="col-6 col-md-2 mb-3 text-dark">
             <h5>CONTACT</h5>
             <ul class="nav flex-column">
@@ -1065,7 +1038,6 @@
                 <a href="#" class="nav-link p-0 text-dark">help@softclothes.com</a>
             </ul>
           </div>
-
           <div class="col-md-5 offset-md-1 mb-3 text-dark">
             <form>
               <h5>Subscribe to our newsletter</h5>
@@ -1078,7 +1050,6 @@
             </form>
           </div>
         </div>
-
         <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
           <p>© 2023 Company, Inc. All rights reserved.</p>
           <ul class="list-unstyled d-flex">
@@ -1097,45 +1068,45 @@
           </ul>
         </div>
       </footer>
-      <!-- toast start -->
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                           FOOTER SECTION END                            -->
+      <!-- ----------------------------------------------------------------------- -->
+      <!-- TOAST START -->
+      <!-- add to cart toast -->
       <div class="toast position-fixed text-bg-success bottom-0 start-0 ms-3 mb-3 sticky-bottom " role="alert"
         aria-live="assertive" aria-atomic="true" id="liveToast">
-        <div class="d-flex">
-          <div class="toast-body fs-6">
+        <div class="d-flex px-2">
+          <div class="toast-body fs-6 z-n1">
             successfully add <i class="bi bi-cart-check fs-4 mx-1"></i>
           </div>
           <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close">
           </button>
         </div>
       </div>
-      <!-- toast end -->
-    </div>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                           FOOTER SECTION END                            -->
-    <!-- ----------------------------------------------------------------------- -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="enable-stuff.js"></script>
-    <script>
-      const toastTrigger = document.getElementById('liveToastBtn')
-      const toastLiveExample = document.getElementById('liveToast')
-      if (toastTrigger) {
-        toastTrigger.addEventListener('click', () => {
-          const toast = new bootstrap.Toast(toastLiveExample)
-          toast.show()
-        })
-      }
-    </script>
+      <!-- add to cart toast end -->
 
-    <script type="importmap">
-        {
-          "imports": {
-            "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.js",
-            "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.esm.min.js"
-          }
-        }
-      </script>
-    <script type="module" src="./js/main.js"></script>
+      <!-- add to favorite toast start -->
+      <div class="toast position-fixed text-bg-danger bottom-0 start-0 ms-3 mb-3 sticky-bottom " role="alert"
+        aria-live="assertive" aria-atomic="true" id="liveToastFavorite">
+        <div class="d-flex px-2 ">
+          <div class="toast-body fs-6">
+            added to your favorite
+            <i class="bi bi-clipboard-heart-fill fs-4 mx-1"></i>
+          </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close">
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- add to cart toast end -->
+
+    <!-- TOAST END -->
+
+
+
+    <script type="module" src="./js/toast-bootstrap.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="./js/searchHandler.js"></script>
     <script type="module" src="./js/navbar-filter.js"></script>
 
 </body>
