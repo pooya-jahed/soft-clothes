@@ -54,28 +54,12 @@ function createProductCard() {
       cardImage.style = `background-image:url("../assets/img/product-img/product-(1)/bodice-Dress-Smocked-1.jpg")`;
       console.log(cardImage);
       cardImage.addEventListener("mouseenter", (item) => {
-        item.target.style = `background-image:url("../assets/img/product-img/product-(1)/bodice-Dress-Smocked-2.jpg")`;
+        item.target.style = `background-image:url("../assets/img/product-img/product-(${item.id})/${item.catalog}-2.jpg")`;
       });
-
       cardImage.addEventListener("mouseleave", (item) => {
-        item.target.style = `background-image:url("../assets/img/product-img/product-(1)/bodice-Dress-Smocked-1.jpg")`;
+        item.target.style = `background-image:url("../assets/img/product-img/product-(${item.id})/${item.catalog}-1.jpg")`;
       });
     });
   });
 }
-const allProducts = document.getElementById("check-all");
-setInterval(function () {
-  if (allProducts.checked) {
-    while (
-      document.getElementsByClassName("product-cart").length <= product.length
-    ) {
-      createProductCard();
-    }
-  }
-  if (allProducts.checked === false) {
-    document.getElementById("product-container").innerHTML = "";
-    if (allProducts.checked) {
-      can;
-    }
-  }
-}, 1000);
+createProductCard();

@@ -3,8 +3,8 @@
     "id": 1,
     "title": "Smocked bodice Dress",
     "imageUrl": {
-      "catalog": ["Smocked"],
-      "detail": ["Smocked-3"]
+      "catalog": ["bodice-Dress-Smocked-1,bodice-Dress-Smocked-2"],
+      "detail": ["detail-1,detail-2,detail-3"]
     },
 
     "brand": "javad-mod",
@@ -14,8 +14,8 @@
     "type": ["Dress"],
     "gender": ["women"],
     "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
-    "colors": ["white", "red"],
-    "description": "Ankle-length dress in woven, crêped fabric with smocking at top. Round neckline, keyhole opening at back with a concealed button, and long balloon sleeves with narrow elastic at cuffs.",
+    "colors": ["pattern"],
+    "description": "Ankle-length dress in woven, craped fabric with smocking at top. Round neckline, keyhole opening at back with a concealed button, and long balloon sleeves with narrow elastic at cuffs.",
     "rate": "4.5",
     "tags": ["patterned", "White", "paisley-patterned", "Keyhole", "Smocking"],
     "status": "Available",
@@ -24,10 +24,18 @@
   },
   {
     "id": 2,
-    "title": "Loose",
+    "title": "Loose Jeans",
     "imageUrl": {
-      "catalog": ["black", "blue", "brown"],
-      "detail": ["black-3", "blue-5", "brown-4"]
+      "catalog": [
+        ["Loose-Jeans-black-1", "Loose-Jeans-black-2"],
+        ["Loose-Jeans-blue-1", "Loose-Jeans-blue-2"],
+        ["Loose-Jeans-brown-1", "Loose-Jeans-brown-2"]
+      ],
+      "detail": [
+        ["detail-1", "detail-2", "detail-3"],
+        ["detail-1", "detail-2", "detail-3", "detail-4", "detail-5"],
+        ["detail-1", "detail-2", "detail-3", "detail-4"]
+      ]
     },
     "brand": "DENIM",
     "model": ["Taylor", "John", "Frank"],
@@ -51,8 +59,11 @@
     "id": 3,
     "title": "Wide High Jeans",
     "imageUrl": {
-      "catalog": ["black", "blue"],
-      "detail": ["black-2", "blue-2"]
+      "catalog": [
+        ["Wide-High-Jeans-black-1", "Wide-High-Jeans-black-2"],
+        ["Wide-High-Jeans-blue-1", "Wide-High-Jeans-blue-2"]
+      ],
+      "detail": [["detail-1"], ["detail-1"]]
     },
     "brand": "DENIM",
     "model": ["Kokab", "Angella"],
@@ -61,7 +72,7 @@
     "type": ["jeans"],
     "gender": ["women"],
     "sizes": [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20],
-    "colors": ["blue", "black"],
+    "colors": ["black", "blue"],
     "description": "5-pocket jeans in washed cotton denim. High waist, zip fly with button, and straight, wide legs.",
     "rate": "5",
     "tags": [
@@ -81,8 +92,11 @@
     "id": 4,
     "title": "Rib knit top ",
     "imageUrl": {
-      "catalog": ["black", "blue"],
-      "detail": ["black-2", "blue-2"]
+      "catalog": [
+        ["rib-knit-top-red-1", "rib-knit-top-red-2"],
+        ["rib-knit-top-white-1", "rib-knit-top-white-2"]
+      ],
+      "detail": ["detail-1", "detail-1"]
     },
     "brand": "DENIM",
     "model": ["Kokab"],
@@ -103,8 +117,8 @@
     "id": 5,
     "title": "Fit Denim Jacket",
     "imageUrl": {
-      "catalog": ["gray"],
-      "detail": ["gray-2"]
+      "catalog": ["Deni-Jacket-gray-1", "Deni-Jacket-gray-2"],
+      "detail": [["detail-1"], ["detail-2"], ["detail-3"]]
     },
     "brand": "DENIM",
     "model": ["Deni"],
@@ -125,8 +139,8 @@
     "id": 6,
     "title": "Fit Denim Jacket",
     "imageUrl": {
-      "catalog": ["white"],
-      "detail": ["white-3"]
+      "catalog": ["Chunky-Sneakers-white-1", "Chunky-Sneakers-white-2"],
+      "detail": ["detail-1", "detail-2", "detail-3"]
     },
     "brand": "Sneakers",
     "model": ["Leo"],
@@ -155,8 +169,8 @@
     "id": 7,
     "title": "Chunky Sneakers",
     "imageUrl": {
-      "catalog": ["green"],
-      "detail": ["green-3"]
+      "catalog": ["grChunky-Sneakers-green-1", "grChunky-Sneakers-green-2"],
+      "detail": ["detail-1", "detail-2", "detail-3"]
     },
     "brand": "Sneakers",
     "model": ["Frank"],
@@ -186,8 +200,8 @@
     "id": 8,
     "title": "white bluse ",
     "imageUrl": {
-      "catalog": ["white"],
-      "detail": ["white-1"]
+      "catalog": ["white-bluse-1", "white-bluse-2"],
+      "detail": ["detail-1"]
     },
     "brand": "another",
     "model": ["Sophia"],
@@ -208,8 +222,15 @@
     "id": 9,
     "title": "Quilted Jacket",
     "imageUrl": {
-      "catalog": ["black"],
-      "detail": ["black-6"]
+      "catalog": ["Quilted-Jacket-1", "Quilted-Jacket-2"],
+      "detail": [
+        "detail-1",
+        "detail-2",
+        "detail-3",
+        "detail-4",
+        "detail-5",
+        "detail-6"
+      ]
     },
     "brand": "Sneakers",
     "model": ["Mia"],
@@ -230,8 +251,14 @@
     "id": 10,
     "title": "Pointed collar Shirt",
     "imageUrl": {
-      "catalog": ["white", "pointed"],
-      "detail": ["pointed-3"]
+      "catalog": [
+        ["collar-Shirt-white-1,collar-Shirt-white-2"],
+        ["collar-Shirt-Pointed-1", "collar-Shirt-Pointed-2"]
+      ],
+      "detail": [
+        ["detail-1", "detail-2"],
+        ["detail-1", "detail-2", "detail-3"]
+      ]
     },
     "brand": "another",
     "model": ["Charlotte", "Adeline"],
@@ -259,8 +286,11 @@
     "id": 11,
     "title": "Fit Printed T-shirt",
     "imageUrl": {
-      "catalog": ["brown"],
-      "detail": ["brown-5"]
+      "catalog": [
+        "Regular-Fit Printed-T-shirt-1",
+        "Regular-Fit Printed-T-shirt-2"
+      ],
+      "detail": ["detail-1", "detail-2", "detail-3", "detail-4", "detail-5"]
     },
     "brand": "human",
     "model": ["Tommy"],
@@ -281,8 +311,8 @@
     "id": 12,
     "title": "Mohair blend Sweater",
     "imageUrl": {
-      "catalog": ["gray"],
-      "detail": ["gray-2"]
+      "catalog": ["Mohair-blend-Sweater-1", "Mohair-blend-Sweater-2"],
+      "detail": ["detail-1", "detail-2"]
     },
     "brand": "luxury",
     "model": ["ashley"],
@@ -303,8 +333,8 @@
     "id": 13,
     "title": "Pumps shoes",
     "imageUrl": {
-      "catalog": ["black"],
-      "detail": ["black-2"]
+      "catalog": ["Pumps-shoes-black-1", "Pumps-shoes-black-2"],
+      "detail": ["detail-1", "detail-2"]
     },
     "brand": "another",
     "model": [""],
@@ -325,8 +355,8 @@
     "id": 14,
     "title": "Fit Printed T-shirt",
     "imageUrl": {
-      "catalog": ["black"],
-      "detail": ["black-3"]
+      "catalog": ["Fit-Printed-T-shirt-black-1", "Fit-Printed-T-shirt-black-2"],
+      "detail": ["detail-1,detail-2,detail-3"]
     },
     "brand": "luxury",
     "model": ["Liam"],
@@ -347,8 +377,11 @@
     "id": 15,
     "title": "MomFit High Ankle Jeans",
     "imageUrl": {
-      "catalog": ["blue"],
-      "detail": ["blue-2"]
+      "catalog": [
+        "Vintage-Mom-Fit-Ultra-High-Ankle-Jeans-blue-1",
+        "Vintage-Mom-Fit-Ultra-High-Ankle-Jeans-blue-2"
+      ],
+      "detail": ["detail-1", "detail-2"]
     },
     "brand": "DENIM",
     "model": ["Charlotte"],
@@ -369,7 +402,10 @@
     "id": 16,
     "title": "Hooded Puffer Vest",
     "imageUrl": {
-      "catalog": ["blue"],
+      "catalog": [
+        "Hooded-Puffer-oliveGreen-Vest-1",
+        "Hooded-Puffer-oliveGreen-Vest-2"
+      ],
       "detail": [""]
     },
     "brand": "another",
@@ -391,8 +427,11 @@
     "id": 17,
     "title": "Tie Belt Coat",
     "imageUrl": {
-      "catalog": ["gray", "brown"],
-      "detail": ["gray-3"]
+      "catalog": [
+        ["Tie-Belt-Coat-brown-1", "Tie-Belt-Coat-brown-2"],
+        ["Tie-Belt-Coat-gray-1", "Tie-Belt-Coat-gray-2"]
+      ],
+      "detail": ["detail-1,detail-2,detail-3"]
     },
     "brand": "another",
     "model": ["Olivia"],
@@ -413,8 +452,8 @@
     "id": 18,
     "title": "Waist black Shirt",
     "imageUrl": {
-      "catalog": ["black"],
-      "detail": ["black-1"]
+      "catalog": ["Tapered-waist-Shirt-black-1", "Tapered-waist-Shirt-black-2"],
+      "detail": ["detail-1"]
     },
     "brand": "another",
     "model": ["Bonnie"],
@@ -435,8 +474,8 @@
     "id": 19,
     "title": " Sneakers light-gray",
     "imageUrl": {
-      "catalog": ["light-gray"],
-      "detail": ["light-gray-3"]
+      "catalog": ["Sneakers-light-gray-1", "Sneakers-light-gray-2"],
+      "detail": ["detail-1", "detail-2", "detail-3"]
     },
     "brand": "Sneakers",
     "model": [""],
@@ -457,8 +496,8 @@
     "id": 20,
     "title": "Relaxed Fit Hoodie",
     "imageUrl": {
-      "catalog": ["dark-blue"],
-      "detail": ["dark-blue-5"]
+      "catalog": ["Fit-Hoodie-dark-blue-1", "Fit-Hoodie-dark-blue-2"],
+      "detail": ["detail-1,detail-2,detail-3", "detail-4", "detail-5"]
     },
     "brand": "kangaroo",
     "model": ["Danny"],
@@ -479,8 +518,15 @@
     "id": 21,
     "title": "Twill Dress Pants",
     "imageUrl": {
-      "catalog": ["brown"],
-      "detail": ["brown-6"]
+      "catalog": ["Twill-Dress-Pants-brown-1", "Twill-Dress-Pants-brown-2"],
+      "detail": [
+        "detail-1",
+        "detail-2",
+        "detail-3",
+        "detail-4",
+        "detail-5",
+        "detail-6"
+      ]
     },
     "brand": "kangaroo",
     "model": ["mike"],
@@ -501,8 +547,8 @@
     "id": 22,
     "title": "Chunky Derby Shoes",
     "imageUrl": {
-      "catalog": ["black"],
-      "detail": ["black-4"]
+      "catalog": ["Chunky-Derby-Shoes-black-1", "Chunky-Derby-Shoes-black-2"],
+      "detail": ["detail-1", "detail-2", "detail-3", "detail-4"]
     },
     "brand": "luxury",
     "model": ["mike"],
@@ -523,8 +569,31 @@
     "id": 23,
     "title": "Oversized Fit Sweatshirt",
     "imageUrl": {
-      "catalog": ["brown", "green", "red"],
-      "detail": ["brown-7", "green-8", "red-4"]
+      "catalog": [
+        [
+          "Oversized-Fit-Sweatshirt-brown-1",
+          "Oversized-Fit-Sweatshirt-brown-2"
+        ],
+        [
+          "Oversized-Fit-Sweatshirt-green-1",
+          "Oversized-Fit-Sweatshirt-green-2"
+        ],
+        ["Oversized-Fit-Sweatshirt-red-1", "Oversized-Fit-Sweatshirt-red-2"]
+      ],
+      "detail": [
+        ["detail-1", "detail-2", "detail-3", "detail-4", "detail-5"],
+        [
+          "detail-1",
+          "detail-2",
+          "detail-3",
+          "detail-4",
+          "detail-5",
+          "detail-6",
+          "detail-7",
+          "detail-8"
+        ],
+        ["detail-1", "detail-2", "detail-3", "detail-4"]
+      ]
     },
     "brand": "luxury",
     "model": ["Alex", "mike", "Frank"],
@@ -556,8 +625,8 @@
     "id": 24,
     "title": "Cargo Pants",
     "imageUrl": {
-      "catalog": ["black", "Cream"],
-      "detail": ["", "Cream"]
+      "catalog": [["Cargo-Pants-black-1"], ["Cargo-Pants-Cream-1"]],
+      "detail": ["", "detail-1"]
     },
     "brand": "another",
     "model": ["Kokab"],
