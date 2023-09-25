@@ -3,8 +3,8 @@
     "id": 1,
     "title": "Smocked bodice Dress",
     "imageUrl": {
-      "catalog": ["bodice-Dress-Smocked-1,bodice-Dress-Smocked-2"],
-      "detail": ["detail-1,detail-2,detail-3"]
+      "catalog": ["bodice-Dress-Smocked-1", "bodice-Dress-Smocked-2"],
+      "detail": ["detail-1", "detail-2", "detail-3"]
     },
 
     "brand": "javad-mod",
@@ -252,7 +252,7 @@
     "title": "Pointed collar Shirt",
     "imageUrl": {
       "catalog": [
-        ["collar-Shirt-white-1,collar-Shirt-white-2"],
+        ["collar-Shirt-white-1", "collar-Shirt-white-2"],
         ["collar-Shirt-Pointed-1", "collar-Shirt-Pointed-2"]
       ],
       "detail": [
@@ -356,7 +356,7 @@
     "title": "Fit Printed T-shirt",
     "imageUrl": {
       "catalog": ["Fit-Printed-T-shirt-black-1", "Fit-Printed-T-shirt-black-2"],
-      "detail": ["detail-1,detail-2,detail-3"]
+      "detail": ["detail-1", "detail-2", "detail-3"]
     },
     "brand": "luxury",
     "model": ["Liam"],
@@ -431,7 +431,7 @@
         ["Tie-Belt-Coat-brown-1", "Tie-Belt-Coat-brown-2"],
         ["Tie-Belt-Coat-gray-1", "Tie-Belt-Coat-gray-2"]
       ],
-      "detail": ["detail-1,detail-2,detail-3"]
+      "detail": ["detail-1", "detail-2", "detail-3"]
     },
     "brand": "another",
     "model": ["Olivia"],
@@ -497,7 +497,7 @@
     "title": "Relaxed Fit Hoodie",
     "imageUrl": {
       "catalog": ["Fit-Hoodie-dark-blue-1", "Fit-Hoodie-dark-blue-2"],
-      "detail": ["detail-1,detail-2,detail-3", "detail-4", "detail-5"]
+      "detail": ["detail-1", "detail-2", "detail-3", "detail-4", "detail-5"]
     },
     "brand": "kangaroo",
     "model": ["Danny"],
