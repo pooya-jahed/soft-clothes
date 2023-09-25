@@ -1,6 +1,5 @@
 import data from "../products.json" assert { type: "json" };
 console.log(data);
-
 let product = data.map((item) => item);
 function createProductCard() {
   const productContainer = document.getElementById("product-container");
@@ -37,9 +36,13 @@ function createProductCard() {
       }
       
     </div>`;
+    console.log(element.season);
     card.innerHTML = content;
     card.classList.add(
+      // `${element.season}`,
+
       "product-cart",
+      `product-cart${element.id}`,
       "col-12",
       "col-lg-6",
       "col-xl-4",
@@ -47,19 +50,30 @@ function createProductCard() {
       "mb-md-6",
       "pt-lg-3"
     );
+    console.log(product);
+
     productContainer.appendChild(card);
     let productImage = document.querySelectorAll(".product-cart-image");
 
     productImage.forEach((cardImage) => {
-      cardImage.style = `background-image:url("../assets/img/product-img/product-(1)/bodice-Dress-Smocked-1.jpg")`;
-      console.log(cardImage);
+      cardImage.style = `background-image:url("../assets/img/product-img/product-(${
+        product[1].id
+      })/${product[1].imageUrl.catalog.flat()[0]}.jpg")`;
       cardImage.addEventListener("mouseenter", (item) => {
-        item.target.style = `background-image:url("../assets/img/product-img/product-(${item.id})/${item.catalog}-2.jpg")`;
+        item.target.style = `background-image:url("../assets/img/product-img/product-(${product[1].id})/${product[1].imageUrl.catalog[0][1]}.jpg")`;
       });
       cardImage.addEventListener("mouseleave", (item) => {
-        item.target.style = `background-image:url("../assets/img/product-img/product-(${item.id})/${item.catalog}-1.jpg")`;
+        item.target.style = `background-image:url("../assets/img/product-img/product-(${product[1].id})/${product[1].imageUrl.catalog[0][0]}.jpg")`;
       });
     });
   });
 }
 createProductCard();
+// console.log(element.imageUrl.catalog[0])
+// : console.log(element.imageUrl.catalog[0][0])
+// __________________________________________________
+// function filterSeason() {
+//   const winterC = dispatchEvent(".winter-checkbox");
+//   winterC.cheked();
+// }
+// setTimeout(filterSeason(), 1350);
