@@ -8,13 +8,13 @@ function getColors() {
   let colorsList = Array(...colorSet);
   colorsList = colorsList.map((item) => item.toUpperCase());
   colorsList = colorsList.sort();
-  console.log(colorsList);
+  // console.log(colorsList);
   return colorsList;
 }
 getColors();
 function createColorTag() {
   getColors().forEach((color) => {
-    console.log(color);
+    // console.log(color);
     const tagSizesContainer = document.getElementById("color-tags-container");
     let colorContainer = document.createElement("div");
     let colorStructure = `
@@ -34,4 +34,5 @@ function createColorTag() {
     tagSizesContainer.appendChild(colorContainer);
   });
 }
-createColorTag();
+const colorTab = document.getElementById("collapseFour");
+colorTab.addEventListener("click", createColorTag());
