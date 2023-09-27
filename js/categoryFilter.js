@@ -34,21 +34,21 @@ function createProductCard() {
               (Number(element.price) / 100) * Number(element.off)
             ).toFixed(2)}</p>`
       }
-      
     </div>`;
     // console.log(element.season);
     card.innerHTML = content;
     card.classList.add(
-      // `${element.season}`,
-
       "product-cart",
-      `product-cart${element.id}`,
+      `product-cart${element.id+1}`,
       "col-12",
       "col-lg-6",
       "col-xl-4",
       "mb-4",
       "mb-md-6",
-      "pt-lg-3"
+      "pt-lg-3",
+      "item",
+      `item${element.id+1}`,
+
     );
     // console.log(product);
 

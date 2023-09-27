@@ -1,3 +1,4 @@
+
 $enable-gradients: true;
 $enable-shadows: true;
 
@@ -131,7 +132,7 @@ $dropdown-navbar-shop-dark: #292929 !important;
 // @import "icon-list";
 body {
   font-family: $font-primary;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.8;
   font-weight: normal;
 }
@@ -211,7 +212,7 @@ nav a {
   }
   .footer-bg {
     background-color: $footer-bg-background-dark;
-  }
+  
   h5 {
     color: white;
   }
@@ -222,7 +223,7 @@ nav a {
   .footer-shape::after,
   .footer-shape::before {
     background-color: rgb(148, 148, 148) !important;
-  }
+  }}
 }
 
 /* -------------------------------------------------------------------------- */
@@ -298,8 +299,8 @@ nav a {
   .navbar-brand {
     color: black;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 800;
+    font-size: 1.4rem;
     line-height: 1;
     span {
       display: block;

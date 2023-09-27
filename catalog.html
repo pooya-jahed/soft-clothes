@@ -1,274 +1,492 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css" />
-  <script type="module" src="js/color-modes.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
+    <script src="/js/purePajinate.es5.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script type="module" src="js/color-modes.js"></script>
+    <script type="text/javascript">
+      document.onreadystatechange = function () {
+        if (document.readyState === "complete") {
+          var example_1 = new purePaginate({
+            containerSelector: ".example_1 .items",
+            itemSelector: ".example_1 .items > div",
+            navigationSelector: ".example_1 .page_navigation",
+            itemsPerPage: 5,
+          });
+        }
+      };
+    </script>
+    <title>CATEGORY</title>
+  </head>
+  <style>
+    /* // cursor shape */
+    body {
+      cursor: none;
+    }
+    #cursor {
+      position: fixed;
+      z-index: 99999;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      will-change: transform;
+      mix-blend-mode: difference;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .cursor__circle {
+        width: 64px;
+        height: 64px;
+        background-color: rgba(243, 122, 8, 0.849);
+        margin-top: -50%;
+        margin-left: -50%;
+        border-radius: 50%;
+        border: solid 1px rgba(227, 222, 193, 0.64);
+        transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      #cursor.arrow .cursor__circle {
+        width: 128px;
+        height: 128px;
+        background-color: #0b3d7793;
+        border-color: #434c64;
+      }
+      #cursor.arrow::after {
+        content: "";
+        position: absolute;
+        left: -50%;
+        top: -50%;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://svgshare.com/i/MzQ.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #cursor.subtle .cursor__circle {
+        opacity: 0.16;
+        background-color: rgba(240, 99, 6, 0.644);
+      }
+      #cursor.overlay .cursor__circle {
+        width: 48px;
+        height: 48px;
+        background-color: rgba(250, 126, 25, 0.644);
+        border-color: transparent;
+      }
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .image-container:hover img {
+        transform: scale(1.1);
+      }
+      .underline:hover::after {
+        opacity: 1;
+      }
+      section::after {
+        display: none;
+      }
+    }
+    /* //////////////////////// */
+    .example_1,
+    .example_2,
+    .example_3 {
+      margin: 20px 0;
+    }
+    .page_navigation {
+      width: 100%;
+      text-align: center;
+    }
+    .page_navigation ul {
+      padding: 0;
+    }
+    .page_navigation li {
+      display: inline;
+      margin-top: 2rem;
+    }
+  </style>
+  <body>
+    <div id="cursor">
+      <div class="cursor__circle"></div>
+    </div>
+    <a href="#top" id="scrollTop">
+      <i class="bi bi-arrow-up"></i>
+    </a>
 
-  <title>CATEGORY</title>
-</head>
-
-<body>
-  <!-- ----------------------------------------------------------------------- -->
-  <!--                           HEADER SECTION START                          -->
-  <!-- ----------------------------------------------------------------------- -->
-  <header>
-    <!--------------------------------------------------------------------------->
-    <!--                         NAVBAR SECTION START                          -->
-    <!--------------------------------------------------------------------------->
-    <section class="ftco-section " data-bs-theme="light">
-      <div class="w100-bg-black">
-        <div class="container">
-          <div class="row justify-content-between align-items-center p-2">
-            <span class="btn-group col-1 dark-light" role="group" aria-label="Basic radio toggle button group"
-              aria-labelledby="bd-theme">
-              <input type="radio" class="btn-check" name="btnradio" data-bs-theme-value="light" id="btnradio1"
-                autocomplete="off" checked="" />
-              <label class="btn text-white btn-outline-white " for="btnradio1">
-                <svg class="bi m-2  opacity-100 theme-icon">
-                  <use href="#sun-fill"></use>
-                </svg>
-                <svg class="bi ms-auto d-none">
-                  <use href="#check2"></use>
-                </svg>
-              </label>
-              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" data-bs-theme-value="dark"
-                autocomplete="off" />
-              <label class="btn text-white btn-outline-white" for="btnradio2">
-                <svg class="bi me-2 opacity-100 theme-icon">
-                  <use href="#moon-stars-fill"></use>
-                </svg>
-                <svg class="bi ms-auto d-none">
-                  <use href="#check2"></use>
-                </svg>
-              </label>
-            </span>
-            <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-              <symbol id="circle-half" viewBox="0 0 16 16">
-                <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-              </symbol>
-              <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-                <path
-                  d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-                <path
-                  d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-              </symbol>
-              <symbol id="sun-fill" viewBox="0 0 16 16">
-                <path
-                  d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-              </symbol>
-            </svg>
-            <div class="col-3 mx-4 d-none d-md-inline text-start text-md-end">
-              <p class="mb-0 phone">
-                <span class="bi bi-phone-flip text-warning fs-4"></span> <a class=" text-warning display-6 "
-                  href="#">+00
-                  1234
-                  567</a>
-              </p>
-            </div>
-            <!-- social media section  -->
-            <div class="col d-flex justify-content-end">
-              <div class="social-media">
-                <p class="mb-0 d-flex">
-                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i class="bi bi-facebook">
-                    </i>
-                  </a>
-                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i class="bi bi-twitter">
-                    </i></a>
-                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i
-                      class="bi bi-instagram"></i></a>
-                  <a href="#" class="pb-2 d-flex align-items-center justify-content-center"><i
-                      class="bi bi-dribbble"></i></a>
+    <!-- ----------------------------------------------------------------------- -->
+    <!--                           HEADER SECTION START                          -->
+    <!-- ----------------------------------------------------------------------- -->
+    <header>
+      <!--------------------------------------------------------------------------->
+      <!--                         NAVBAR SECTION START                          -->
+      <!--------------------------------------------------------------------------->
+      <section class="ftco-section" data-bs-theme="light">
+        <div class="w100-bg-black">
+          <div class="container">
+            <div class="row justify-content-between align-items-center p-2">
+              <span
+                class="btn-group col-1 dark-light"
+                role="group"
+                aria-label="Basic radio toggle button group"
+                aria-labelledby="bd-theme"
+              >
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  data-bs-theme-value="light"
+                  id="btnradio1"
+                  autocomplete="off"
+                  checked=""
+                />
+                <label class="btn text-white btn-outline-white" for="btnradio1">
+                  <svg class="bi m-2 opacity-100 theme-icon">
+                    <use href="#sun-fill"></use>
+                  </svg>
+                  <svg class="bi ms-auto d-none">
+                    <use href="#check2"></use>
+                  </svg>
+                </label>
+                <input
+                  type="radio"
+                  class="btn-check"
+                  name="btnradio"
+                  id="btnradio2"
+                  data-bs-theme-value="dark"
+                  autocomplete="off"
+                />
+                <label class="btn text-white btn-outline-white" for="btnradio2">
+                  <svg class="bi me-2 opacity-100 theme-icon">
+                    <use href="#moon-stars-fill"></use>
+                  </svg>
+                  <svg class="bi ms-auto d-none">
+                    <use href="#check2"></use>
+                  </svg>
+                </label>
+              </span>
+              <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+                <symbol id="circle-half" viewBox="0 0 16 16">
+                  <path
+                    d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+                  />
+                </symbol>
+                <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+                  />
+                  <path
+                    d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+                  />
+                </symbol>
+                <symbol id="sun-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </symbol>
+              </svg>
+              <div class="col-3 mx-4 d-none d-md-inline text-start text-md-end">
+                <p class="mb-0 phone">
+                  <span class="bi bi-phone-flip text-warning fs-4"></span>
+                  <a class="text-warning display-6" href="#">+00 1234 567</a>
                 </p>
+              </div>
+              <!-- social media section  -->
+              <div class="col d-flex justify-content-end">
+                <div class="social-media">
+                  <p class="mb-0 d-flex">
+                    <a
+                      href="#"
+                      class="pb-2 d-flex align-items-center justify-content-center"
+                      ><i class="bi bi-facebook"> </i>
+                    </a>
+                    <a
+                      href="#"
+                      class="pb-2 d-flex align-items-center justify-content-center"
+                      ><i class="bi bi-twitter"> </i
+                    ></a>
+                    <a
+                      href="#"
+                      class="pb-2 d-flex align-items-center justify-content-center"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                    <a
+                      href="#"
+                      class="pb-2 d-flex align-items-center justify-content-center"
+                      ><i class="bi bi-dribbble"></i
+                    ></a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top"
-        id="ftco-navbar">
-        <div class="container-fluid px-0 px-md-4">
-          <a class="display-6 navbar-brand mx-0 mx-md-1 " href="index.html">soft clothes
-            <span>commerce</span></a>
+        <nav
+          class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top"
+          id="ftco-navbar"
+        >
+          <div class="container-fluid px-0 px-md-4">
+            <a class="display-6 navbar-brand mx-0 mx-md-1" href="index.html"
+              >soft clothes <span>commerce</span></a
+            >
 
-          <form action="#" class="searchform order-sm-start order-lg-last d-none d-lg-block">
-            <div class="form-group d-flex">
-              <input type="text" id="search-input" class="form-control pl-3 " placeholder="Search" />
-              <button type="submit" placeholder="" class="form-control search ">
-                <span class="bi bi-search "></span>
-              </button>
-            </div>
-          </form>
+            <form
+              action="#"
+              class="searchform order-sm-start order-lg-last d-none d-lg-block"
+            >
+              <div class="form-group d-flex">
+                <input
+                  type="text"
+                  id="search-input"
+                  class="form-control pl-3"
+                  placeholder="Search"
+                />
+                <button
+                  type="submit"
+                  placeholder=""
+                  class="form-control search"
+                >
+                  <span class="bi bi-search"></span>
+                </button>
+              </div>
+            </form>
 
-          <button class="navbar-toggler collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav"
-            aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="bi bi-list navbar-toggler-icon text-warning-50 fw-bold fs-1"></span>
-          </button>
-          <ul class="navbar-nav d-flex d-lg-none flex-row p-0">
-            <li id="md-shop-list" class="nav-item btn btn-link  py-0 position-relative" data-bs-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <a class="bi bi-bag-check  navbar-main-icon  position-relative">
-                <span class="position-absolute badge rounded-pill bg-danger ">
-                  +5
-                  <span class="visually-hidden">favorite list</span>
-                </span>
-
-              </a>
-              <div
-                class="dropdown-menu dropdown-navbar-shop-light dropdown-navbar-shop-dark  dropdown-menu-end dropdown-navbar-shop-md px-4 py-3 position-absolute mx-4"
-                aria-labelledby="md-shop-list" data-bs-popper="static">
-
-                <!-- cart item-->
-                <div class="navbar-cart-product ">
-                  <div class="d-flex align-items-start">
-                    <a href="detail.html">
-                      <img class="img-fluid navbar-cart-product-image" style="max-width:60px ;"
-                        src="/assets/img/product-img-woman-jeans-1.jpg" alt="...">
+            <button
+              class="navbar-toggler collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#ftco-nav"
+              aria-controls="ftco-nav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span
+                class="bi bi-list navbar-toggler-icon text-warning-50 fw-bold fs-1"
+              ></span>
+            </button>
+            <ul class="navbar-nav d-flex d-lg-none flex-row p-0">
+              <li
+                id="md-shop-list"
+                class="nav-item btn btn-link py-0 position-relative"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <a class="bi bi-bag-check navbar-main-icon position-relative">
+                  <span class="position-absolute badge rounded-pill bg-danger">
+                    +5
+                    <span class="visually-hidden">favorite list</span>
+                  </span>
+                </a>
+                <div
+                  class="dropdown-menu dropdown-navbar-shop-light dropdown-navbar-shop-dark dropdown-menu-end dropdown-navbar-shop-md px-4 py-3 position-absolute mx-4"
+                  aria-labelledby="md-shop-list"
+                  data-bs-popper="static"
+                >
+                  <!-- cart item-->
+                  <div class="navbar-cart-product">
+                    <div class="d-flex align-items-start">
+                      <a href="detail.html">
+                        <img
+                          class="img-fluid navbar-cart-product-image"
+                          style="max-width: 60px"
+                          src="/assets/img/product-img-woman-jeans-1.jpg"
+                          alt="..."
+                        />
+                      </a>
+                      <div class="w-100">
+                        <div class="ps-3">
+                          <a
+                            class="navbar-cart-product-link navbar-cart-product-link-dark"
+                            href="detail.html"
+                            >Skull Tee</a
+                          >
+                          <span
+                            class="btn-close float-end"
+                            style="width: 2px"
+                          ></span>
+                          <small class="text-muted">Quantity: 1 </small>
+                          <strong class="d-block">$75.00 </strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- cart item-->
+                  <!-- total price-->
+                  <hr class="navbar-cart-product-wrapper" />
+                  <div class="navbar-cart-total w-100">
+                    <span class="text-uppercase text-white text-dark-mode"
+                      >Total</span
+                    >
+                    <strong class="text-uppercase float-end">$75.00</strong>
+                  </div>
+                  <hr class="navbar-cart-product-wrapper p-0" />
+                  <!-- buttons-->
+                  <div class="d-flex justify-content-center flex-column">
+                    <a class="btn btn-link text-dark p-2" href="cart.html"
+                      >View Cart
+                      <i class="bi bi-arrow-right"></i>
                     </a>
-                    <div class="w-100 ">
-                      <div class="ps-3 ">
-                        <a class="navbar-cart-product-link navbar-cart-product-link-dark" href="detail.html">Skull
-                          Tee</a>
-                        <span class="btn-close float-end " style="width: 2px;"></span>
-                        <small class=" text-muted ">Quantity: 1 </small>
-                        <strong class="d-block ">$75.00 </strong>
+                    <a class="btn btn-outline-dark p-2" href="checkout1.html"
+                      >Checkout
+                    </a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="bi bi-heart navbar-main-icon dropdown-navbar-shop-dark position-relative"
+                >
+                  <span class="position-absolute badge rounded-pill bg-danger">
+                    +5
+                    <span class="visually-hidden">favorite list</span>
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark position-relative"
+                >
+                  <span
+                    class="position-absolute badge rounded-pill bg-danger p-1"
+                    style="width: 0.3rem; height: 0.3rem"
+                  >
+                    <span class="visually-hidden">favorite list</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <div class="navbar-collapse collapsed" id="ftco-nav">
+              <ul class="navbar-nav m-auto d-flex align-items-start">
+                <li class="nav-item w-100">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+
+                <li class="nav-item w-100 active active-nav-link-dark">
+                  <a href="Catalog.html" class="nav-link">Catalog</a>
+                </li>
+                <li class="nav-item w-100">
+                  <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item w-100">
+                  <a href="#" class="nav-link">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="navbar-nav px-0 d-none d-lg-flex px-md-5 align-baseline">
+            <li
+              id="shop-list"
+              class="btn btn-link nav-item px-3 py-0"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <a
+                class="bi bi-bag-check navbar-main-icon dropdown-navbar-shop-dark position-relative p-0"
+              >
+                <span class="position-absolute badge rounded-pill bg-danger">
+                  +1
+                  <span class="visually-hidden">favorite list </span>
+                </span>
+              </a>
+
+              <div
+                class="dropdown-menu dropdown-navbar-shop dropdown-navbar-shop-dark dropdown-menu-end px-4 py-3 position-absolute"
+                aria-labelledby="shop-list"
+                data-bs-popper="static"
+              >
+                <!-- cart item-->
+                <div class="navbar-cart-product">
+                  <div class="d-flex align-items-center">
+                    <a href="detail.html">
+                      <img
+                        class="img-fluid navbar-cart-product-image"
+                        style="max-width: 60px"
+                        src="/assets/img/product-img-woman-jeans-1.jpg"
+                        alt="..."
+                      />
+                    </a>
+                    <div class="w-100">
+                      <div class="ps-3">
+                        <a class="navbar-cart-product-link" href="detail.html"
+                          >Skull Tee</a
+                        >
+                        <span
+                          class="btn-close float-end"
+                          style="width: 2px"
+                        ></span>
+                        <small class="d-block text-muted">Quantity: 1 </small>
+                        <strong class="d-block">$75.00 </strong>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- cart item-->
                 <!-- total price-->
-                <hr class="navbar-cart-product-wrapper ">
+                <hr class="navbar-cart-product-wrapper" />
                 <div class="navbar-cart-total w-100">
-                  <span class="text-uppercase text-white text-dark-mode">Total</span>
+                  <span class="text-uppercase text-dark text-dark-mode"
+                    >Total</span
+                  >
                   <strong class="text-uppercase float-end">$75.00</strong>
                 </div>
-                <hr class="navbar-cart-product-wrapper p-0 ">
+                <hr class="navbar-cart-product-wrapper p-0" />
                 <!-- buttons-->
-                <div class="d-flex justify-content-center flex-column">
-                  <a class="btn btn-link text-dark p-2" href="cart.html">View
-                    Cart
-                    <i class="bi bi-arrow-right "></i>
+                <div class="d-flex justify-content-between">
+                  <a class="btn btn-link text-dark me-3" href="cart.html"
+                    >View Cart
+                    <i class="bi bi-arrow-right"></i>
                   </a>
-                  <a class="btn btn-outline-dark p-2 " href="checkout1.html">Checkout </a>
+                  <a class="btn btn-outline-dark" href="checkout1.html"
+                    >Checkout
+                  </a>
                 </div>
+              </div>
+              <!-- ---------------- -->
             </li>
-            <li class="nav-item">
-              <a class="bi bi-heart navbar-main-icon dropdown-navbar-shop-dark position-relative">
+            <li class="nav-item px-2">
+              <a
+                class="bi bi-heart navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0"
+              >
                 <span class="position-absolute badge rounded-pill bg-danger">
                   +5
-                  <span class="visually-hidden">favorite list</span>
-                </span>
+                  <span class="visually-hidden">favorite list</span></span
+                >
               </a>
             </li>
-            <li class="nav-item">
-              <a class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark position-relative">
-                <span class="position-absolute badge rounded-pill bg-danger p-1 " style="width: 0.3rem;height: 0.3rem;">
-
-                  <span class="visually-hidden">favorite list</span>
-                </span>
+            <li class="nav-item px-2">
+              <a
+                class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0"
+              >
+                <span
+                  class="position-absolute badge rounded-pill bg-danger mx-1"
+                  style="width: 0.3rem; height: 0.3rem; padding: 0.4rem"
+                >
+                  <span class="visually-hidden">favorite list</span></span
+                >
               </a>
             </li>
           </ul>
-          <div class="navbar-collapse collapsed" id="ftco-nav">
-            <ul class="navbar-nav m-auto d-flex  align-items-start">
-              <li class="nav-item   w-100">
-                <a href="index.html" class="nav-link ">Home</a>
-              </li>
-
-              <li class="nav-item w-100 active active-nav-link-dark">
-                <a href="Catalog.html" class="nav-link">Catalog</a>
-              </li>
-              <li class="nav-item w-100">
-                <a href="#" class="nav-link">Blog</a>
-              </li>
-              <li class="nav-item w-100">
-                <a href="#" class="nav-link">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <ul class="navbar-nav px-0 d-none d-lg-flex px-md-5  align-baseline">
-
-          <li id="shop-list" class="btn btn-link nav-item px-3 py-0" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
-
-            <a class="bi bi-bag-check navbar-main-icon dropdown-navbar-shop-dark   position-relative p-0 ">
-              <span class="position-absolute badge rounded-pill bg-danger">
-                +1
-                <span class="visually-hidden">favorite list
-
-                </span>
-              </span>
-            </a>
-
-
-            <div
-              class="dropdown-menu dropdown-navbar-shop dropdown-navbar-shop-dark dropdown-menu-end px-4 py-3 position-absolute"
-              aria-labelledby="shop-list" data-bs-popper="static">
-
-              <!-- cart item-->
-              <div class="navbar-cart-product ">
-                <div class="d-flex align-items-center">
-                  <a href="detail.html">
-                    <img class="img-fluid navbar-cart-product-image" style="max-width:60px ;"
-                      src="/assets/img/product-img-woman-jeans-1.jpg" alt="...">
-                  </a>
-                  <div class="w-100 ">
-                    <div class="ps-3 ">
-                      <a class="navbar-cart-product-link" href="detail.html">Skull Tee</a>
-                      <span class="btn-close float-end " style="width: 2px;"></span>
-                      <small class="d-block text-muted">Quantity: 1 </small>
-                      <strong class="d-block ">$75.00 </strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- cart item-->
-              <!-- total price-->
-              <hr class="navbar-cart-product-wrapper ">
-              <div class="navbar-cart-total w-100">
-                <span class="text-uppercase  text-dark text-dark-mode ">Total</span>
-                <strong class="text-uppercase float-end">$75.00</strong>
-              </div>
-              <hr class="navbar-cart-product-wrapper p-0 ">
-              <!-- buttons-->
-              <div class="d-flex justify-content-between">
-                <a class="btn btn-link text-dark me-3" href="cart.html">View
-                  Cart
-                  <i class="bi bi-arrow-right "></i>
-                </a>
-                <a class="btn btn-outline-dark" href="checkout1.html">Checkout </a>
-              </div>
-            </div>
-            <!-- ---------------- -->
-          </li>
-          <li class="nav-item px-2">
-            <a
-              class="bi bi-heart navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0">
-              <span class="position-absolute badge rounded-pill bg-danger">
-                +5
-                <span class="visually-hidden">favorite list</span>
-            </a>
-          </li>
-          <li class="nav-item px-2">
-            <a
-              class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0"><span
-                class="position-absolute badge rounded-pill bg-danger  mx-1"
-                style=" width: 0.3rem;height: 0.3rem; padding: 0.4rem;">
-                <span class="visually-hidden">favorite list</span></a>
-          </li>
-        </ul>
-      </nav>
-    </section>
-
+        </nav>
+      </section>
+    </header>
     <!-- ----------------------------------------------------------------------- -->
     <!--                           NAVBAR SECTION END                            -->
     <!-- ----------------------------------------------------------------------- -->
@@ -277,200 +495,288 @@
     <!--                                           CONTENT                                           -->
     <!-- ------------------------------------------------------------------------------------------- -->
     <section class="content">
-      <div class="container ">
-        <div class="row my-5  ">
+      <div class="container">
+        <div class="row my-5">
           <!-- ----------------------------------------------------------------------- -->
           <!--                         ACCORDION SECTION START                         -->
           <!-- ----------------------------------------------------------------------- -->
           <div class="col-12 col-md-4 my-2 sticky-md-top h-100">
-            <div class="accordion accordion-flush " id="accordionExample">
-
+            <div class="accordion accordion-flush" id="accordionExample">
               <!-- accordion item one -->
-              <div class="accordion-item ">
-                <h2 class="accordion-header ">
-                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
-                    aria-controls="collapseOne">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button bg-body border-light shadow-none fs-5"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
                     Category
                   </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-                    <ul class="list-styled mb-0 px-0  " id="productsNav">
-                      <li class="list-unstyled d-flex px-0  ">
-                        <input class="h3 list-inline-item" id="check-all" type="checkbox" checked=""
-                          style="width: 25px;height: 25px;">
-                        <label id="all-product"
-                          class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
-                          for="check-all">
+                    <ul class="list-styled mb-0 px-0" id="productsNav">
+                      <li class="list-unstyled d-flex px-0">
+                        <input
+                          class="h3 list-inline-item"
+                          id="check-all"
+                          type="checkbox"
+                          checked=""
+                          style="width: 25px; height: 25px"
+                        />
+                        <label
+                          id="all-product"
+                          class="form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
+                          for="check-all"
+                        >
                           All Products
                         </label>
                       </li>
                       <li class="list-styled-item ms-3">
-
                         <!-- Toggle -->
-                        <a class="list-styled-link text-decoration-none fw-bold " data-bs-toggle="collapse"
-                          href="#blousesCollapse" style="width: 25px;height: 25px;">
+                        <a
+                          class="list-styled-link text-decoration-none fw-bold"
+                          data-bs-toggle="collapse"
+                          href="#blousesCollapse"
+                          style="width: 25px; height: 25px"
+                        >
                           Bluse and Shirts
                         </a>
 
                         <!-- Collapse -->
-                        <div class="collapse" id="blousesCollapse" data-bs-parent="#productsNav">
+                        <div
+                          class="collapse"
+                          id="blousesCollapse"
+                          data-bs-parent="#productsNav"
+                        >
                           <div class="py-4 ps-5">
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="blousesOne" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="blousesOne"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="blousesOne">
                                 Women Tops, Blouses
                               </label>
                             </div>
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="blousesTwo" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="blousesTwo"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="blousesTwo">
                                 Shirt
                               </label>
                             </div>
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="blousesThree" type="checkbox">
-                              <label class="form-check-label" for="blousesThree">T-shirt
+                              <input
+                                class="form-check-input"
+                                id="blousesThree"
+                                type="checkbox"
+                              />
+                              <label class="form-check-label" for="blousesThree"
+                                >T-shirt
                               </label>
                             </div>
-
                           </div>
                         </div>
-
                       </li>
-                      <li class="list-styled-item ms-3 ">
-
+                      <li class="list-styled-item ms-3">
                         <!-- Toggle -->
-                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
-                          href="#coatsCollapse">
+                        <a
+                          class="list-styled-link text-decoration-none fw-bold"
+                          data-bs-toggle="collapse"
+                          href="#coatsCollapse"
+                        >
                           Jackets and Puffer
                         </a>
 
                         <!-- Collapse -->
-                        <div class="collapse" id="coatsCollapse" data-bs-parent="#productsNav">
+                        <div
+                          class="collapse"
+                          id="coatsCollapse"
+                          data-bs-parent="#productsNav"
+                        >
                           <div class="py-4 ps-5">
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="coatsOne" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="coatsOne"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="coatsOne">
                                 Coats, Jackets &amp; Vests
                               </label>
                             </div>
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="coatsTwo" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="coatsTwo"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="coatsTwo">
-                                Puffer </label>
+                                Puffer
+                              </label>
                             </div>
-
                           </div>
                         </div>
-
                       </li>
-                      <li class="list-styled-item ms-3 ">
-
+                      <li class="list-styled-item ms-3">
                         <!-- Toggle -->
-                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
-                          href="#dressesCollapse" aria-expanded="true">
+                        <a
+                          class="list-styled-link text-decoration-none fw-bold"
+                          data-bs-toggle="collapse"
+                          href="#dressesCollapse"
+                          aria-expanded="true"
+                        >
                           Dresses
                         </a>
 
                         <!-- Collapse -->
-
-
                       </li>
                       <li class="list-styled-item ms-3">
-
                         <!-- Toggle -->
-                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
-                          href="#hoodiesCollapse">
+                        <a
+                          class="list-styled-link text-decoration-none fw-bold"
+                          data-bs-toggle="collapse"
+                          href="#hoodiesCollapse"
+                        >
                           Hoodies and SweatShirt
                         </a>
 
                         <!-- Collapse -->
-                        <div class="collapse" id="hoodiesCollapse" data-bs-parent="#productsNav">
+                        <div
+                          class="collapse"
+                          id="hoodiesCollapse"
+                          data-bs-parent="#productsNav"
+                        >
                           <div class="py-4 ps-5">
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="hoodiesOne" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="hoodiesOne"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="hoodiesOne">
                                 Sweater
                               </label>
                             </div>
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="hoodiesTwo" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="hoodiesTwo"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="hoodiesTwo">
-                                Sweatshirt </label>
+                                Sweatshirt
+                              </label>
                             </div>
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="hoodiesThree" type="checkbox">
-                              <label class="form-check-label" for="hoodiesThree">
+                              <input
+                                class="form-check-input"
+                                id="hoodiesThree"
+                                type="checkbox"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="hoodiesThree"
+                              >
                                 Hoodie
                               </label>
                             </div>
-
                           </div>
                         </div>
-
                       </li>
 
-                      <li class="list-styled-item ms-3 ">
-
+                      <li class="list-styled-item ms-3">
                         <!-- Toggle -->
-                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
-                          href="#jeansCollapse">
+                        <a
+                          class="list-styled-link text-decoration-none fw-bold"
+                          data-bs-toggle="collapse"
+                          href="#jeansCollapse"
+                        >
                           Jeans
                         </a>
 
                         <!-- Collapse -->
-                        <div class="collapse" id="jeansCollapse" data-bs-parent="#productsNav">
+                        <div
+                          class="collapse"
+                          id="jeansCollapse"
+                          data-bs-parent="#productsNav"
+                        >
                           <div class="py-4 ps-5">
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="jeansOne" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="jeansOne"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="jeansOne">
                                 Men Jeans
                               </label>
                             </div>
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="jeansOne" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="jeansOne"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="jeansOne">
                                 Women Jeans
                               </label>
-
                             </div>
                           </div>
-
                         </div>
-
                       </li>
-                      <li class="list-styled-item ms-3 ">
-
+                      <li class="list-styled-item ms-3">
                         <!-- Toggle -->
-                        <a class="list-styled-link text-decoration-none fw-bold" data-bs-toggle="collapse"
-                          href="#ShoesCollapse">
+                        <a
+                          class="list-styled-link text-decoration-none fw-bold"
+                          data-bs-toggle="collapse"
+                          href="#ShoesCollapse"
+                        >
                           Shoes
                         </a>
 
                         <!-- Collapse -->
-                        <div class="collapse" id="ShoesCollapse" data-bs-parent="#productsNav">
+                        <div
+                          class="collapse"
+                          id="ShoesCollapse"
+                          data-bs-parent="#productsNav"
+                        >
                           <div class="py-4 ps-5">
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="ShoesOne" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="ShoesOne"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="ShoesOne">
                                 Men Shoes
                               </label>
                             </div>
                             <div class="form-check mb-3 px-0">
-                              <input class="form-check-input" id="ShoesOne" type="checkbox">
+                              <input
+                                class="form-check-input"
+                                id="ShoesOne"
+                                type="checkbox"
+                              />
                               <label class="form-check-label" for="ShoesOne">
                                 Women Shoes
                               </label>
-
                             </div>
                           </div>
-
                         </div>
-
-
-
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -479,71 +785,122 @@
               <!-- accordion item two -->
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
-                    aria-controls="collapseTwo">
+                  <button
+                    class="accordion-button bg-body border-light shadow-none fs-5"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
                     Season
-
                   </button>
                 </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-
                     <!-- Collapse -->
-                    <div class="collapse show" id="seasonCollapse" data-simplebar-collapse="#seasonGroup">
-                      <div class="form-group form-group-overflow mb-6" id="seasonGroup" data-simplebar="init">
-                        <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div
+                      class="collapse show"
+                      id="seasonCollapse"
+                      data-simplebar-collapse="#seasonGroup"
+                    >
+                      <div
+                        class="form-group form-group-overflow mb-6"
+                        id="seasonGroup"
+                        data-simplebar="init"
+                      >
+                        <div class="simplebar-wrapper" style="margin: 0px">
                           <div class="simplebar-height-auto-observer-wrapper">
                             <div class="simplebar-height-auto-observer"></div>
                           </div>
                           <div class="simplebar-mask">
-                            <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                              <div class="simplebar-content-wrapper" tabindex="0" role="region"
-                                aria-label="scrollable content" style="height: auto; overflow: hidden;">
-                                <div class="simplebar-content" style="padding: 0px;">
-
+                            <div
+                              class="simplebar-offset"
+                              style="right: 0px; bottom: 0px"
+                            >
+                              <div
+                                class="simplebar-content-wrapper"
+                                tabindex="0"
+                                role="region"
+                                aria-label="scrollable content"
+                                style="height: auto; overflow: hidden"
+                              >
+                                <div
+                                  class="simplebar-content"
+                                  style="padding: 0px"
+                                >
                                   <div class="form-check mb-3 d-flex p-0">
-                                    <input class="h3 list-inline-item" id="check-all-season" type="checkbox" checked=""
-                                      style="width: 25px;height: 25px;">
+                                    <input
+                                      class="h3 list-inline-item"
+                                      id="check-all-season"
+                                      type="checkbox"
+                                      checked=""
+                                      style="width: 25px; height: 25px"
+                                    />
                                     <label
-                                      class="check-all-season  form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
-                                      for="check-all-season">
+                                      class="check-all-season form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
+                                      for="check-all-season"
+                                    >
                                       All
                                     </label>
                                   </div>
                                   <div class="form-check mb-3 d-flex p-0">
-                                    <input class="h3 list-inline-item" id="winter-checkbox" type="checkbox"
-                                      style="width: 25px;height: 25px;">
+                                    <input
+                                      class="h3 list-inline-item"
+                                      id="winter-checkbox"
+                                      type="checkbox"
+                                      style="width: 25px; height: 25px"
+                                    />
                                     <label
-                                      class="winter-checkbox form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
-                                      for="winter-checkbox">
+                                      class="winter-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
+                                      for="winter-checkbox"
+                                    >
                                       Winter
                                     </label>
                                   </div>
                                   <div class="form-check mb-3 d-flex p-0">
-                                    <input class="h3 list-inline-item" id="autumn-checkbox" type="checkbox"
-                                      style="width: 25px;height: 25px;">
+                                    <input
+                                      class="h3 list-inline-item"
+                                      id="autumn-checkbox"
+                                      type="checkbox"
+                                      style="width: 25px; height: 25px"
+                                    />
                                     <label
-                                      class="autumn-checkbox form-check-label   icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
-                                      for="autumn-checkbox">
+                                      class="autumn-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
+                                      for="autumn-checkbox"
+                                    >
                                       Autumn
                                     </label>
                                   </div>
                                   <div class="form-check mb-3 d-flex p-0">
-                                    <input class="h3 list-inline-item" id="summer-checkbox" type="checkbox"
-                                      style="width: 25px;height: 25px;">
+                                    <input
+                                      class="h3 list-inline-item"
+                                      id="summer-checkbox"
+                                      type="checkbox"
+                                      style="width: 25px; height: 25px"
+                                    />
                                     <label
-                                      class="summer-checkbox form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
-                                      for="summer-checkbox">
+                                      class="summer-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
+                                      for="summer-checkbox"
+                                    >
                                       Summer
                                     </label>
                                   </div>
                                   <div class="form-check mb-3 d-flex p-0">
-                                    <input class="h3 list-inline-item" id="spring-checkbox" type="checkbox"
-                                      style="width: 25px;height: 25px;">
+                                    <input
+                                      class="h3 list-inline-item"
+                                      id="spring-checkbox"
+                                      type="checkbox"
+                                      style="width: 25px; height: 25px"
+                                    />
                                     <label
-                                      class="spring-checkbox form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
-                                      for="spring-checkbox">
+                                      class="spring-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
+                                      for="spring-checkbox"
+                                    >
                                       Spring
                                     </label>
                                   </div>
@@ -551,57 +908,104 @@
                               </div>
                             </div>
                           </div>
-
                         </div>
-                        <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                          <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                        <div
+                          class="simplebar-track simplebar-horizontal"
+                          style="visibility: hidden"
+                        >
+                          <div
+                            class="simplebar-scrollbar"
+                            style="width: 0px; display: none"
+                          ></div>
                         </div>
-                        <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
-                          <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
+                        <div
+                          class="simplebar-track simplebar-vertical"
+                          style="visibility: hidden"
+                        >
+                          <div
+                            class="simplebar-scrollbar"
+                            style="height: 0px; display: none"
+                          ></div>
                         </div>
                       </div>
                     </div>
-                    </li>
                   </div>
                 </div>
               </div>
 
               <!-- accordion item three -->
-              <div class="accordion-item ">
+              <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-                    aria-controls="collapseThree">
+                  <button
+                    class="accordion-button bg-body border-light shadow-none fs-5"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
                     Size
                   </button>
                 </h2>
-                <div id="collapseThree" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-                    <div class="collapse show" id="sizeCollapse" style="height: 15rem; overflow: hidden scroll;"
-                      data-simplebar-collapse="#sizeGroup">
-                      <div class="form-group form-group-overlow mb-6" id="sizeGroup" data-simplebar="init">
-                        <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div
+                      class="collapse show"
+                      id="sizeCollapse"
+                      style="height: 15rem; overflow: hidden scroll"
+                      data-simplebar-collapse="#sizeGroup"
+                    >
+                      <div
+                        class="form-group form-group-overlow mb-6"
+                        id="sizeGroup"
+                        data-simplebar="init"
+                      >
+                        <div class="simplebar-wrapper" style="margin: 0px">
                           <div class="simplebar-height-auto-observer-wrapper">
                             <div class="simplebar-height-auto-observer"></div>
                           </div>
                           <div class="simplebar-mask">
-                            <div class="simplebar-offset d-flex justify-content-between"
-                              style="right: 0px; bottom: 0px;">
-                              <div class="simplebar-content-wrapper" tabindex="0" role="region"
-                                aria-label="scrollable content" style="height: auto; overflow: hidden;">
-                                <div id="tag-sizes-container" class="simplebar-content" style="padding: 0px;">
-
-
-                                </div>
+                            <div
+                              class="simplebar-offset d-flex justify-content-between"
+                              style="right: 0px; bottom: 0px"
+                            >
+                              <div
+                                class="simplebar-content-wrapper"
+                                tabindex="0"
+                                role="region"
+                                aria-label="scrollable content"
+                                style="height: auto; overflow: hidden"
+                              >
+                                <div
+                                  id="tag-sizes-container"
+                                  class="simplebar-content"
+                                  style="padding: 0px"
+                                ></div>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-                          <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+                        <div
+                          class="simplebar-track simplebar-horizontal"
+                          style="visibility: hidden"
+                        >
+                          <div
+                            class="simplebar-scrollbar"
+                            style="width: 0px; display: none"
+                          ></div>
                         </div>
-                        <div class="simplebar-track simplebar-vertical" style="visibility: hidden;">
-                          <div class="simplebar-scrollbar" style="height: 0px; display: none;"></div>
+                        <div
+                          class="simplebar-track simplebar-vertical"
+                          style="visibility: hidden"
+                        >
+                          <div
+                            class="simplebar-scrollbar"
+                            style="height: 0px; display: none"
+                          ></div>
                         </div>
                       </div>
                     </div>
@@ -610,42 +1014,67 @@
               </div>
 
               <!-- accordion item four -->
-              <div class="accordion-item ">
+              <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
-                    aria-controls="collapseFour">
+                  <button
+                    class="accordion-button bg-body border-light shadow-none fs-5"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
                     Color
                   </button>
                 </h2>
-                <div id="collapseFour" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-                    <div class="collapse show" id="colorCollapse" data-simplebar-collapse="#colorGroup">
-                      <div class="form-group form-group-overflow mb-6" id="colorGroup" data-simplebar="init">
-                        <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div
+                      class="collapse show"
+                      id="colorCollapse"
+                      data-simplebar-collapse="#colorGroup"
+                    >
+                      <div
+                        class="form-group form-group-overflow mb-6"
+                        id="colorGroup"
+                        data-simplebar="init"
+                      >
+                        <div class="simplebar-wrapper" style="margin: 0px">
                           <div class="simplebar-height-auto-observer-wrapper">
                             <div class="simplebar-height-auto-observer"></div>
                           </div>
                           <div class="simplebar-mask">
-                            <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                              <div class="simplebar-content-wrapper" tabindex="0" role="region"
-                                aria-label="scrollable content" style="height: 15rem; overflow: hidden scroll;">
-                                <div class="simplebar-content p-0" id="color-tags-container">
-
-
-
-                                </div>
+                            <div
+                              class="simplebar-offset"
+                              style="right: 0px; bottom: 0px"
+                            >
+                              <div
+                                class="simplebar-content-wrapper"
+                                tabindex="0"
+                                role="region"
+                                aria-label="scrollable content"
+                                style="height: 15rem; overflow: hidden scroll"
+                              >
+                                <div
+                                  class="simplebar-content p-0"
+                                  id="color-tags-container"
+                                ></div>
                               </div>
                             </div>
                           </div>
-
                         </div>
-                        <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
-
-                        </div>
-                        <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
-
-                        </div>
+                        <div
+                          class="simplebar-track simplebar-horizontal"
+                          style="visibility: hidden"
+                        ></div>
+                        <div
+                          class="simplebar-track simplebar-vertical"
+                          style="visibility: visible"
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -653,28 +1082,50 @@
               </div>
 
               <!-- accordion item five -->
-              <div class="accordion-item ">
+              <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
-                    aria-controls="collapseFive">
+                  <button
+                    class="accordion-button bg-body border-light shadow-none fs-5"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
                     Brand
                   </button>
                 </h2>
-                <div id="collapseFive" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body">
-                    <div class="form-group form-group-overflow mb-6" id="brandGroup" data-simplebar="init">
-                      <div class="simplebar-wrapper" style="margin: 0px;">
+                    <div
+                      class="form-group form-group-overflow mb-6"
+                      id="brandGroup"
+                      data-simplebar="init"
+                    >
+                      <div class="simplebar-wrapper" style="margin: 0px">
                         <div class="simplebar-height-auto-observer-wrapper">
                           <div class="simplebar-height-auto-observer"></div>
                         </div>
                         <div class="simplebar-mask">
-                          <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
-                            <div class="simplebar-content-wrapper" tabindex="0" role="region"
-                              aria-label="scrollable content" style="height: auto; overflow: hidden scroll;">
-                              <div class="simplebar-content" id="brands-tags-container">
-
-                              </div>
+                          <div
+                            class="simplebar-offset"
+                            style="right: 0px; bottom: 0px"
+                          >
+                            <div
+                              class="simplebar-content-wrapper"
+                              tabindex="0"
+                              role="region"
+                              aria-label="scrollable content"
+                              style="height: auto; overflow: hidden scroll"
+                            >
+                              <div
+                                class="simplebar-content"
+                                id="brands-tags-container"
+                              ></div>
                             </div>
                           </div>
                         </div>
@@ -686,33 +1137,70 @@
 
               <!-- accordion item six -->
 
-              <div class="accordion-item price-section ">
+              <div class="accordion-item price-section">
                 <h2 class="accordion-header">
-                  <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false"
-                    aria-controls="collapseSix">
+                  <button
+                    class="accordion-button bg-body border-light shadow-none fs-5"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseSix"
+                    aria-expanded="false"
+                    aria-controls="collapseSix"
+                  >
                     Price
                   </button>
                 </h2>
-                <div id="collapseSix" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
+                <div
+                  id="collapseSix"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
                   <div class="accordion-body px-3">
                     <div class="price-input input-group rounded-0">
                       <span class="input-group-text rounded-0">From</span>
-                      <input type="number" class="input-min form-control lowest-price" placeholder="$100.00" value="">
-                      <span class="input-group-text rounded-0 border-0 text-light-emphasis">$</span>
+                      <input
+                        type="number"
+                        class="input-min form-control lowest-price"
+                        placeholder="$100.00"
+                        value=""
+                      />
+                      <span
+                        class="input-group-text rounded-0 border-0 text-light-emphasis"
+                        >$</span
+                      >
 
-                      <span class=" input-group-text ">To</span>
-                      <input type="number" class="input-min input-group-text   form-control highest-price"
-                        placeholder="$100.00" value="">
-                      <span class="input-group-text rounded-0 border-0 text-light-emphasis">$</span>
-
+                      <span class="input-group-text">To</span>
+                      <input
+                        type="number"
+                        class="input-min input-group-text form-control highest-price"
+                        placeholder="$100.00"
+                        value=""
+                      />
+                      <span
+                        class="input-group-text rounded-0 border-0 text-light-emphasis"
+                        >$</span
+                      >
                     </div>
                     <div class="slider">
                       <div class="progress"></div>
                     </div>
                     <div class="range-input">
-                      <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
-                      <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                      <input
+                        type="range"
+                        class="range-min"
+                        min="0"
+                        max="10000"
+                        value="2500"
+                        step="100"
+                      />
+                      <input
+                        type="range"
+                        class="range-max"
+                        min="0"
+                        max="10000"
+                        value="7500"
+                        step="100"
+                      />
                     </div>
                   </div>
                 </div>
@@ -725,46 +1213,115 @@
           <!-- ----------------------------------------------------------------------- -->
           <!--                             SLIDER SECTION                              -->
           <!-- ----------------------------------------------------------------------- -->
-          <div class="col-12 col-md-8  mt-3  mb-5">
-            <div id="carouselExampleDark" class="carousel carousel-dark slide mb-4  ">
+          <div class="col-12 col-md-8 mt-3 mb-5">
+            <div
+              id="carouselExampleDark"
+              class="carousel carousel-dark slide mb-4"
+            >
               <div class="carousel-indicators carousel-indicators-catalog">
-                <button class="carousel-control active bg-danger" type="button" data-bs-target="#carouselExampleDark"
-                  data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
-                <button class="carousel-control bg-danger" type="button" data-bs-target="#carouselExampleDark"
-                  data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button class="carousel-control  bg-danger" type="button" data-bs-target="#carouselExampleDark"
-                  data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button
+                  class="carousel-control active bg-danger"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="0"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  class="carousel-control bg-danger"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  class="carousel-control bg-danger"
+                  type="button"
+                  data-bs-target="#carouselExampleDark"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
               </div>
               <div class="carousel-inner">
-                <div style="max-height: 370px;" class="carousel-item active " data-bs-interval="8000">
-                  <img src="/assets/img/catalog/carousel/cover-1.jpg" class="d-block w-100 " alt="...">
-                  <div class="carousel-caption d-none d-md-block text-white text-start p-3">
+                <div
+                  style="max-height: 370px"
+                  class="carousel-item active"
+                  data-bs-interval="8000"
+                >
+                  <img
+                    src="/assets/img/catalog/carousel/cover-1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-none d-md-block text-white text-start p-3"
+                  >
                     <h4 class="">First slide label</h4>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <p>
+                      Some representative placeholder content for the first
+                      slide.
+                    </p>
                   </div>
                 </div>
-                <div style="max-height: 370px;" class="carousel-item " data-bs-interval="2000">
-                  <img src="/assets/img/catalog/carousel/cover-2.jpg " class="d-block opacity-75 w-100 text-end p-3"
-                    alt="...">
-                  <div class="carousel-caption d-none d-md-block text-center text-light">
+                <div
+                  style="max-height: 370px"
+                  class="carousel-item"
+                  data-bs-interval="2000"
+                >
+                  <img
+                    src="/assets/img/catalog/carousel/cover-2.jpg "
+                    class="d-block opacity-75 w-100 text-end p-3"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-none d-md-block text-center text-light"
+                  >
                     <h4 class="">Second slide label</h4>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <p>
+                      Some representative placeholder content for the second
+                      slide.
+                    </p>
                   </div>
                 </div>
-                <div style="max-height: 370px;" class="carousel-item">
-                  <img src="/assets/img/catalog/carousel/cover-3.jpg " class="d-block  w-100  " alt="...">
-                  <div class="carousel-caption d-none d-md-block text-white text-end">
+                <div style="max-height: 370px" class="carousel-item">
+                  <img
+                    src="/assets/img/catalog/carousel/cover-3.jpg "
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                  <div
+                    class="carousel-caption d-none d-md-block text-white text-end"
+                  >
                     <h4 class="">Third slide label</h4>
-                    <p>Some representative placeholder content for the third slide.</p>
+                    <p>
+                      Some representative placeholder content for the third
+                      slide.
+                    </p>
                   </div>
                 </div>
               </div>
-              <button class="visually-hidden" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <button
+                class="visually-hidden"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="visually-hidden" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class=" carousel-control-next-icon  " aria-hidden="true"></span>
+              <button
+                class="visually-hidden"
+                type="button"
+                data-bs-target="#carouselExampleDark"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
@@ -774,9 +1331,9 @@
             <!-- ----------------------------------------------------------------------- -->
             <!--                      TOP INFO TITLE SECTION START                       -->
             <!-- ----------------------------------------------------------------------- -->
-            <div class="row p-2 d-flex justify-content-between align-baseline ">
-              <h1 class="col-8 product-category">All Products</h1>
-              <select class="form-select col-4 h-25 w-25 mt-2 rounded-0 ">
+            <div class="row p-2 d-flex justify-content-between align-baseline">
+              <h1 class="col-8 product-category text-light">All Products</h1>
+              <select class="form-select col-4 h-25 w-25 mt-2 rounded-0">
                 <option class="p-1" selected="">NEWEST FIRST</option>
                 <option class="p-1" selected="">RATING</option>
                 <option class="p-1" selected="">Most popular</option>
@@ -784,73 +1341,58 @@
               </select>
               <div class="row ps-4 mb-2">
                 <ol class="breadcrumb col-12" aria-label="breadcrumb ">
-                  <li class="breadcrumb-item"><a href="#">
-                      Catalog</a></li>
-                  <li class="breadcrumb-item active" aria-current="page"><a href="#"></a> page 1</li>
+                  <li class="breadcrumb-item"><a href="#"> Catalog</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">
+                    <a href="#"></a> page 1
+                  </li>
                 </ol>
-                <div class="all-season-tag   btn px-1 col-1  my-2">2<div class="btn btn-close " aria-label="Close">
+                <div class="all-season-tag btn px-1 col-1 my-2">
+                  2
+                  <div class="btn btn-close" aria-label="Close"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                      TOP INFO TITLE SECTION END                         -->
+            <!-- ----------------------------------------------------------------------- -->
+
+            <!-- ----------------------------------------------------------------------- -->
+            <!--                   CATALOG CARD PRODUCT SECTION START                    -->
+            <!-- ----------------------------------------------------------------------- -->
+            <section id="card-product" class="mx-auto">
+              <div class="container justify-content-center">
+                <div class="row">
+                  <div class="col-xl-12 mb-2 example_1">
+                    <div id="product-container" class="row items">
+                      <!-- product card will be create dynamic in here -->
+                    </div>
+                    <!-- dynamic pagination -->
+                    <div class="page_navigation mt-4"></div>
                   </div>
                 </div>
               </div>
+            </section>
+          </div>
+        </div>
+      </div>
 
-              <!-- ----------------------------------------------------------------------- -->
-              <!--                      TOP INFO TITLE SECTION END                         -->
-              <!-- ----------------------------------------------------------------------- -->
-
-              <!-- ----------------------------------------------------------------------- -->
-              <!--                   CATALOG CARD PRODUCT SECTION START                    -->
-              <!-- ----------------------------------------------------------------------- -->
-              <section id="card-product" class=" mx-auto">
-                <div class="container justify-content-center">
-                  <div class="row">
-                    <div class="col-xl-12 mb-2">
-                      <div id="product-container" class="row">
-
-                        <!-- product-cart section -->
-
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-            <div aria-label="Page navigation example mx-auto">
-              <ul class="pagination justify-content-center bottom-0">
-                <li class="page-item ">
-                  <a class="page-link Previous ">Previous</a>
-                </li>
-                <li class="page-item active page-item-one"><a class="page-link bg-light-subtle border-light"
-                    href="#">1</a>
-                </li>
-                <li class="page-item "><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </div>
-
+      <!-- ----------------------------------------------------------------------- -->
+      <!--                      CATALOG CARD PRODUCT SECTION END                   -->
+      <!-- ----------------------------------------------------------------------- -->
     </section>
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                      CATALOG CARD PRODUCT SECTION END                   -->
-    <!-- ----------------------------------------------------------------------- -->
     <!-- ------------------------------------------------------------------------------------------- -->
     <!--                                         CONTENT END                                         -->
     <!-- ------------------------------------------------------------------------------------------- -->
-    </div>
-
-    </section>
-
-
 
     <!-- ----------------------------------------------------------------------- -->
     <!--                          FOOTER SECTION START                           -->
     <!-- ----------------------------------------------------------------------- -->
-    <div class="container-fluid position-relative footer-bg bottom-0 ">
+    <div class="container-fluid position-relative footer-bg bottom-0">
       <footer class="pt-5 container text-dark">
         <span class="footer-shape"></span>
-        <div class="row position-relative " style="z-index: 3;">
-          <div class="col-6 col-md-2 mb-3 ">
+        <div class="row position-relative" style="z-index: 3">
+          <div class="col-6 col-md-2 mb-3">
             <h5>SUPPORT</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -863,11 +1405,13 @@
                 <a href="#" class="nav-link p-0 text-body-dark">Size Guide</a>
               </li>
               <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-body-dark">Shipping & Returns</a>
+                <a href="#" class="nav-link p-0 text-body-dark"
+                  >Shipping & Returns</a
+                >
               </li>
             </ul>
           </div>
-          <div class="col-6 col-md-2 mb-3  text-dark">
+          <div class="col-6 col-md-2 mb-3 text-dark">
             <h5>SHOP</h5>
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
@@ -891,7 +1435,10 @@
                 <a href="#" class="nav-link p-0 text-dark">1-22222-333-6666</a>
               </li>
               <li class="nav-item mb-1">
-                <a href="#" class="nav-link p-0 text-dark">help@softclothes.com</a>
+                <a href="#" class="nav-link p-0 text-dark"
+                  >pooyajahed@gmail.com</a
+                >
+              </li>
             </ul>
           </div>
           <div class="col-md-5 offset-md-1 mb-3 text-dark">
@@ -899,26 +1446,40 @@
               <h5>Subscribe to our newsletter</h5>
               <p>Monthly digest of what's new and exciting from us.</p>
               <div class="d-flex flex-column flex-sm-row w-75 gap-2">
-                <label for="newsletter1" class="visually-hidden">Email address</label>
-                <input id="newsletter1" type="text" class="form-control" placeholder="Email address" />
-                <button class="btn-sm btn-primary" type="button">Subscribe</button>
+                <label for="newsletter1" class="visually-hidden"
+                  >Email address</label
+                >
+                <input
+                  id="newsletter1"
+                  type="text"
+                  class="form-control"
+                  placeholder="Email address"
+                />
+                <button class="btn-sm btn-primary" type="button">
+                  Subscribe
+                </button>
               </div>
             </form>
           </div>
         </div>
-        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top">
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-between py-4 mt-4 border-top"
+        >
           <p>© 2023 Company, Inc. All rights reserved.</p>
           <ul class="list-unstyled d-flex">
             <li class="ms-3">
-              <a class="link-body-emphasis" href="#"><i class="bi bi-twitter fs-6"></i>
+              <a class="link-body-emphasis" href="#"
+                ><i class="bi bi-twitter fs-6"></i>
               </a>
             </li>
             <li class="ms-3">
-              <a class="link-body-emphasis" href="#"><i class="bi bi-instagram fs-6"></i>
+              <a class="link-body-emphasis" href="#"
+                ><i class="bi bi-instagram fs-6"></i>
               </a>
             </li>
             <li class="ms-3">
-              <a class="link-body-emphasis " href="#"><i class="bi bi-facebook fs-6"></i>
+              <a class="link-body-emphasis" href="#"
+                ><i class="bi bi-facebook fs-6"></i>
               </a>
             </li>
           </ul>
@@ -929,28 +1490,46 @@
       <!-- ----------------------------------------------------------------------- -->
       <!-- TOAST START -->
       <!-- add to cart toast -->
-      <div class="toast position-fixed text-bg-success bottom-0 start-0 ms-3 mb-3 sticky-bottom " role="alert"
-        aria-live="assertive" aria-atomic="true" id="liveToast">
+      <div
+        class="toast position-fixed text-bg-success bottom-0 start-0 ms-3 mb-3 sticky-bottom"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        id="liveToast"
+      >
         <div class="d-flex px-2">
           <div class="toast-body fs-6 z-n1">
             successfully add <i class="bi bi-cart-check fs-4 mx-1"></i>
           </div>
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close">
-          </button>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
         </div>
       </div>
       <!-- add to cart toast end -->
 
       <!-- add to favorite toast start -->
-      <div class="toast position-fixed text-bg-danger bottom-0 start-0 ms-3 mb-3 sticky-bottom " role="alert"
-        aria-live="assertive" aria-atomic="true" id="liveToastFavorite">
-        <div class="d-flex px-2 ">
+      <div
+        class="toast position-fixed text-bg-danger bottom-0 start-0 ms-3 mb-3 sticky-bottom"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+        id="liveToastFavorite"
+      >
+        <div class="d-flex px-2">
           <div class="toast-body fs-6">
             added to your favorite
             <i class="bi bi-clipboard-heart-fill fs-4 mx-1"></i>
           </div>
-          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close">
-          </button>
+          <button
+            type="button"
+            class="btn-close me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Close"
+          ></button>
         </div>
       </div>
     </div>
@@ -958,22 +1537,20 @@
 
     <!-- TOAST END -->
 
-
-
+    <script type="module" src="/js/scroolTop.js"></script>
     <script type="module" src="./js/toast-bootstrap.js"></script>
     <script type="module" src="./js/getCatalogTag.js"></script>
-    <script type="module" src="./js/getColors.js">  </script>
-    <script type="module" src="./js/getCatageroyType.js">  </script>
-    <script type="module" src="./js/pagination.js">  </script>
-    <script type="module" src="./js/getBrands.js">  </script>
-    <script type="module" src="./js/filterPrice.js">  </script>
-    <script type="module" src="/js/priceSlider.js">  </script>
-    <script type="module" src="/js/categoryFilter.js">  </script>
+    <script type="module" src="./js/getColors.js"></script>
+    <script type="module" src="./js/getCatageroyType.js"></script>
+    <script type="module" src="./js/pagination.js"></script>
+    <script type="module" src="./js/getBrands.js"></script>
+    <script type="module" src="./js/filterPrice.js"></script>
+    <script type="module" src="/js/priceSlider.js"></script>
+    <script type="module" src="/js/categoryFilter.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="./js/searchHandler.js"></script>
     <script type="module" src="./js/navbar-filter.js"></script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="./js/searchHandler.js"></script>
-</body>
-
+  </body>
 </html>
