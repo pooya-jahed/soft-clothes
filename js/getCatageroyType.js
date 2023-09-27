@@ -14,7 +14,7 @@ function getTypes() {
 
   return TypeCloth;
 }
-console.log(getTypes());
+// console.log(getTypes());
 //
 //
 //

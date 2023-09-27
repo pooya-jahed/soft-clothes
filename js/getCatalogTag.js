@@ -9,7 +9,7 @@ function getSizes() {
   b = b.sort();
   b = b.sort((a, b) => a - b);
   b = b.reverse();
-  console.log(b);
+  // console.log(b);
   return b;
 }
 getSizes();

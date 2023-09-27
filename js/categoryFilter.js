@@ -1,11 +1,11 @@
 import data from "../products.json" assert { type: "json" };
-console.log(data);
+// console.log(data);
 let product = data.map((item) => item);
 function createProductCard() {
   const productContainer = document.getElementById("product-container");
 
   product.forEach((element) => {
-    console.log(element.title);
+    // console.log(element.title);
     let card = document.createElement("div");
     const content = `<div class="product-cart-header ">
       <div  class="product-cart-size product-cart-image rounded-2 rounded-3 position-relative">
@@ -36,7 +36,7 @@ function createProductCard() {
       }
       
     </div>`;
-    console.log(element.season);
+    // console.log(element.season);
     card.innerHTML = content;
     card.classList.add(
       // `${element.season}`,
@@ -50,7 +50,7 @@ function createProductCard() {
       "mb-md-6",
       "pt-lg-3"
     );
-    console.log(product);
+    // console.log(product);
 
     productContainer.appendChild(card);
     let productImage = document.querySelectorAll(".product-cart-image");

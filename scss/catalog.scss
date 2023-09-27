@@ -17,6 +17,9 @@
   }
 }
 
+input::selection {
+  color: #fff;
+}
 .carousel-indicators-catalog [data-bs-target] {
   width: 20px;
   height: 20px;

@@ -19,10 +19,9 @@
   <!--                           HEADER SECTION START                          -->
   <!-- ----------------------------------------------------------------------- -->
   <header>
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                             navbar section                              -->
-    <!-- ----------------------------------------------------------------------- -->
+    <!--------------------------------------------------------------------------->
+    <!--                         NAVBAR SECTION START                          -->
+    <!--------------------------------------------------------------------------->
     <section class="ftco-section " data-bs-theme="light">
       <div class="w100-bg-black">
         <div class="container">
@@ -171,8 +170,8 @@
             </li>
             <li class="nav-item">
               <a class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark position-relative">
-                <span class="position-absolute badge rounded-pill bg-danger">
-                  +5
+                <span class="position-absolute badge rounded-pill bg-danger p-1 " style="width: 0.3rem;height: 0.3rem;">
+
                   <span class="visually-hidden">favorite list</span>
                 </span>
               </a>
@@ -262,8 +261,8 @@
           <li class="nav-item px-2">
             <a
               class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0"><span
-                class="position-absolute badge rounded-pill bg-danger">
-                +5
+                class="position-absolute badge rounded-pill bg-danger  mx-1"
+                style=" width: 0.3rem;height: 0.3rem; padding: 0.4rem;">
                 <span class="visually-hidden">favorite list</span></a>
           </li>
         </ul>
@@ -578,7 +577,8 @@
                 </h2>
                 <div id="collapseThree" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
-                    <div class="collapse show" id="sizeCollapse" data-simplebar-collapse="#sizeGroup">
+                    <div class="collapse show" id="sizeCollapse" style="height: 15rem; overflow: hidden scroll;"
+                      data-simplebar-collapse="#sizeGroup">
                       <div class="form-group form-group-overlow mb-6" id="sizeGroup" data-simplebar="init">
                         <div class="simplebar-wrapper" style="margin: 0px;">
                           <div class="simplebar-height-auto-observer-wrapper">
@@ -672,19 +672,8 @@
                           <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
                             <div class="simplebar-content-wrapper" tabindex="0" role="region"
                               aria-label="scrollable content" style="height: auto; overflow: hidden scroll;">
-                              <div class="simplebar-content" style="padding: 0px;">
-                                <div class="list">
+                              <div class="simplebar-content" id="brands-tags-container">
 
-                                  <div class="form-check mb-3 d-flex p-0">
-                                    <input class="h3 list-inline-item" id="brand-all" type="checkbox"
-                                      style="width: 25px;height: 25px;">
-                                    <label
-                                      class=" form-check-label  icon-link-hover  text-decoration-underline fw-bold fs-6 ms-2 "
-                                      for="brand-all">
-                                      All
-                                    </label>
-                                  </div>
-                                </div>
                               </div>
                             </div>
                           </div>
@@ -706,17 +695,24 @@
                   </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse  collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <input type="range" class="form-range position-relative  " min="0" max="100" step="1"
-                      id="customRange3">
-                    <div class="input-group mb-3  ">
-                      <span class="input-group-text p-1 rounded-0 ">From</span> <input type="text"
-                        class="form-control lowest-price " placeholder="$20.00
-                        " aria-label="Username">
-                      <span class="input-group-text p-1 ">To</span>
-                      <input type="text" class="form-control highest-price" placeholder="$100.00
-                      " aria-label="Server">
-                      <span class="input-group-text p-2 rounded-0 "></span>
+                  <div class="accordion-body px-3">
+                    <div class="price-input input-group rounded-0">
+                      <span class="input-group-text rounded-0">From</span>
+                      <input type="number" class="input-min form-control lowest-price" placeholder="$100.00" value="">
+                      <span class="input-group-text rounded-0 border-0 text-light-emphasis">$</span>
+
+                      <span class=" input-group-text ">To</span>
+                      <input type="number" class="input-min input-group-text   form-control highest-price"
+                        placeholder="$100.00" value="">
+                      <span class="input-group-text rounded-0 border-0 text-light-emphasis">$</span>
+
+                    </div>
+                    <div class="slider">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="range-input">
+                      <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                      <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
                     </div>
                   </div>
                 </div>
@@ -818,31 +814,33 @@
                   </div>
                 </div>
             </div>
-          </div>
+            <div aria-label="Page navigation example mx-auto">
+              <ul class="pagination justify-content-center bottom-0">
+                <li class="page-item ">
+                  <a class="page-link Previous ">Previous</a>
+                </li>
+                <li class="page-item active page-item-one"><a class="page-link bg-light-subtle border-light"
+                    href="#">1</a>
+                </li>
+                <li class="page-item "><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </div>
+
     </section>
     <!-- ----------------------------------------------------------------------- -->
     <!--                      CATALOG CARD PRODUCT SECTION END                   -->
     <!-- ----------------------------------------------------------------------- -->
-    <div aria-label="Page navigation example ">
-      <ul class="pagination justify-content-center bottom-0">
-        <li class="page-item ">
-          <a class="page-link Previous ">Previous</a>
-        </li>
-        <li class="page-item active page-item-one"><a class="page-link bg-light-subtle border-light" href="#">1</a>
-        </li>
-        <li class="page-item "><a class="page-link" href="#">2</a></li>
-        <li class="page-item"><a class="page-link" href="#">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#">Next</a>
-        </li>
-      </ul>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <!--                                         CONTENT END                                         -->
+    <!-- ------------------------------------------------------------------------------------------- -->
     </div>
 
     </section>
 
-    <!-- ------------------------------------------------------------------------------------------- -->
-    <!--                                         CONTENT END                                         -->
-    <!-- ------------------------------------------------------------------------------------------- -->
 
 
     <!-- ----------------------------------------------------------------------- -->
@@ -967,7 +965,9 @@
     <script type="module" src="./js/getColors.js">  </script>
     <script type="module" src="./js/getCatageroyType.js">  </script>
     <script type="module" src="./js/pagination.js">  </script>
-
+    <script type="module" src="./js/getBrands.js">  </script>
+    <script type="module" src="./js/filterPrice.js">  </script>
+    <script type="module" src="/js/priceSlider.js">  </script>
     <script type="module" src="/js/categoryFilter.js">  </script>
     <script type="module" src="js/main.js"></script>
     <script type="module" src="./js/searchHandler.js"></script>
