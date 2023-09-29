@@ -4,93 +4,99 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
   <link rel="stylesheet" href="css/styles.css" />
   <script type="module" src="js/color-modes.js"></script>
   <script defer type="module" src="./js/offTime.js"></script>
   <style>
-   /* // cursor shape */
-body {
-  cursor: none;
-}
+    /* // cursor shape */
+    body {
+      cursor: none;
+    }
 
-#cursor {
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  will-change: transform;
-  mix-blend-mode: difference;
-}
+    #cursor {
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      will-change: transform;
+      mix-blend-mode: difference;
+    }
 
-@media (hover: hover) and (pointer: fine) {
-  .cursor__circle {
-    width: 64px;
-    height: 64px;
-    background-color: rgba(243, 122, 8, 0.849);
+    @media (hover: hover) and (pointer: fine) {
+      .cursor__circle {
+        width: 64px;
+        height: 64px;
+        background-color: rgba(243, 122, 8, 0.849);
 
-    margin-top: -50%;
-    margin-left: -50%;
-    border-radius: 50%;
-    border: solid 1px rgba(227, 222, 193, 0.64);
-    transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-      height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-  }
+        margin-top: -50%;
+        margin-left: -50%;
+        border-radius: 50%;
+        border: solid 1px rgba(227, 222, 193, 0.64);
+        transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+          height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      }
 
-  #cursor.arrow .cursor__circle {
-    width: 128px;
-    height: 128px;
-    background-color: #0b3d7793;
-    border-color: #434c64;
-  }
+      #cursor.arrow .cursor__circle {
+        width: 128px;
+        height: 128px;
+        background-color: #0b3d7793;
+        border-color: #434c64;
+      }
 
-  #cursor.arrow::after {
-    content: '';
-    position: absolute;
-    left: -50%;
-    top: -50%;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+      #cursor.arrow::after {
+        content: '';
+        position: absolute;
+        left: -50%;
+        top: -50%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
 
-  #cursor.subtle .cursor__circle {
-    opacity: 0.16;
-    background-color: rgba(240, 99, 6, 0.644);
+      #cursor.subtle .cursor__circle {
+        opacity: 0.16;
+        background-color: rgba(240, 99, 6, 0.644);
 
-  }
+      }
 
-  #cursor.overlay .cursor__circle {
-    width: 48px;
-    height: 48px;
-    background-color: rgba(250, 126, 25, 0.644);
-    border-color: transparent;
-  }
-}
-
-
+      #cursor.overlay .cursor__circle {
+        width: 48px;
+        height: 48px;
+        background-color: rgba(250, 126, 25, 0.644);
+        border-color: transparent;
+      }
+    }
 
 
-@media (hover: hover) and (pointer: fine) {
-  .image-container:hover img {
-    transform: scale(1.1);
-  }
 
-  .underline:hover::after {
-    opacity: 1;
-  }
 
-  section::after {
-    display: none;
-  }
-}
-/* //////////////////////// */
+    @media (hover: hover) and (pointer: fine) {
+      .image-container:hover img {
+        transform: scale(1.1);
+      }
+
+      .underline:hover::after {
+        opacity: 1;
+      }
+
+      section::after {
+        display: none;
+      }
+    }
+
+    /* //////////////////////// */
   </style>
 
   <title>SOFT CLOTH</title>
@@ -113,21 +119,19 @@ body {
   <!--                           HEADER SECTION START                          -->
   <!-- ----------------------------------------------------------------------- -->
   <header>
-
     <!--------------------------------------------------------------------------->
     <!--                         NAVBAR SECTION START                          -->
     <!--------------------------------------------------------------------------->
-    <section class="ftco-section " data-bs-theme="light">
+    <section class="ftco-section" data-bs-theme="light">
       <div class="w100-bg-black">
         <div class="container">
-
           <div class="row justify-content-between align-items-center p-2">
             <span class="btn-group col-1 dark-light" role="group" aria-label="Basic radio toggle button group"
               aria-labelledby="bd-theme">
               <input type="radio" class="btn-check" name="btnradio" data-bs-theme-value="light" id="btnradio1"
                 autocomplete="off" checked="" />
-              <label class="btn text-white btn-outline-white " for="btnradio1">
-                <svg class="bi m-2  opacity-100 theme-icon">
+              <label class="btn text-white btn-outline-white" for="btnradio1">
+                <svg class="bi m-2 opacity-100 theme-icon">
                   <use href="#sun-fill"></use>
                 </svg>
                 <svg class="bi ms-auto d-none">
@@ -162,10 +166,8 @@ body {
             </svg>
             <div class="col-3 mx-4 d-none d-md-inline text-start text-md-end">
               <p class="mb-0 phone">
-                <span class="bi bi-phone-flip text-warning fs-4"></span> <a class=" text-warning display-6 "
-                  href="#">+00
-                  1234
-                  567</a>
+                <span class="bi bi-phone-flip text-warning fs-4"></span>
+                <a class="text-warning display-6" href="#">+00 1234 567</a>
               </p>
             </div>
             <!-- social media section  -->
@@ -191,70 +193,68 @@ body {
       <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light sticky-top"
         id="ftco-navbar">
         <div class="container-fluid px-0 px-md-4">
-          <a class="display-6 navbar-brand mx-0 mx-md-1 " href="index.html">soft clothes
-            <span>commerce</span></a>
+          <a class="display-6 navbar-brand mx-0 mx-md-1" href="index.html">soft clothes <span>commerce</span></a>
 
           <form action="#" class="searchform order-sm-start order-lg-last d-none d-lg-block">
             <div class="form-group d-flex">
-              <input type="text" id="search-input" class="form-control pl-3 " placeholder="Search" />
-              <button type="submit" placeholder="" class="form-control search ">
-                <span class="bi bi-search "></span>
+              <input type="text" id="search-input" class="form-control pl-3" placeholder="Search" />
+              <button type="submit" placeholder="" class="form-control search">
+                <span class="bi bi-search"></span>
               </button>
             </div>
           </form>
 
-          <button class="navbar-toggler collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav"
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ftco-nav"
             aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="bi bi-list navbar-toggler-icon text-warning-50 fw-bold fs-1"></span>
           </button>
           <ul class="navbar-nav d-flex d-lg-none flex-row p-0">
-            <li id="md-shop-list" class="nav-item btn btn-link  py-0 position-relative" data-bs-toggle="dropdown"
+            <li id="md-shop-list" class="nav-item btn btn-link py-0 position-relative" data-bs-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              <a class="bi bi-bag-check  navbar-main-icon  position-relative">
-                <span class="position-absolute badge rounded-pill bg-danger ">
+              <a class="bi bi-bag-check navbar-main-icon position-relative">
+                <span class="position-absolute badge rounded-pill bg-danger">
                   +5
                   <span class="visually-hidden">favorite list</span>
                 </span>
-
               </a>
               <div
-                class="dropdown-menu dropdown-navbar-shop-light dropdown-navbar-shop-dark  dropdown-menu-end dropdown-navbar-shop-md px-4 py-3 position-absolute mx-4"
+                class="dropdown-menu dropdown-navbar-shop-light dropdown-navbar-shop-dark dropdown-menu-end dropdown-navbar-shop-md px-4 py-3 position-absolute mx-4"
                 aria-labelledby="md-shop-list" data-bs-popper="static">
-
                 <!-- cart item-->
-                <div class="navbar-cart-product ">
+                <div class="navbar-cart-product">
                   <div class="d-flex align-items-start">
                     <a href="detail.html">
-                      <img class="img-fluid navbar-cart-product-image" style="max-width:60px ;"
-                        src="/assets/img/product-img-woman-jeans-1.jpg" alt="...">
+                      <img class="img-fluid navbar-cart-product-image" style="max-width: 60px"
+                        src="/assets/img/product-img-woman-jeans-1.jpg" alt="..." />
                     </a>
-                    <div class="w-100 ">
-                      <div class="ps-3 ">
+                    <div class="w-100">
+                      <div class="ps-3">
                         <a class="navbar-cart-product-link navbar-cart-product-link-dark" href="detail.html">Skull
                           Tee</a>
-                        <span class="btn-close float-end " style="width: 2px;"></span>
-                        <small class=" text-muted ">Quantity: 1 </small>
-                        <strong class="d-block ">$75.00 </strong>
+                        <span class="btn-close float-end" style="width: 2px"></span>
+                        <small class="text-muted">Quantity: 1 </small>
+                        <strong class="d-block">$75.00 </strong>
                       </div>
                     </div>
                   </div>
                 </div>
                 <!-- cart item-->
                 <!-- total price-->
-                <hr class="navbar-cart-product-wrapper ">
+                <hr class="navbar-cart-product-wrapper" />
                 <div class="navbar-cart-total w-100">
                   <span class="text-uppercase text-white text-dark-mode">Total</span>
                   <strong class="text-uppercase float-end">$75.00</strong>
                 </div>
-                <hr class="navbar-cart-product-wrapper p-0 ">
+                <hr class="navbar-cart-product-wrapper p-0" />
                 <!-- buttons-->
                 <div class="d-flex justify-content-center flex-column">
-                  <a class="btn btn-link text-dark p-2" href="cart.html">View
-                    Cart
-                    <i class="bi bi-arrow-right "></i>
+                  <a class="btn btn-link text-dark p-2" href="cart.html">View Cart
+                    <i class="bi bi-arrow-right"></i>
                   </a>
-                  <a class="btn btn-outline-dark p-2 " href="checkout1.html">Checkout </a>
+                  <a class="btn btn-outline-dark p-2" href="checkout1.html">Checkout
+                  </a>
                 </div>
+              </div>
             </li>
             <li class="nav-item">
               <a class="bi bi-heart navbar-main-icon dropdown-navbar-shop-dark position-relative">
@@ -266,17 +266,16 @@ body {
             </li>
             <li class="nav-item">
               <a class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark position-relative">
-                <span class="position-absolute badge rounded-pill bg-danger p-1 " style="width: 0.3rem;height: 0.3rem;">
-
+                <span class="position-absolute badge rounded-pill bg-danger p-1" style="width: 0.3rem; height: 0.3rem">
                   <span class="visually-hidden">favorite list</span>
                 </span>
               </a>
             </li>
           </ul>
           <div class="navbar-collapse collapsed" id="ftco-nav">
-            <ul class="navbar-nav m-auto d-flex  align-items-start">
-              <li class="nav-item active   w-100">
-                <a href="index.html" class="nav-link ">Home</a>
+            <ul class="navbar-nav m-auto d-flex align-items-start">
+              <li class="nav-item w-100 active">
+                <a href="index.html" class="nav-link">Home</a>
               </li>
 
               <li class="nav-item w-100  active-nav-link-dark">
@@ -291,57 +290,51 @@ body {
             </ul>
           </div>
         </div>
-        <ul class="navbar-nav px-0 d-none d-lg-flex px-md-5  align-baseline">
-
+        <ul class="navbar-nav px-0 d-none d-lg-flex px-md-5 align-baseline z-n1">
           <li id="shop-list" class="btn btn-link nav-item px-3 py-0" data-bs-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
-
-            <a class="bi bi-bag-check navbar-main-icon dropdown-navbar-shop-dark   position-relative p-0 ">
+            <a class="bi bi-bag-check navbar-main-icon dropdown-navbar-shop-dark position-relative p-0">
               <span class="position-absolute badge rounded-pill bg-danger">
                 +1
-                <span class="visually-hidden">favorite list
-
-                </span>
+                <span class="visually-hidden">favorite list </span>
               </span>
             </a>
-
 
             <div
               class="dropdown-menu dropdown-navbar-shop dropdown-navbar-shop-dark dropdown-menu-end px-4 py-3 position-absolute"
               aria-labelledby="shop-list" data-bs-popper="static">
-
               <!-- cart item-->
-              <div class="navbar-cart-product ">
+              <div class="navbar-cart-product">
                 <div class="d-flex align-items-center">
                   <a href="detail.html">
-                    <img class="img-fluid navbar-cart-product-image" style="max-width:60px ;"
-                      src="/assets/img/product-img-woman-jeans-1.jpg" alt="...">
+                    <img class="img-fluid navbar-cart-product-image" style="max-width: 60px"
+                      src="/assets/img/product-img-woman-jeans-1.jpg" alt="..." />
                   </a>
-                  <div class="w-100 ">
-                    <div class="ps-3 ">
+                  <div class="w-100">
+                    <div class="ps-3">
                       <a class="navbar-cart-product-link" href="detail.html">Skull Tee</a>
-                      <span class="btn-close float-end " style="width: 2px;"></span>
+                      <span class="btn-close float-end" style="width: 2px"></span>
                       <small class="d-block text-muted">Quantity: 1 </small>
-                      <strong class="d-block ">$75.00 </strong>
+                      <strong class="d-block">$75.00 </strong>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- cart item-->
               <!-- total price-->
-              <hr class="navbar-cart-product-wrapper ">
+              <hr class="navbar-cart-product-wrapper" />
               <div class="navbar-cart-total w-100">
-                <span class="text-uppercase  text-dark text-dark-mode ">Total</span>
+                <span class="text-uppercase text-dark text-dark-mode">Total</span>
                 <strong class="text-uppercase float-end">$75.00</strong>
               </div>
-              <hr class="navbar-cart-product-wrapper p-0 ">
+              <hr class="navbar-cart-product-wrapper p-0" />
               <!-- buttons-->
               <div class="d-flex justify-content-between">
-                <a class="btn btn-link text-dark me-3" href="cart.html">View
-                  Cart
-                  <i class="bi bi-arrow-right "></i>
+                <a class="btn btn-link text-dark me-3" href="cart.html">View Cart
+                  <i class="bi bi-arrow-right"></i>
                 </a>
-                <a class="btn btn-outline-dark" href="checkout1.html">Checkout </a>
+                <a class="btn btn-outline-dark" href="checkout1.html">Checkout
+                </a>
               </div>
             </div>
             <!-- ---------------- -->
@@ -351,15 +344,16 @@ body {
               class="bi bi-heart navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0">
               <span class="position-absolute badge rounded-pill bg-danger">
                 +5
-                <span class="visually-hidden">favorite list</span>
+                <span class="visually-hidden">favorite list</span></span>
             </a>
           </li>
           <li class="nav-item px-2">
             <a
-              class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0"><span
-                class="position-absolute badge rounded-pill bg-danger  mx-1"
-                style=" width: 0.3rem;height: 0.3rem; padding: 0.4rem;">
-                <span class="visually-hidden">favorite list</span></a>
+              class="bi bi-person navbar-main-icon dropdown-navbar-shop-dark dropdown-navbar-shop-dark position-relative p-0">
+              <span class="position-absolute badge rounded-pill bg-danger mx-1"
+                style="width: 0.3rem; height: 0.3rem; padding: 0.4rem">
+                <span class="visually-hidden">favorite list</span></span>
+            </a>
           </li>
         </ul>
       </nav>
@@ -404,7 +398,7 @@ body {
                       The bedding was hardly able to cover it and seemed ready
                       to slide off any moment. His many legs, pit
                     </p>
-                    <a onclick="event.preventDefault()" class="btn btn-dark" href="#">Discover more</a>
+                    <a class="btn btn-dark" href="#">Discover more</a>
                   </div>
                 </div>
               </div>
@@ -432,7 +426,7 @@ body {
                       The bedding was hardly able to cover it and seemed ready
                       to slide off any moment.
                     </p>
-                    <a onclick="event.preventDefault()" class="btn btn-dark" href="#">Discover more</a>
+                    <a class="btn btn-dark" href="#">Discover more</a>
                   </div>
                 </div>
               </div>
@@ -460,7 +454,7 @@ body {
                       The bedding was hardly able to cover it and seemed ready
                       to slide off any moment. His many legs, pit
                     </p>
-                    <a onclick="event.preventDefault()" class="btn btn-dark" href="#">Discover more</a>
+                    <a class="btn btn-dark" href="#">Discover more</a>
                   </div>
                 </div>
               </div>
@@ -535,8 +529,7 @@ body {
               <h4 class="mb-0 h2 ">Bags Collection</h4>
 
               <!-- Link -->
-              <a onclick="event.preventDefault()"
-                class="btn btn-link text-white fw-semibold  stretched-link position-relative py-3 fs-4 "
+              <a class="btn btn-link text-white fw-semibold  stretched-link position-relative py-3 fs-4 "
                 href="shop.html">
                 Shop Now <i class="bi bi-arrow-right ms-2 position-relative fs-5 translate-middle-y"></i>
               </a>
@@ -562,8 +555,7 @@ body {
               <h4 class="mb-0 mt-5 fs-3 h3 fw-bold">Printed men’s Shirts</h4>
 
               <!-- Link -->
-              <a onclick="event.preventDefault()"
-                class="btn btn-link text-dark fw-semibold  stretched-link position-relative px-0 py-3 fs-5 "
+              <a class="btn btn-link text-dark fw-semibold  stretched-link position-relative px-0 py-3 fs-5 "
                 href="shop.html">
                 Shop Now <i class="bi bi-arrow-right mx-2 position-relative fs-5 translate-middle-y"></i>
               </a>
@@ -588,8 +580,7 @@ body {
               <h4 class="mb-0 mt-5 fs-3 h3 fw-bold text-dark">Basic women’s Dresses</h4>
 
               <!-- Link -->
-              <a onclick="event.preventDefault()"
-                class="btn btn-link text-dark fw-semibold  stretched-link position-relative py-3 fs-4 "
+              <a class="btn btn-link text-dark fw-semibold  stretched-link position-relative py-3 fs-4 "
                 href="shop.html">
                 Shop Now <i class="bi bi-arrow-right ms-2 position-relative fs-5 translate-middle-y"></i>
               </a>
@@ -614,8 +605,7 @@ body {
               <h4 class="mb-0 h2">Sweatshirts</h4>
 
               <!-- Link -->
-              <a onclick="event.preventDefault()"
-                class="btn btn-link text-white fw-semibold  stretched-link position-relative py-3 fs-4 "
+              <a class="btn btn-link text-white fw-semibold  stretched-link position-relative py-3 fs-4 "
                 href="shop.html">
                 Shop Now <i class="bi bi-arrow-right ms-2 position-relative fs-5 translate-middle-y"></i>
               </a>
@@ -656,8 +646,7 @@ body {
               <div class="card-img-overlay d-flex align-items-center">
                 <div class="w-100 py-3">
                   <h2 class="display-3 fw-bold mb-0">Women</h2>
-                  <a onclick="event.preventDefault()" class="stretched-link fw-semibold fs-4" href="index.html"><span
-                      class="sr-only">Visit
+                  <a class="stretched-link fw-semibold fs-4" href="#span class=" sr-only">Visit
                     </span></a>
                 </div>
               </div>
@@ -670,8 +659,7 @@ body {
               <div class="card-img-overlay d-flex align-items-center">
                 <div class="w-100 py-3">
                   <h2 class="display-3 fw-bold mb-0">Men</h2>
-                  <a onclick="event.preventDefault()" class="stretched-link fw-semibold fs-4 " href="index.html"><span
-                      class="sr-only">Visit </span></a>
+                  <a class="stretched-link fw-semibold fs-4 " href="#span class=" sr-only">Visit </span></a>
                 </div>
               </div>
             </div>
@@ -699,157 +687,157 @@ body {
         <div class="col-xl-12 mb-2">
 
           <div class="row">
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
-            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="detail-2.html"><img class="img-fluid rounded-3"
+            <div class="col-md-4 mb-4 mb-md-6 pt-lg-3"><a href="#"><img class="img-fluid rounded-3"
                   src="/assets/img/img-product-1.jpg" alt=""></a>
-              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="detail-2.html">
+              <div class="px-4 position-relative z-index-2 mt-3"><a class=" text-decoration-none" href="#">
                   <h3 class="py-2">Black<br>canvas<br>bag </h3>
                   <p class="text-muted">$39.90</p>
                 </a>
-                <p> <a class="btn btn-link  text-decoration-none px-0" href="detail-2.html"> Shop now </a></p>
+                <p> <a class="btn btn-link  text-decoration-none px-0" href="#"> Shop now </a></p>
               </div>
             </div>
           </div>
@@ -1011,11 +999,9 @@ body {
   <script type="module" src="js/main.js"></script>
   <script type="module" src="/js/scroolTop.js"></script>
   <script type="module" src="./js/offTime.js"></script>
-  <script type="module" src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
   <script type="module" src="./js/searchHandler.js"></script>
-  <script type="module" src="./js/toast-bootstrap.js"></script>
 
 </body>
 
