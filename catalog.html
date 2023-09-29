@@ -21,7 +21,7 @@
           containerSelector: ".example_1 .items",
           itemSelector: ".example_1 .items > div",
           navigationSelector: ".example_1 .page_navigation",
-          itemsPerPage: 5,
+          itemsPerPage: 8,
         });
       }
     };
@@ -590,7 +590,7 @@
                             <div class="simplebar-content-wrapper" tabindex="0" role="region"
                               aria-label="scrollable content" style="height: auto; overflow: hidden">
                               <div class="simplebar-content" style="padding: 0px">
-                                <div class="form-check mb-3 d-flex p-0">
+                                <!-- <div class="form-check mb-3 d-flex p-0">
                                   <input class="h3 list-inline-item" id="check-all-season" type="checkbox" checked=""
                                     style="width: 25px; height: 25px" />
                                   <label
@@ -598,43 +598,13 @@
                                     for="check-all-season">
                                     All
                                   </label>
-                                </div>
-                                <div class="form-check mb-3 d-flex p-0">
-                                  <input class="h3 list-inline-item" id="winter-checkbox" type="checkbox"
-                                    style="width: 25px; height: 25px" />
-                                  <label
-                                    class="winter-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
-                                    for="winter-checkbox">
-                                    Winter
-                                  </label>
-                                </div>
-                                <div class="form-check mb-3 d-flex p-0">
-                                  <input class="h3 list-inline-item" id="autumn-checkbox" type="checkbox"
-                                    style="width: 25px; height: 25px" />
-                                  <label
-                                    class="autumn-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
-                                    for="autumn-checkbox">
-                                    Autumn
-                                  </label>
-                                </div>
-                                <div class="form-check mb-3 d-flex p-0">
-                                  <input class="h3 list-inline-item" id="summer-checkbox" type="checkbox"
-                                    style="width: 25px; height: 25px" />
-                                  <label
-                                    class="summer-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
-                                    for="summer-checkbox">
-                                    Summer
-                                  </label>
-                                </div>
-                                <div class="form-check mb-3 d-flex p-0">
-                                  <input class="h3 list-inline-item" id="spring-checkbox" type="checkbox"
-                                    style="width: 25px; height: 25px" />
-                                  <label
-                                    class="spring-checkbox form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
-                                    for="spring-checkbox">
-                                    Spring
-                                  </label>
-                                </div>
+                                </div> -->
+                                <div class="container__title"></div>
+                                <div id="post-season" class="filter-container"></div>
+
+
+
+
                               </div>
                             </div>
                           </div>
@@ -674,7 +644,10 @@
                           <div class="simplebar-offset d-flex justify-content-between" style="right: 0px; bottom: 0px">
                             <div class="simplebar-content-wrapper" tabindex="0" role="region"
                               aria-label="scrollable content" style="height: auto; overflow: hidden">
-                              <div id="tag-sizes-container" class="simplebar-content" style="padding: 0px"></div>
+                              <div id="tag-sizes-container" class="simplebar-content" style="padding: 0px">
+                                <div class="container__title">sizes</div>
+                                <div id="post-sizes" class="filter-container"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -712,7 +685,10 @@
                           <div class="simplebar-offset" style="right: 0px; bottom: 0px">
                             <div class="simplebar-content-wrapper" tabindex="0" role="region"
                               aria-label="scrollable content" style="height: 15rem; overflow: hidden scroll">
-                              <div class="simplebar-content p-0" id="color-tags-container"></div>
+                              <div class="simplebar-content p-0" id="color-tags-container">
+                                <div class="container__title"></div>
+                                <div id="post-color" class="filter-container"></div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -745,7 +721,10 @@
                         <div class="simplebar-offset" style="right: 0px; bottom: 0px">
                           <div class="simplebar-content-wrapper" tabindex="0" role="region"
                             aria-label="scrollable content" style="height: auto; overflow: hidden scroll">
-                            <div class="simplebar-content" id="brands-tags-container"></div>
+                            <div class="simplebar-content" id="brands-tags-container">
+                              <div class="container__title"></div>
+                              <div id="post-Brand" class="filter-container"></div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -868,9 +847,58 @@
                   <a href="#"></a> page 1
                 </li>
               </ol>
+
               <div class="all-season-tag btn px-1 col-1 my-2">
-                2
+                ALL
                 <div class="btn btn-close" aria-label="Close"></div>
+              </div>
+              <hr>
+
+              <!-- ______________________________________________ -->
+              <div class="container__title">Types</div>
+              <div id="post-types" class="filter-container"></div>
+              <!-- ______________________________________________ -->
+              <!-- <div class="container__title">sizes</div>
+              <div id="post-sizes" class="filter-container"></div> -->
+              <!-- ______________________________________________ -->
+
+
+              <!-- ______________________________________________ -->
+
+              <!-- <div class="container__title">Dates</div>
+              <div id="post-dates" class="filter-container"></div> -->
+              <!-- ______________________________________________ -->
+
+              <!-- <div class="container__title">Models</div>
+              <div id="post-models" class="filter-container"></div> -->
+              <!-- ______________________________________________ -->
+              <hr>
+              <div class="container__title">Gender</div>
+              <div id="post-gender" class="filter-container"></div>
+              <!-- ______________________________________________ -->
+
+              <!-- ______________________________________________ -->
+
+              <!-- <div class="container__title">Price</div>
+              <div id="post-price" class="filter-container"></div> -->
+              <!-- ______________________________________________ -->
+
+              <!-- <div class="container__title">status</div>
+              <div id="post-status" class="filter-container"></div> -->
+              <!-- ______________________________________________ -->
+
+              <!-- <div class="container__title">Rate</div>
+              <div id="post-rate" class="filter-container"></div> -->
+              <!-- ______________________________________________ -->
+              <!-- 
+              <div class="container__title">Off</div>
+              <div id="post-off" class="filter-container"></div> -->
+              <!-- ______________________________________________ -->
+
+              <div id="posts-container"></div>
+              <p id="no-results"></p>
+              <div class="container__title display-5 fs-5 px-0 my-2">
+                products (<span id="post-count"></span>)
               </div>
             </div>
           </div>
@@ -1032,7 +1060,7 @@
   <script type="module" src="./js/getBrands.js"></script>
   <script type="module" src="./js/filterPrice.js"></script>
   <script type="module" src="/js/priceSlider.js"></script>
-  <script type="module" src="/js/categoryFilter.js"></script>
+  <script type="module" src="/js/multiFilter.js"></script>
   <script type="module" src="js/main.js"></script>
   <script type="module" src="./js/searchHandler.js"></script>
   <script type="module" src="./js/navbar-filter.js"></script>

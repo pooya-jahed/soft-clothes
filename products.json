@@ -27,7 +27,8 @@
     "title": "Loose Jeans",
     "imageUrl": {
       "catalog": [
-        ["Loose-Jeans-black-1", "Loose-Jeans-black-2"],
+        "Loose-Jeans-black-1",
+        "Loose-Jeans-black-2",
         ["Loose-Jeans-blue-1", "Loose-Jeans-blue-2"],
         ["Loose-Jeans-brown-1", "Loose-Jeans-brown-2"]
       ],
@@ -60,7 +61,8 @@
     "title": "Wide High Jeans",
     "imageUrl": {
       "catalog": [
-        ["Wide-High-Jeans-black-1", "Wide-High-Jeans-black-2"],
+        "Wide-High-Jeans-black-1",
+        "Wide-High-Jeans-black-2",
         ["Wide-High-Jeans-blue-1", "Wide-High-Jeans-blue-2"]
       ],
       "detail": [["detail-1"], ["detail-1"]]
@@ -93,7 +95,8 @@
     "title": "Rib knit top ",
     "imageUrl": {
       "catalog": [
-        ["rib-knit-top-red-1", "rib-knit-top-red-2"],
+        "rib-knit-top-red-1",
+        "rib-knit-top-red-2",
         ["rib-knit-top-white-1", "rib-knit-top-white-2"]
       ],
       "detail": ["detail-1", "detail-1"]
@@ -125,7 +128,7 @@
     "price": 76.99,
     "off": "",
     "type": ["jacket"],
-    "gender": ["Mens"],
+    "gender": ["Men"],
     "sizes": ["XS", "S", "M", "L", "XL", "XXL"],
     "colors": ["gray"],
     "description": "Relaxed-fit jacket in non-stretch denim. Collar, metal buttons at front, chest pockets with flap and button, and welt side pockets. Long sleeves with button at cuffs. Adjustable tab at sides with buttons.",
@@ -169,7 +172,7 @@
     "id": 7,
     "title": "Chunky Sneakers",
     "imageUrl": {
-      "catalog": ["grChunky-Sneakers-green-1", "grChunky-Sneakers-green-2"],
+      "catalog": ["Chunky-Sneakers-green-1", "Chunky-Sneakers-green-2"],
       "detail": ["detail-1", "detail-2", "detail-3"]
     },
     "brand": "Sneakers",
@@ -252,7 +255,8 @@
     "title": "Pointed collar Shirt",
     "imageUrl": {
       "catalog": [
-        ["collar-Shirt-white-1", "collar-Shirt-white-2"],
+        "collar-Shirt-white-1",
+        "collar-Shirt-white-2",
         ["collar-Shirt-Pointed-1", "collar-Shirt-Pointed-2"]
       ],
       "detail": [
@@ -287,8 +291,8 @@
     "title": "Fit Printed T-shirt",
     "imageUrl": {
       "catalog": [
-        "Regular-Fit Printed-T-shirt-1",
-        "Regular-Fit Printed-T-shirt-2"
+        "Regular-Fit-Printed-T-shirt-1",
+        "Regular-Fit-Printed-T-shirt-2"
       ],
       "detail": ["detail-1", "detail-2", "detail-3", "detail-4", "detail-5"]
     },
@@ -297,12 +301,12 @@
     "price": 14.99,
     "off": "",
     "type": ["T-shirt"],
-    "gender": ["men"],
+    "gender": ["Men"],
     "sizes": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     "colors": ["brown"],
     "description": "Shirt in woven, gently textured fabric. Pointed collar, buttons at front, and yoke at back with a pleat. Long sleeves with button at cuffs. Rounded hem.",
     "rate": "5",
-    "tags": ["Tommy", "T-shirt", "human", "men"],
+    "tags": ["Tommy", "T-shirt", "human", "Men"],
     "status": "Available",
     "season": ["summer ", "Spring"],
     "data": "30/7/2023"
@@ -363,12 +367,12 @@
     "price": 14.99,
     "off": "",
     "type": ["T-shirt"],
-    "gender": ["men"],
+    "gender": ["Men"],
     "sizes": ["XS", "S", "M"],
     "colors": ["black"],
     "description": "Relaxed-fit T-shirt in soft cotton jersey with a printed motif. Ribbed crew neck, dropped shoulders, and straight-cut hem.",
     "rate": "4",
-    "tags": ["T-shirt", "black", "Liam", "printed", "men"],
+    "tags": ["T-shirt", "black", "Liam", "printed", "Men"],
     "status": "sold",
     "season": ["summer ", "Spring ", "Winter "],
     "data": "18/09/2023"
@@ -419,7 +423,7 @@
     "colors": ["oliveGreen"],
     "description": "Relaxed-fit, knee-length padded vest in woven fabric with quilted seams. Drawstring hood, practical two-way zipper at front, and narrow, concealed elastic at armholes and hem. Forward-facing side seams with discreet pockets. Lined.",
     "rate": "1.9",
-    "tags": ["Puffer ", "women", "men"],
+    "tags": ["Puffer ", "women", "Men"],
     "status": "Available",
     "season": ["summer ", "Spring ", "Autumn "],
     "data": "18/09/2020"
@@ -429,7 +433,8 @@
     "title": "Tie Belt Coat",
     "imageUrl": {
       "catalog": [
-        ["Tie-Belt-Coat-brown-1", "Tie-Belt-Coat-brown-2"],
+        "Tie-Belt-Coat-brown-1",
+        "Tie-Belt-Coat-brown-2",
         ["Tie-Belt-Coat-gray-1", "Tie-Belt-Coat-gray-2"]
       ],
       "detail": ["detail-1", "detail-2", "detail-3"]
@@ -483,12 +488,12 @@
     "price": 69.99,
     "off": "00",
     "type": ["shoes"],
-    "gender": ["men"],
+    "gender": ["Men"],
     "sizes": [7.5, 8.5, 9, 10, 10.5, 11.5, 12],
     "colors": ["light-gray"],
     "description": "Sneakers with a tongue and lacing at front, and padded upper edge. Jersey lining, jersey insoles, and patterned soles. Sole thickness 1 3/4 in.",
     "rate": "4.9",
-    "tags": ["Shoes", "men", "light-gray", "Sneakers"],
+    "tags": ["Shoes", "Men", "light-gray", "Sneakers"],
     "status": "Available",
     "season": ["All"],
     "data": "10/05/2023"
@@ -505,13 +510,13 @@
     "price": 29.99,
     "off": "",
     "type": ["hoodie"],
-    "gender": ["men"],
+    "gender": ["Men"],
     "sizes": [7.5, 8.5, 9, 10, 10.5, 11.5, 12],
     "colors": ["dark-blue"],
     "color-code": ["#1c396a"],
     "description": "Relaxed-fit sweatshirt hoodie in cotton-blend fabric with soft, brushed inside. Jersey-lined drawstring hood, kangaroo pocket, and long sleeves. Wide ribbing at cuffs and hem.",
     "rate": "5",
-    "tags": ["Hoodie", "men", "dark-blue", "kangaroo", "Danny"],
+    "tags": ["Hoodie", "Men", "dark-blue", "kangaroo", "Danny"],
     "status": "Available",
     "season": ["Winter "],
     "data": "10/05/2023"
@@ -535,12 +540,12 @@
     "price": 29.99,
     "off": "",
     "type": ["pants"],
-    "gender": ["men"],
+    "gender": ["Men"],
     "sizes": [28, 29, 30, 31, 32, 33, 34, 36, 38, 40, 42],
     "colors": ["brown"],
     "description": "Relaxed-fit sweatshirt hoodie in cotton-blend fabric with soft, brushed inside. Jersey-lined drawstring hood, kangaroo pocket, and long sleeves. Wide ribbing at cuffs and hem.",
     "rate": "4",
-    "tags": ["pants", "men", "light-brown", "kangaroo", "mike"],
+    "tags": ["pants", "Men", "light-brown", "kangaroo", "mike"],
     "status": "coming soon",
     "season": ["All"],
     "data": "18/09/2023"
@@ -557,12 +562,12 @@
     "price": 76.99,
     "off": "15",
     "type": ["shoes"],
-    "gender": ["men"],
+    "gender": ["Men"],
     "sizes": [7.5, 8.5, 9, 10, 10.5, 11.5, 12],
     "colors": ["black"],
     "description": "Derby shoes with rounded toes, a moccasin seam, and open lacing at front. Loop at back. Cotton canvas lining and insoles. Chunky, patterned soles. Heel height approx. 1 1/2 in.",
     "rate": "4.9",
-    "tags": ["Shoes", "men", "black", "luxury", "mike"],
+    "tags": ["Shoes", "Men", "black", "luxury", "mike"],
     "status": "Available",
     "season": ["All"],
     "data": "10/09/2023"
@@ -572,10 +577,8 @@
     "title": "Oversized Fit Sweatshirt",
     "imageUrl": {
       "catalog": [
-        [
-          "Oversized-Fit-Sweatshirt-brown-1",
-          "Oversized-Fit-Sweatshirt-brown-2"
-        ],
+        "Oversized-Fit-Sweatshirt-brown-1",
+        "Oversized-Fit-Sweatshirt-brown-2",
         [
           "Oversized-Fit-Sweatshirt-green-1",
           "Oversized-Fit-Sweatshirt-green-2"
@@ -602,7 +605,7 @@
     "price": 76.99,
     "off": "15",
     "type": ["Sweatshirt"],
-    "gender": ["men"],
+    "gender": ["Men"],
     "sizes": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
     "colors": ["brown", "green", "red"],
     "description": "Oversized sweatshirt in cotton-blend fabric with soft, brushed inside. Dropped shoulders, long sleeves, and ribbing at neck, cuffs, and hem.",
@@ -612,7 +615,7 @@
       "brown",
       "green",
       "red",
-      "men",
+      "Men",
       "black",
       "luxury",
       "Alex",
@@ -627,7 +630,7 @@
     "id": 24,
     "title": "Cargo Pants",
     "imageUrl": {
-      "catalog": [["Cargo-Pants-black-1"], ["Cargo-Pants-Cream-1"]],
+      "catalog": ["Cargo-Pants-black-1", ["Cargo-Pants-Cream-1"]],
       "detail": ["", "detail-1"]
     },
     "brand": "another",
