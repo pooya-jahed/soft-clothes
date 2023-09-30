@@ -127,24 +127,34 @@ const createPost = (postData) => {
   bg-white "></i>
 </div></div>
 </div>
-<div class="product-cart-footer z-index-2 mt-2 text-lg-start text-center ">
+<div class="product-cart-footer z-index-2 my-4 text-lg-start text-center ">
     <a class="text-decoration-none " href="${title}.html"></a>
-    <p class="product-cart-footer--type text-muted  mb-0 mt-3">${type}</p>
-    <h5 class="product-cart-footer--title ">${title}</h5>
-    <p class="product-cart-footer--offPrice  d-inline-block  h5 text-start">${
+    <p class="product-cart-footer--type text-muted  mb-0 mt-3 h5 text-capitalize ${
+      status === "sold" ? "text-decoration-line-through" : ""
+    } ">${type[1]}</p>
+    <h5 class="product-cart-footer--title text-capitalize mt-2 ${
+      status === "sold" ? "text-decoration-line-through" : ""
+    }  ">${title}</h5>
+    <div class="product-cart-footer--offPrice  d-inline-block  h5 text-start ">${
       off === "" || 0
-        ? `<p class="product-cart-footer--offPrice  d-inline-block  h5 text-start">${price}$</p>`
-        : `<s class="product-cart-footer--price text-muted d-inline-block h5 ">${price}$</s><p class="product-cart-footer--offPrice  d-inline-block  h5 ps-2">${(
+        ? `<p class="product-cart-footer--offPrice  d-inline-block  h5 text-start ${
+            status === "sold" ? "text-decoration-line-through" : ""
+          } ">${price}$</p>`
+        : `<s class="product-cart-footer--price text-muted d-inline-block h5 ${
+            status === "sold" ? "text-decoration-line-through" : ""
+          }  ">${price}$</s><p class="product-cart-footer--offPrice  d-inline-block  h5 ps-2">${(
             price -
             (Number(price) / 100) * Number(off)
           ).toFixed(2)}</p>`
-    }</p>
-    <div class="post-tags ">
-    ${`<span class="post-tag">${brand}</span>`}
+    }</div>
+    <div class="post-tags badge text-${
+      status === "Available" ? "white" : ""
+    } text-${status === "coming soon" ? "primary" : ""}
+     text-${status === "sold" ? "danger" : ""} 
+     py-2 ">
+    ${`<span class="post-tag">${status}</span>`}
   </div>
-  <div class="post-footer">
-  <span class="post-level">${brand}</span>
-</div>
+
 </div>
 </div>
 </div>
@@ -155,7 +165,14 @@ const createPost = (postData) => {
 
 const createFilter = (key, param, container) => {
   const filterButton = document.createElement("button");
-  filterButton.className = "filter-button";
+  filterButton.classList.add(
+    "filter-button",
+    "btn",
+    "text-white-50",
+    "me-1",
+    "my-1",
+    "h5"
+  );
   filterButton.innerText = param;
   filterButton.setAttribute("data-state", "inactive");
   filterButton.addEventListener("click", (e) =>

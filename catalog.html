@@ -567,7 +567,7 @@
             </div>
 
             <!-- accordion item four -->
-            <div class="accordion-item">
+            <div class="accordion-item " id="color-tab">
               <h2 class="accordion-header">
                 <button class="accordion-button bg-body border-light shadow-none fs-5" type="button"
                   data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
@@ -735,7 +735,7 @@
           <!--                      TOP INFO TITLE SECTION START                       -->
           <!-- ----------------------------------------------------------------------- -->
           <div class="row p-2 d-flex justify-content-between align-baseline">
-            <h5 class="col-8 h1 product-category text-light">All Products</h5>
+            <h5 class="col-8 h1 product-category text-dark  page-titel">All Products</h5>
             <select class="form-select col-4 h-25 w-25 mt-2 rounded-0">
               <option class="p-1" selected="">NEWEST FIRST</option>
               <option class="p-1" selected="">RATING</option>
@@ -749,15 +749,17 @@
                   <a href="#"></a> page 1
                 </li>
               </ol>
+              <div class="d-flex p-0">
+                <div class="all-tag btn px-2  mb-3 me-2" id="AllClose">
+                  ALL
+                  <div class="btn btn-close " aria-label="AllClose"></div>
+                </div>
 
-              <div class="all-season-tag btn px-1 col-1 my-2">
-                ALL
-                <div class="btn btn-close" aria-label="Close"></div>
               </div>
               <hr>
 
               <!-- ______________________________________________ -->
-              <div class="container__title">Types</div>
+              <div class="container__title my-1 ps-0">Types</div>
               <div id="post-types" class="filter-container"></div>
               <!-- ______________________________________________ -->
               <!-- <div class="container__title">sizes</div>
@@ -775,8 +777,9 @@
               <div id="post-models" class="filter-container"></div> -->
               <!-- ______________________________________________ -->
               <hr>
-              <div class="container__title">Gender</div>
+              <div class="container__title my-1 ps-0">Gender</div>
               <div id="post-gender" class="filter-container"></div>
+              <hr class="my-1">
               <!-- ______________________________________________ -->
 
               <!-- ______________________________________________ -->

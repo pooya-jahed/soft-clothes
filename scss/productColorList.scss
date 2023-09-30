@@ -1,45 +1,94 @@
 #color-tags-container {
   .black {
     background-color: black;
+    border-color: #ced3d4;
+  }
+  .black.is-active {
+    background-color: rgb(255, 107, 107);
+    border-color: #ced3d4;
+    color: #ffffff;
+  }
+  .black:hover {
+    background-color: rgb(199, 186, 186);
+    border-color: #ced3d4;
+    color: #ffffff;
   }
   .gray {
     background-color: #5c5c5c;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .blue {
     background-color: rgb(57, 97, 143);
+    color: black !important;
+    border-color: #ced3d4;
   }
   .brown {
     background-color: #ccaf86;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .cream {
     background-color: #f5f5e7;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .dark-blue {
     background-color: #1c396a;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .green {
     background-color: #4b7939;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .light-gray {
     background-color: #c5c5c5;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .olivegreen {
     background-color: #666b1a;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .orange {
     background-color: #ac6d14;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .pointed {
     background-color: #ccaf86;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .red {
     background-color: #f53f32;
+    color: black !important;
+    border-color: #ced3d4;
   }
-  .smoked {
+  .smocked {
     background-color: #808080;
+    color: black !important;
+    border-color: #ced3d4;
   }
   .white {
+    border-color: #5c5c5c;
     background-color: #ececeb;
+    color: black !important;
+    border-color: #ced3d4;
+  }
+
+  button:hover {
+    background-color: rgb(199, 186, 186);
+    border-color: #ced3d4;
+    color: #ffffff;
+  }
+  button.is-active {
+    background-color: rgb(255, 107, 107);
+    border-color: #ced3d4;
+    color: #ffffff;
   }
   @include color-mode(dark) {
     .blue {
@@ -72,11 +121,15 @@
     .red {
       background-color: #f53f32;
     }
-    .smoked {
+    .smocked {
       background-color: #585857;
+      color: black !important;
+      border-color: #5c5c5c;
     }
     .white {
       background-color: #ececeb;
+      border-color: #5c5c5c;
+      color: black !important;
     }
   }
 }

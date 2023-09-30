@@ -36,3 +36,18 @@
 // }
 // const colorTab = document.getElementById("collapseFour");
 // colorTab.addEventListener("click", createColorTag());
+const colorSection = document.getElementById("color-tab");
+
+colorSection.addEventListener("click", () => {
+  let colorBtn = colorSection.querySelectorAll(".filter-button");
+  console.log(colorBtn);
+  colorBtn.forEach((element) => {
+    console.log(
+      element.classList.add(
+        element.textContent.toLowerCase(),
+        "rounded-4",
+        "p-2"
+      )
+    );
+  });
+});

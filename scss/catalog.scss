@@ -1,5 +1,30 @@
 @import "../scss/productColorList";
+.filter-button {
+  transition: background-color 200ms, color 200ms;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 8px;
+  border: 1px solid #9b9b9b;
+  border-radius: 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+  color: #252424 !important;
+}
 
+.filter-button:hover {
+  background-color: #3a3a3a;
+  color: #f3f3f3;
+}
+
+.filter-button.is-active {
+  background-color: rgb(255, 107, 107);
+  border-color: #ced3d4;
+  color: #fff;
+}
+
+// ______________________________
 #carouselExampleDark img {
   object-fit: cover;
   object-position: top;
@@ -8,7 +33,7 @@
 .price-section .form-control {
   background: #2b3035 !important;
   color: #e4dfdf !important;
-  font-size: 14px;
+  font-size: 1rem;
   border-radius: 0px;
   box-shadow: none !important;
   border: var(--bs-border-width) solid var(--bs-border-color);
@@ -102,8 +127,23 @@ input::selection {
   .accordion button {
     color: white !important;
   }
-}
 
+  .page-titel {
+    color: #ebe6e6 !important;
+  }
+  .filter-button {
+    color: #d4d0d0 !important;
+    border: 1px solid #9b9b9b;
+    border-radius: 10px;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
+  .filter-button:hover {
+    background-color: #3a3a3a;
+    color: #f3f3f3 !important;
+  }
+}
 .simplebar-content-wrapper .form-check-size {
   margin-right: 0 !important;
   padding: 0 !important;
@@ -116,4 +156,15 @@ input::selection {
   left: 105px;
 }
 
+.price-section .form-control {
+  background: #ced0d3 !important;
+  color: #333131 !important;
+  font-size: 1rem;
+  border-radius: 0px;
+  box-shadow: none !important;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  &:focus {
+    border: 1px solid rgb(63, 61, 61);
+  }
+}
 // media queries
