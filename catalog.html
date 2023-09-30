@@ -28,105 +28,7 @@
   </script>
   <title>CATEGORY</title>
 </head>
-<style>
-  /* // cursor shape */
-  body {
-    cursor: none;
-  }
 
-  #cursor {
-    position: fixed;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-    pointer-events: none;
-    will-change: transform;
-    mix-blend-mode: difference;
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    .cursor__circle {
-      width: 64px;
-      height: 64px;
-      background-color: rgba(243, 122, 8, 0.849);
-      margin-top: -50%;
-      margin-left: -50%;
-      border-radius: 50%;
-      border: solid 1px rgba(227, 222, 193, 0.64);
-      transition: opacity 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-        background-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-        border-color 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-        width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
-        height 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-    }
-
-    #cursor.arrow .cursor__circle {
-      width: 128px;
-      height: 128px;
-      background-color: #0b3d7793;
-      border-color: #434c64;
-    }
-
-    #cursor.arrow::after {
-      content: "";
-      position: absolute;
-      left: -50%;
-      top: -50%;
-      width: 100%;
-      height: 100%;
-      background-image: url("https://svgshare.com/i/MzQ.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    #cursor.subtle .cursor__circle {
-      opacity: 0.16;
-      background-color: rgba(240, 99, 6, 0.644);
-    }
-
-    #cursor.overlay .cursor__circle {
-      width: 48px;
-      height: 48px;
-      background-color: rgba(250, 126, 25, 0.644);
-      border-color: transparent;
-    }
-  }
-
-  @media (hover: hover) and (pointer: fine) {
-    .image-container:hover img {
-      transform: scale(1.1);
-    }
-
-    .underline:hover::after {
-      opacity: 1;
-    }
-
-    section::after {
-      display: none;
-    }
-  }
-
-  /* //////////////////////// */
-  .example_1,
-  .example_2,
-  .example_3 {
-    margin: 20px 0;
-  }
-
-  .page_navigation {
-    width: 100%;
-    text-align: center;
-  }
-
-  .page_navigation ul {
-    padding: 0;
-  }
-
-  .page_navigation li {
-    display: inline;
-    margin-top: 2rem;
-  }
-</style>
 
 <body>
   <div id="cursor">
@@ -411,7 +313,7 @@
                       <input class="h3 list-inline-item" id="check-all" type="checkbox" checked=""
                         style="width: 25px; height: 25px" />
                       <label id="all-product"
-                        class="form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2"
+                        class="form-check-label icon-link-hover text-decoration-underline fw-bold fs-6 ms-2 text"
                         for="check-all">
                         All Products
                       </label>
@@ -426,23 +328,23 @@
                       <!-- Collapse -->
                       <div class="collapse" id="blousesCollapse" data-bs-parent="#productsNav">
                         <div class="py-4 ps-5">
-                          <div class="form-check mb-3 px-0">
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="blousesOne" type="checkbox" />
                             <label class="form-check-label" for="blousesOne">
                               Women Tops, Blouses
                             </label>
-                          </div>
-                          <div class="form-check mb-3 px-0">
+                          </h3>
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="blousesTwo" type="checkbox" />
                             <label class="form-check-label" for="blousesTwo">
                               Shirt
                             </label>
-                          </div>
-                          <div class="form-check mb-3 px-0">
+                          </h3>
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="blousesThree" type="checkbox" />
                             <label class="form-check-label" for="blousesThree">T-shirt
                             </label>
-                          </div>
+                          </h3>
                         </div>
                       </div>
                     </li>
@@ -456,18 +358,18 @@
                       <!-- Collapse -->
                       <div class="collapse" id="coatsCollapse" data-bs-parent="#productsNav">
                         <div class="py-4 ps-5">
-                          <div class="form-check mb-3 px-0">
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="coatsOne" type="checkbox" />
                             <label class="form-check-label" for="coatsOne">
                               Coats, Jackets &amp; Vests
                             </label>
-                          </div>
-                          <div class="form-check mb-3 px-0">
+                          </h3>
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="coatsTwo" type="checkbox" />
                             <label class="form-check-label" for="coatsTwo">
                               Puffer
                             </label>
-                          </div>
+                          </h3>
                         </div>
                       </div>
                     </li>
@@ -490,24 +392,24 @@
                       <!-- Collapse -->
                       <div class="collapse" id="hoodiesCollapse" data-bs-parent="#productsNav">
                         <div class="py-4 ps-5">
-                          <div class="form-check mb-3 px-0">
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="hoodiesOne" type="checkbox" />
                             <label class="form-check-label" for="hoodiesOne">
                               Sweater
                             </label>
-                          </div>
-                          <div class="form-check mb-3 px-0">
+                          </h3>
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="hoodiesTwo" type="checkbox" />
                             <label class="form-check-label" for="hoodiesTwo">
                               Sweatshirt
                             </label>
-                          </div>
-                          <div class="form-check mb-3 px-0">
+                          </h3>
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="hoodiesThree" type="checkbox" />
                             <label class="form-check-label" for="hoodiesThree">
                               Hoodie
                             </label>
-                          </div>
+                          </h3>
                         </div>
                       </div>
                     </li>
@@ -522,18 +424,18 @@
                       <!-- Collapse -->
                       <div class="collapse" id="jeansCollapse" data-bs-parent="#productsNav">
                         <div class="py-4 ps-5">
-                          <div class="form-check mb-3 px-0">
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="jeansOne" type="checkbox" />
                             <label class="form-check-label" for="jeansOne">
                               Men Jeans
                             </label>
-                          </div>
-                          <div class="form-check mb-3 px-0">
+                          </h3>
+                          <h3 class="form-check mb-3 px-0 h5">
                             <input class="form-check-input" id="jeansOne" type="checkbox" />
                             <label class="form-check-label" for="jeansOne">
                               Women Jeans
                             </label>
-                          </div>
+                          </h3>
                         </div>
                       </div>
                     </li>
@@ -833,7 +735,7 @@
           <!--                      TOP INFO TITLE SECTION START                       -->
           <!-- ----------------------------------------------------------------------- -->
           <div class="row p-2 d-flex justify-content-between align-baseline">
-            <h1 class="col-8 product-category text-light">All Products</h1>
+            <h5 class="col-8 h1 product-category text-light">All Products</h5>
             <select class="form-select col-4 h-25 w-25 mt-2 rounded-0">
               <option class="p-1" selected="">NEWEST FIRST</option>
               <option class="p-1" selected="">RATING</option>
@@ -914,22 +816,23 @@
             <div class="container justify-content-center">
               <div class="row">
                 <div class="col-xl-12 mb-2 example_1">
-                  <div id="product-container" class="row items">
+                  <main id="product-container" class="row items">
                     <!-- product card will be create dynamic in here -->
-                  </div>
+                  </main>
                   <!-- dynamic pagination -->
                   <div class="page_navigation mt-4"></div>
                 </div>
               </div>
             </div>
           </section>
+
+
+          <!-- ----------------------------------------------------------------------- -->
+          <!--                      CATALOG CARD PRODUCT SECTION END                   -->
+          <!-- ----------------------------------------------------------------------- -->
         </div>
       </div>
     </div>
-
-    <!-- ----------------------------------------------------------------------- -->
-    <!--                      CATALOG CARD PRODUCT SECTION END                   -->
-    <!-- ----------------------------------------------------------------------- -->
   </section>
   <!-- ------------------------------------------------------------------------------------------- -->
   <!--                                         CONTENT END                                         -->
